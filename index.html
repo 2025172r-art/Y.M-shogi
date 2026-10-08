@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="ja">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="#1a0e0c" name="theme-color"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#1a0e0c" name="theme-color"/>
+<title>
    極上将棋 AI
   </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-  <style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
    :root {
     --ink: #1c140c;
     --lacquer: #2a1210;
@@ -489,16 +490,16 @@ body.best-unlocked .best-guide-panel{display:block}
 .best-dev-console code{color:#fff2bf}
 @media(max-width:560px){.best-guide-meta{grid-template-columns:1fr 1fr}.best-guide-controls{flex-wrap:wrap}.best-guide-controls button{min-width:45%}}
   </style>
-  <style id="ultra47-cockpit-css">
+<style id="ultra47-cockpit-css">
    .ai-cockpit{display:none;margin:12px 0 0;border:1px solid rgba(92,60,25,.24);border-radius:18px;background:linear-gradient(180deg,rgba(255,252,245,.96),rgba(244,229,199,.92));box-shadow:0 16px 40px rgba(55,35,10,.13);overflow:hidden;color:#24170d}.ai-cockpit-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;background:linear-gradient(135deg,#2c1d10,#69491e);color:#fff6df}.ai-cockpit-head b{font-size:14px}.ai-cockpit-head small{opacity:.78}.ai-cockpit-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:12px;padding:12px}.ai-cockpit-card{background:rgba(255,255,255,.72);border:1px solid rgba(83,54,22,.16);border-radius:14px;padding:12px}.ai-cockpit-card h4{margin:0 0 9px;font-size:12px;color:#5c3d19}.ai-cockpit-score{font-size:27px;font-weight:900;line-height:1}.ai-cockpit-meter{height:10px;border-radius:999px;background:#dfcfb1;overflow:hidden;margin:9px 0}.ai-cockpit-meter i{display:block;height:100%;width:50%;background:linear-gradient(90deg,#8f1f1f,#d9a33d,#315d2e);transition:width .35s ease}.ai-cockpit-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.ai-cockpit-stat{padding:8px;border-radius:10px;background:rgba(241,225,195,.72);text-align:center}.ai-cockpit-stat b{display:block;font-size:14px}.ai-cockpit-stat span{font-size:9px;opacity:.72}.ai-candidate{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:8px;padding:8px 7px;border-top:1px solid rgba(83,54,22,.11);font-size:12px}.ai-candidate:first-child{border-top:0}.ai-candidate .rank{font-weight:900;color:#80602e}.ai-candidate .pv{font-weight:800}.ai-candidate .eval{font-variant-numeric:tabular-nums;font-weight:700}.ai-cockpit-foot{padding:0 12px 12px;display:flex;flex-wrap:wrap;gap:7px}.ai-cockpit-foot button{border:1px solid rgba(82,55,22,.22);background:#fff9ec;color:#3b2815;border-radius:10px;padding:7px 10px;font-weight:700;cursor:pointer}.ai-alert{padding:8px 10px;border-radius:10px;background:rgba(132,62,20,.08);border:1px dashed rgba(132,62,20,.25);font-size:11px;line-height:1.55;margin-top:9px}.ai-alert.ok{background:rgba(46,105,58,.08);border-color:rgba(46,105,58,.24)}.ai-fingerprint{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;word-break:break-all;opacity:.75;margin-top:6px}.ultra47-hotkey{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;padding:2px 5px;border-radius:5px;background:rgba(0,0,0,.06)}body.ultra47-focus .play-layout>main{filter:drop-shadow(0 0 20px rgba(166,119,42,.12))}@media(max-width:860px){.ai-cockpit-grid{grid-template-columns:1fr}.ai-cockpit-stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.ai-cockpit-head small{display:none}.ai-cockpit-grid{padding:9px}}
   </style>
-  <style id="ultra48-nav-style">
+<style id="ultra48-nav-style">
    .u48-guide{margin-top:12px;padding:12px;border:1px solid rgba(132,96,38,.25);border-radius:16px;background:linear-gradient(145deg,rgba(255,248,229,.96),rgba(235,216,177,.88));box-shadow:0 10px 28px rgba(62,42,16,.10);color:#24170d}.u48-title{display:flex;justify-content:space-between;gap:10px;font-weight:800;font-size:13px}.u48-title span:last-child{font-size:10px;opacity:.7}.u48-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.u48-grid>div{padding:7px 8px;border-radius:10px;background:rgba(255,255,255,.62);border:1px solid rgba(80,50,20,.10)}.u48-grid small{display:block;font-size:9px;opacity:.65}.u48-grid b{display:block;margin-top:2px;font-size:12px}.u48-candidates{display:grid;gap:4px;margin-top:9px}.u48-candidate{display:grid;grid-template-columns:25px 1fr auto;gap:7px;align-items:center;padding:5px 7px;border-radius:8px;background:rgba(255,255,255,.45);font-size:10px}.u48-candidate.primary{background:rgba(210,168,76,.20);box-shadow:inset 0 0 0 1px rgba(120,80,20,.16)}.u48-candidate span{opacity:.55}.u48-candidate em{font-style:normal;font-variant-numeric:tabular-nums;opacity:.75}.u48-tip{margin-top:8px;font-size:10px;line-height:1.55;opacity:.72}.u48-caption{position:fixed;z-index:99999;transform:translate(-50%,-100%);padding:7px 10px;border-radius:10px;background:rgba(35,22,10,.92);color:#fff7dc;box-shadow:0 8px 24px rgba(0,0,0,.22);font-size:10px;pointer-events:none;animation:u48Caption .8s ease-out both}.u48-caption b{display:block;font-size:11px}.u48-caption span{opacity:.78}@keyframes u48Caption{0%{opacity:0;transform:translate(-50%,-70%) scale(.86)}100%{opacity:1;transform:translate(-50%,-100%) scale(1)}}@media(max-width:720px){.u48-grid{grid-template-columns:repeat(2,1fr)}.u48-guide{border-radius:12px}}
   </style>
-  <style id="ultra49-bestmaster-css">
+<style id="ultra49-bestmaster-css">
    .best-master-dock{margin-top:12px;border:1px solid rgba(116,76,26,.28);border-radius:18px;background:linear-gradient(145deg,rgba(255,249,232,.96),rgba(235,207,155,.88));box-shadow:0 12px 32px rgba(69,43,15,.12),inset 0 1px 0 rgba(255,255,255,.8);overflow:hidden;color:#20170f}.best-master-head{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-bottom:1px solid rgba(92,61,24,.15);font-size:13px}.best-master-head strong{letter-spacing:.04em}.best-master-state{font-size:10px;padding:4px 7px;border-radius:999px;background:#ead9b7;color:#5c411d}.best-master-state.live{background:#3b2916;color:#ffe7a3;box-shadow:0 0 0 2px rgba(203,157,67,.18)}.best-master-body{padding:12px}.best-master-main{display:grid;grid-template-columns:1fr 1fr;gap:8px}.best-master-metric{padding:9px;border-radius:11px;background:rgba(255,255,255,.48);border:1px solid rgba(88,57,19,.1)}.best-master-metric small{display:block;font-size:9px;opacity:.62}.best-master-metric b{display:block;margin-top:2px;font-size:13px}.best-master-move{margin-top:10px;padding:12px;border-radius:13px;background:linear-gradient(135deg,#2c1c0f,#5a3d1a);color:#fff4d2;box-shadow:0 8px 18px rgba(51,33,12,.18)}.best-master-move small{opacity:.7}.best-master-move strong{display:block;font-size:20px;margin-top:3px;letter-spacing:.04em}.best-master-actions{display:flex;gap:7px;margin-top:9px}.best-master-actions button{flex:1;border:1px solid rgba(75,47,14,.18);border-radius:9px;background:#fff8e8;color:#2c1d10;padding:7px 8px;font-weight:700;cursor:pointer}.best-master-actions button:hover{filter:brightness(1.03);transform:translateY(-1px)}.best-master-radar{margin-top:9px;display:grid;gap:5px}.best-master-row{display:grid;grid-template-columns:23px 1fr auto;gap:7px;align-items:center;font-size:11px}.best-master-row .bar{height:6px;border-radius:99px;background:rgba(88,57,19,.12);overflow:hidden}.best-master-row .bar i{display:block;height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,#9b6b25,#e6c87d);transition:width .35s ease}.best-master-foot{padding:9px 12px;border-top:1px solid rgba(92,61,24,.12);font-size:9px;line-height:1.55;opacity:.68}.best-master-source{position:fixed;z-index:2147483001;pointer-events:none;width:38px;height:38px;border:2px dashed rgba(110,72,23,.78);border-radius:50%;animation:bmRotate 2.5s linear infinite}.best-master-ghost{position:fixed;z-index:2147483002;pointer-events:none;font-family:serif;font-weight:900;font-size:42px;line-height:1;text-shadow:0 2px 5px rgba(40,25,8,.45);filter:drop-shadow(0 6px 9px rgba(55,33,10,.24));animation:bmGhost 1.1s ease-in-out infinite}.best-master-label{position:fixed;z-index:2147483003;pointer-events:none;padding:6px 10px;border-radius:999px;background:#2d1d0e;color:#fff2c7;font-size:11px;font-weight:800;letter-spacing:.04em;box-shadow:0 7px 16px rgba(40,24,8,.25);white-space:nowrap;animation:bmLabel .9s ease-out both}.best-master-path{position:fixed;z-index:2147482999;pointer-events:none;overflow:visible}.best-master-path path{fill:none;stroke:#d6ad55;stroke-width:5;stroke-linecap:round;stroke-dasharray:12 9;filter:drop-shadow(0 2px 3px rgba(70,43,12,.3));animation:bmDash .75s linear infinite}.best-master-target-ring{position:fixed;z-index:2147483001;pointer-events:none;border:3px solid #e5c26b;border-radius:50%;box-shadow:0 0 0 7px rgba(229,194,107,.15),inset 0 0 20px rgba(229,194,107,.18);animation:bmTarget 1s ease-in-out infinite}.best-master-spark{position:fixed;z-index:2147483004;pointer-events:none;width:6px;height:6px;border-radius:50%;background:#f7dfa0;box-shadow:0 0 10px #e9c86d;animation:bmSpark 1.1s ease-out forwards}@keyframes bmRotate{to{transform:rotate(360deg)}}@keyframes bmGhost{0%,100%{transform:translate(-50%,-55%) scale(.92) rotate(-2deg);opacity:.48}50%{transform:translate(-50%,-72%) scale(1.06) rotate(2deg);opacity:.9}}@keyframes bmLabel{from{transform:translate(-50%,6px) scale(.85);opacity:0}to{transform:translate(-50%,0) scale(1);opacity:1}}@keyframes bmDash{to{stroke-dashoffset:-42}}@keyframes bmTarget{0%,100%{transform:scale(.92);opacity:.65}50%{transform:scale(1.06);opacity:1}}@keyframes bmSpark{from{transform:translate(0,0) scale(1);opacity:1}to{transform:translate(var(--sx),var(--sy)) scale(.1);opacity:0}}@media(max-width:760px){.best-master-move strong{font-size:17px}.best-master-ghost{font-size:34px}.best-master-label{font-size:10px}.best-master-path path{stroke-width:4}}@media(prefers-reduced-motion:reduce){.best-master-source,.best-master-ghost,.best-master-label,.best-master-target-ring,.best-master-path path,.best-master-spark{animation:none!important}}body.best-unlocked .best-secret{visibility:visible!important}
   </style>
-  <style id="ultra50-best-privacy-css">
+<style id="ultra50-best-privacy-css">
    /* ULTRA50: 最善手機能は解禁されるまで完全に非表示。新規対局でも解禁状態を持ち越さない。 */
 .best-secret,.best-guide-panel,#bestMasterDock{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}
 body.best-unlocked.game-live .best-secret{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
@@ -508,1224 +509,1242 @@ body:not(.best-unlocked) .best-overlay{display:none!important}
 body:not(.best-unlocked) .best-master-source,body:not(.best-unlocked) .best-master-ghost,body:not(.best-unlocked) .best-master-label,body:not(.best-unlocked) .best-master-target-ring,body:not(.best-unlocked) .best-master-path,body:not(.best-unlocked) .best-master-spark{display:none!important}
 .best-master-ghost{z-index:2147483646!important;mix-blend-mode:normal!important;visibility:visible!important}
   </style>
-  <style id="ultra50-ghost-css">
+<style id="ultra50-ghost-css">
    .u50-ghost-piece{position:fixed;z-index:2147483645;pointer-events:none;width:var(--ghost-w,54px);height:var(--ghost-h,66px);transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;font-family:"Shippori Mincho",serif;font-size:clamp(24px,3.2vw,42px);font-weight:900;line-height:1;color:#24170d;background:linear-gradient(145deg,rgba(255,250,232,.92),rgba(220,183,105,.76));border:2px solid rgba(155,111,42,.82);clip-path:polygon(50% 0,94% 18%,84% 100%,16% 100%,6% 18%);box-shadow:0 10px 28px rgba(47,28,7,.32),0 0 0 7px rgba(214,173,85,.10);opacity:.88;filter:drop-shadow(0 4px 7px rgba(55,32,8,.25));animation:u50GhostFloat 1.15s ease-in-out infinite;backdrop-filter:blur(1px)}
 @keyframes u50GhostFloat{0%,100%{margin-top:0;transform:translate(-50%,-50%) scale(.94) rotate(-1deg);opacity:.62}50%{margin-top:-9px;transform:translate(-50%,-50%) scale(1.04) rotate(1deg);opacity:.92}}
 body:not(.best-unlocked) .u50-ghost-piece{display:none!important}
 @media(prefers-reduced-motion:reduce){.u50-ghost-piece{animation:none}}
   </style>
-  <style>
-   /* ULTRA56 WORLD-CLASS UI POLISH */
+<style>
+   /* ULTRA57 WORLD-CLASS UI POLISH */
 .w56-analysis-shell{display:grid;gap:10px;margin:12px 0;padding:12px;border:1px solid rgba(125,90,35,.22);border-radius:16px;background:linear-gradient(180deg,rgba(255,249,232,.98),rgba(247,235,205,.96));box-shadow:0 10px 28px rgba(55,35,15,.08)}
 .w56-analysis-shell[hidden]{display:none!important}.w56-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.w56-head strong{font-size:15px}.w56-status{font-size:11px;padding:4px 8px;border-radius:999px;background:#efe3c4}.w56-pv{font-size:12px;line-height:1.65;padding:9px;border-radius:10px;background:rgba(255,255,255,.72);overflow:auto;white-space:nowrap}.w56-candidates{display:grid;gap:5px}.w56-candidate{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:7px;align-items:center;padding:7px 8px;border-radius:9px;background:rgba(255,255,255,.55);font-size:12px}.w56-candidate.top{box-shadow:inset 3px 0 0 #b78935;background:rgba(255,250,230,.95)}.w56-candidate em{font-style:normal;font-variant-numeric:tabular-nums}.w56-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.w56-meta span{font-size:10px;padding:6px;border-radius:8px;background:rgba(255,255,255,.55);text-align:center}.w56-tools{display:flex;gap:6px;flex-wrap:wrap}.w56-tools button{font:inherit;font-size:11px;padding:7px 9px;border-radius:9px;border:1px solid rgba(80,50,20,.18);background:#fffaf0;cursor:pointer}.w56-tools button:focus-visible,.w56-candidate:focus-visible{outline:3px solid rgba(64,117,190,.35);outline-offset:2px}.w56-foot{font-size:10px;line-height:1.55;color:#675743}.w56-benchmark{font-size:10px;color:#765f42}
 @media(max-width:980px){.w56-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.w56-analysis-shell{margin:8px 0}}
 @media(prefers-reduced-motion:reduce){.w56-analysis-shell *{animation:none!important;transition:none!important}}
   </style>
- </head>
- <body>
-  <div class="petals" id="petals">
-  </div>
-  <section class="page on" id="page-home">
-   <div class="wrap">
-    <header class="topbar">
-     <div class="brand">
-      <div class="seal">
+<style id="ultra57-polish-css">
+/* ULTRA57 layout / readability polish: additive only */
+.w56-analysis-shell{position:relative;isolation:isolate;max-height:min(46vh,520px);overflow:auto;scrollbar-gutter:stable;padding-right:10px}
+.w56-analysis-shell::-webkit-scrollbar{width:7px}.w56-analysis-shell::-webkit-scrollbar-thumb{background:rgba(90,60,25,.22);border-radius:99px}
+.w56-head{position:sticky;top:-12px;z-index:2;padding:4px 0;background:linear-gradient(180deg,rgba(255,249,232,.99),rgba(255,249,232,.86),transparent)}
+.w56-candidates{grid-template-columns:repeat(2,minmax(0,1fr))}.w56-candidate{min-width:0}.w56-candidate .pv{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.w57-engine-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 7px;border-radius:999px;background:#24170d;color:#ffe9ad;font-size:9px;letter-spacing:.08em;font-weight:800}
+.w57-engine-note{font-size:9px;line-height:1.5;color:#6d5a43}
+@media(max-width:560px){.w56-candidates{grid-template-columns:1fr}.w56-analysis-shell{max-height:42vh}.w56-head{top:-12px}}
+@media(prefers-reduced-motion:reduce){.w56-head{transition:none!important}}
+</style>
+<style id="ultra58-cockpit-css">
+/* ULTRA58: compact diagnostics; hidden until the developer analysis is unlocked. */
+.w58-cockpit{margin-top:10px;border:1px solid rgba(184,137,58,.28);border-radius:13px;background:linear-gradient(180deg,#fffaf0,#f3e7cf);overflow:hidden;color:#2b1b0e}
+.w58-cockpit[hidden]{display:none!important}.w58-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 10px;cursor:pointer}.w58-head b{font-family:"Shippori Mincho",serif;font-size:14px}.w58-state{font-size:10px;padding:3px 7px;border-radius:999px;background:#eadfc9}.w58-body{padding:0 10px 10px}.w58-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.w58-metric{padding:7px 5px;border-radius:8px;background:rgba(255,255,255,.62);text-align:center;border:1px solid rgba(120,85,35,.12)}.w58-metric small{display:block;font-size:9px;color:#78644d}.w58-metric strong{display:block;margin-top:2px;font-size:12px;font-variant-numeric:tabular-nums}.w58-bar{height:6px;margin-top:8px;border-radius:99px;background:#e6d9c1;overflow:hidden}.w58-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#b8893a,#6d28d9,#1d4ed8);transition:width .18s ease}.w58-foot{margin-top:7px;font-size:9px;line-height:1.5;color:#6d5a43}.w58-collapse{font-size:10px;color:#7b6344}.w58-cockpit.collapsed .w58-body{display:none}
+@media(max-width:560px){.w58-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.w58-head{padding:8px}.w58-body{padding:0 8px 8px}}
+@media(prefers-reduced-motion:reduce){.w58-bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="petals" id="petals">
+</div>
+<section class="page on" id="page-home">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="seal">
        将
       </div>
-      <div>
-       <h1>
+<div>
+<h1>
         極上
         <span>
          将棋
         </span>
         AI
        </h1>
-       <div class="sub">
+<div class="sub">
         ホームでモードを選び、対局ページで指す
        </div>
-      </div>
-     </div>
-     <div class="nav">
-      <button class="ghost" id="goGuide">
+</div>
+</div>
+<div class="nav">
+<button class="ghost" id="goGuide">
        ルール
       </button>
-      <button class="ghost" id="goProblems">
+<button class="ghost" id="goProblems">
        問題一覧
       </button>
-      <button class="ghost" id="goRecords">
+<button class="ghost" id="goRecords">
        戦績
       </button>
-     </div>
-    </header>
-    <div class="home-hero">
-     <div class="home-card">
-      <div class="kicker">
+</div>
+</header>
+<div class="home-hero">
+<div class="home-card">
+<div class="kicker">
        KYOKUJO SHOGI
       </div>
-      <h2>
+<h2>
        五つの対局モード
       </h2>
-      <p class="help">
+<p class="help">
        友達・AI・詰み・道場・対面。どれも対局ページで指します。強さ、問題、ルールはそれぞれのページに分かれています。
       </p>
-     </div>
-     <div class="paper">
-      <div class="kicker">
+</div>
+<div class="paper">
+<div class="kicker">
        TODAY
       </div>
-      <h2>
+<h2>
        この端末の戦績
       </h2>
-      <div class="stat-row">
-       <div class="stat">
-        <b id="statWin">
+<div class="stat-row">
+<div class="stat">
+<b id="statWin">
          0
         </b>
-        <span>
+<span>
          勝ち
         </span>
-       </div>
-       <div class="stat">
-        <b id="statLose">
+</div>
+<div class="stat">
+<b id="statLose">
          0
         </b>
-        <span>
+<span>
          負け
         </span>
-       </div>
-       <div class="stat">
-        <b id="statDraw">
+</div>
+<div class="stat">
+<b id="statDraw">
          0
         </b>
-        <span>
+<span>
          引き分け
         </span>
-       </div>
-      </div>
-      <p class="help">
+</div>
+</div>
+<p class="help">
        戦績はこのブラウザの中だけに残ります。ネットワークには送りません。
       </p>
-      <div class="controls" style="margin-top:10px">
-       <button id="goGuide2">
+<div class="controls" style="margin-top:10px">
+<button id="goGuide2">
         遊び方
        </button>
-       <button id="goProblems2">
+<button id="goProblems2">
         問題一覧
        </button>
-      </div>
-     </div>
-    </div>
-    <div class="mode-grid">
-     <button class="mode-card m1" data-mode="friend">
-      <i>
+</div>
+</div>
+</div>
+<div class="mode-grid">
+<button class="mode-card m1" data-mode="friend">
+<i>
        友
       </i>
-      <b>
+<b>
        友達対戦
       </b>
-      <span>
+<span>
        別の端末で部屋コードをつなぎ、トークしながら指せます。
       </span>
-     </button>
-     <button class="mode-card m2" data-mode="ai">
-      <i>
+</button>
+<button class="mode-card m2" data-mode="ai">
+<i>
        智
       </i>
-      <b>
+<b>
        AI対戦
       </b>
-      <span>
+<span>
        強さはLv1〜41。Lvごとに深さ・時間・節点を段階的に上げ、Lv41は深度50を目標に最大180秒・3,000万節点まで探索する研究設定です。プロ棋士の竜王そのものを保証するものではありません。
       </span>
-     </button>
-     <button class="mode-card m3" data-mode="tsume">
-      <i>
+</button>
+<button class="mode-card m3" data-mode="tsume">
+<i>
        詰
       </i>
-      <b>
+<b>
        詰将棋道場
       </b>
-      <span>
+<span>
        短い詰みを順番に解きます。王手をかけ続けて詰ましてください。
       </span>
-     </button>
-     <button class="mode-card m4" data-mode="dojo">
-      <i>
+</button>
+<button class="mode-card m4" data-mode="dojo">
+<i>
        学
       </i>
-      <b>
+<b>
        駒の道場
       </b>
-      <span>
+<span>
        歩・香・桂・銀・金・角・飛の動きを、光るマスへ動かして覚えます。
       </span>
-     </button>
-     <button class="mode-card m5" data-mode="local">
-      <i>
+</button>
+<button class="mode-card m5" data-mode="local">
+<i>
        対
       </i>
-      <b>
+<b>
        対面対局
       </b>
-      <span>
+<span>
        一台の画面で交代しながら指します。手番ごとに盤を渡せます。
       </span>
-     </button>
-    </div>
-   </div>
-  </section>
-  <section class="page" id="page-setup">
-   <div class="wrap">
-    <header class="topbar">
-     <div class="brand">
-      <div class="seal">
+</button>
+</div>
+</div>
+</section>
+<section class="page" id="page-setup">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="seal">
        備
       </div>
-      <div>
-       <h1>
+<div>
+<h1>
         対局
         <span>
          準備
         </span>
-       </h1>
-       <div class="sub" id="setupSub">
+</h1>
+<div class="sub" id="setupSub">
         条件を決めてから対局ページへ
        </div>
-      </div>
-     </div>
-     <div class="nav">
-      <button class="ghost" id="setupHome">
+</div>
+</div>
+<div class="nav">
+<button class="ghost" id="setupHome">
        ホームへ
       </button>
-     </div>
-    </header>
-    <div class="paper" style="max-width:720px;margin:0 auto">
-     <h2 id="setupTitle">
+</div>
+</header>
+<div class="paper" style="max-width:720px;margin:0 auto">
+<h2 id="setupTitle">
       AI対戦
      </h2>
-     <div class="only-ai lv-box" id="setupAi" style="display:block">
-      <div style="display:flex;justify-content:space-between">
-       <b>
+<div class="only-ai lv-box" id="setupAi" style="display:block">
+<div style="display:flex;justify-content:space-between">
+<b>
         AIの強さ
        </b>
-       <b id="lvLabel">
+<b id="lvLabel">
         Lv 16　中級
        </b>
-      </div>
-      <input id="lv" max="41" min="1" type="range" value="16"/>
-      <div class="help">
+</div>
+<input id="lv" max="41" min="1" type="range" value="16"/>
+<div class="help">
        1〜41で思考深度・探索節点・時間上限が段階的に上がります。Lv1〜41を個別設定。Lvが上がるほど目標深さ・探索時間・節点上限・候補幅を段階的に増やします。Lv41は目標深さ50・最大180秒・最大3,000万節点の研究設定。段位は公式棋力ではなく探索負荷からの目安です。対局開始後は強さ固定です。
       </div>
-      <div aria-live="polite" class="best-guide-panel" id="bestGuidePanel">
-       <div class="best-guide-head">
-        <b>
+<div aria-live="polite" class="best-guide-panel" id="bestGuidePanel">
+<div class="best-guide-head">
+<b>
          最善手・誘導ガイド
         </b>
-        <span class="best-live-badge" id="bestLiveBadge">
+<span class="best-live-badge" id="bestLiveBadge">
          待機
         </span>
-       </div>
-       <div class="best-guide-main">
-        <div>
+</div>
+<div class="best-guide-main">
+<div>
          現在の推奨手：
          <strong id="bestMoveText">
           計算待ち
          </strong>
-        </div>
-        <div class="best-guide-meta">
-         <span>
+</div>
+<div class="best-guide-meta">
+<span>
           深さ
           <b id="bestDepth">
            —
           </b>
-         </span>
-         <span>
+</span>
+<span>
           節点
           <b id="bestNodes">
            —
           </b>
-         </span>
-         <span>
+</span>
+<span>
           評価
           <b id="bestScore">
            —
           </b>
-         </span>
-        </div>
-        <div class="best-guide-pv" id="bestPv">
+</span>
+</div>
+<div class="best-guide-pv" id="bestPv">
          「最善手」をオンにすると、現在の局面から探索した第一候補を表示します。
         </div>
-        <div class="best-guide-note">
+<div class="best-guide-note">
          これは現在の盤面を探索したAI候補です。将棋では相手の最善応手や探索限界により「絶対勝利」を保証するものではありません。
         </div>
-       </div>
-       <div class="best-guide-controls">
-        <button id="bestRecalc" type="button">
+</div>
+<div class="best-guide-controls">
+<button id="bestRecalc" type="button">
          再計算
         </button>
-        <button id="bestClear" type="button">
+<button id="bestClear" type="button">
          誘導表示を消す
         </button>
-       </div>
-       <div class="best-dev-console">
+</div>
+<div class="best-dev-console">
         隠し解禁：開発者ツールのConsoleで
         <code>
          最善手
         </code>
         と入力すると、この機能が解禁されます。
        </div>
-      </div>
-      <div aria-live="polite" class="ai-encyclopedia" id="aiEncyclopedia">
-       <div class="ai-ency-head">
-        <div>
-         <b>
+</div>
+<div aria-live="polite" class="ai-encyclopedia" id="aiEncyclopedia">
+<div class="ai-ency-head">
+<div>
+<b>
           AI強さ百科・Lv1〜41
          </b>
-         <span>
+<span>
           41段階を個別に解説。段位・階級は公式レーティングではなく、このアプリの探索設定から見た「おおよその目安」です。
          </span>
-        </div>
-        <button id="aiCompareBtn" type="button">
+</div>
+<button id="aiCompareBtn" type="button">
          41段階を一覧
         </button>
-       </div>
-       <div class="ai-current-card" id="aiCurrentCard">
-       </div>
-       <div class="ai-mini-legend">
-        <span>
+</div>
+<div class="ai-current-card" id="aiCurrentCard">
+</div>
+<div class="ai-mini-legend">
+<span>
          深さ＝探索の目標
         </span>
-        <span>
+<span>
          時間＝最大思考時間
         </span>
-        <span>
+<span>
          節点＝探索上限
         </span>
-        <span>
+<span>
          実力は局面・端末で変動
         </span>
-       </div>
-       <div class="ai-level-grid" id="aiLevelGrid">
-       </div>
-      </div>
-      <div style="margin-top:10px">
-       <select id="sideSel">
-        <option value="S">
+</div>
+<div class="ai-level-grid" id="aiLevelGrid">
+</div>
+</div>
+<div style="margin-top:10px">
+<select id="sideSel">
+<option value="S">
          先手で指す
         </option>
-        <option value="G">
+<option value="G">
          後手で指す
         </option>
-       </select>
-      </div>
-     </div>
-     <div class="lv-box">
-      <b>
+</select>
+</div>
+</div>
+<div class="lv-box">
+<b>
        持ち時間
       </b>
-      <select id="timeSel">
-       <option value="300">
+<select id="timeSel">
+<option value="300">
         5分
        </option>
-       <option selected="" value="600">
+<option selected="" value="600">
         10分
        </option>
-       <option value="900">
+<option value="900">
         15分
        </option>
-      </select>
-      <p class="help">
+</select>
+<p class="help">
        手番のあいだだけ減ります。詰将棋と駒の道場では時計を使いません。
       </p>
-     </div>
-     <div class="lv-box">
-      <b>
+</div>
+<div class="lv-box">
+<b>
        音と表示
       </b>
-      <div class="tog-grid" id="setupToggles">
-      </div>
-      <div style="margin-top:8px">
+<div class="tog-grid" id="setupToggles">
+</div>
+<div style="margin-top:8px">
        音量
        <input id="vol" max="100" min="0" type="range" value="70"/>
-      </div>
-      <div class="controls" style="margin-top:8px">
-       <button id="soundStyleBtn" type="button">
+</div>
+<div class="controls" style="margin-top:8px">
+<button id="soundStyleBtn" type="button">
         駒音
        </button>
-       <button id="previewSound" type="button">
+<button id="previewSound" type="button">
         音を聞く
        </button>
-      </div>
-      <div class="rule-panel">
-       <div class="rule-row">
-        <div>
-         <b>
+</div>
+<div class="rule-panel">
+<div class="rule-row">
+<div>
+<b>
           違反制御
          </b>
-         <div class="help">
+<div class="help">
           ON: 二歩・行き所のない駒打ち・強制成り・打ち歩詰めを禁止。OFF: 反則手も実行できます。
          </div>
-        </div>
-        <button class="rule-switch on" id="ruleToggle" type="button">
+</div>
+<button class="rule-switch on" id="ruleToggle" type="button">
          違反制御: ON
         </button>
-       </div>
-      </div>
-      <div class="controls" style="margin-top:14px">
-       <button class="gold" id="setupStart">
+</div>
+</div>
+<div class="controls" style="margin-top:14px">
+<button class="gold" id="setupStart">
         この条件で対局へ
        </button>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="page" id="page-problems">
-   <div class="wrap">
-    <header class="topbar">
-     <div class="brand">
-      <div class="seal">
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="page" id="page-problems">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="seal">
        題
       </div>
-      <div>
-       <h1>
+<div>
+<h1>
         問題
         <span>
          一覧
         </span>
-       </h1>
-       <div class="sub">
+</h1>
+<div class="sub">
         詰将棋道場と駒の道場
        </div>
-      </div>
-     </div>
-     <div class="nav">
-      <button class="ghost" id="problemsHome">
+</div>
+</div>
+<div class="nav">
+<button class="ghost" id="problemsHome">
        ホームへ
       </button>
-     </div>
-    </header>
-    <div class="paper">
-     <h2>
+</div>
+</header>
+<div class="paper">
+<h2>
       詰将棋道場
      </h2>
-     <p class="help">
+<p class="help">
       先手番です。王手をかけ続けて、後手の玉を詰ましてください。正しい詰みで次の問題へ進みます。
      </p>
-     <div class="problem-grid" id="tsumeList">
-     </div>
-     <h2 style="margin-top:18px">
+<div class="problem-grid" id="tsumeList">
+</div>
+<h2 style="margin-top:18px">
       駒の道場
      </h2>
-     <p class="help">
+<p class="help">
       光るマスは、その駒が動ける場所です。どれか一つへ進めれば合格です。
      </p>
-     <div class="problem-grid" id="dojoList">
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="page" id="page-guide">
-   <div class="wrap">
-    <header class="topbar">
-     <div class="brand">
-      <div class="seal">
+<div class="problem-grid" id="dojoList">
+</div>
+</div>
+</div>
+</section>
+<section class="page" id="page-guide">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="seal">
        学
       </div>
-      <div>
-       <h1>
+<div>
+<h1>
         ルールと
         <span>
          遊び方
         </span>
-       </h1>
-       <div class="sub">
+</h1>
+<div class="sub">
         対局ページと同じルールです
        </div>
-      </div>
-     </div>
-     <div class="nav">
-      <button class="ghost" id="guideHome">
+</div>
+</div>
+<div class="nav">
+<button class="ghost" id="guideHome">
        ホームへ
       </button>
-     </div>
-    </header>
-    <div class="guide-grid">
-     <article class="guide-card">
-      <b>
+</div>
+</header>
+<div class="guide-grid">
+<article class="guide-card">
+<b>
        盤と手番
       </b>
-      <span class="help">
+<span class="help">
        九九の盤です。先手が下から始め、後手は上です。一手ずつ交代します。ファイルは先手から見て右が9、左が1です。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        駒の動き
       </b>
-      <span class="help">
+<span class="help">
        歩は前へ一マス。香は前へ何マスでも。桂は前に二、横に一へ跳びます。銀は前と斜め。金は前後左右と前の斜め。角は斜め、飛車は縦横。玉は周囲一マスです。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        成り
       </b>
-      <span class="help">
+<span class="help">
        敵陣に入る、または敵陣から出るとき、金と玉以外は成れます。歩・香・桂は動けなくなるマスでは必ず成ります。成ると歩・香・桂・銀は金と同じ動き、角は馬、飛車は龍です。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        持ち駒
       </b>
-      <span class="help">
+<span class="help">
        取った駒は成る前の姿で持ち駒になります。空いているマスへ打てます。二歩、打てば動けない場所への歩・香・桂、打ち歩詰めはできません。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        王手と詰み
       </b>
-      <span class="help">
+<span class="help">
        玉がねらわれている状態が王手です。玉が赤く揺れます。王手を防ぎ、取って、逃げて、どれもできなければ詰みです。指せる手がなくなった側の負けです。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        操作
       </b>
-      <span class="help">
+<span class="help">
        自分の駒をタップして、緑の地点へ。赤い地点は取れる駒です。持ち駒を選んで空いているマスへ打てます。成れるときは「成る／不成」を選べます。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        表示と音
       </b>
-      <span class="help">
+<span class="help">
        行ける場所、置ける場所、取れる場所、直前の手、王手、座標、評価、道場の光、ヒント、全合法手は、それぞれオンとオフを切り替えられます。音は駒音と電子音、音量も選べます。AIの強さは準備画面で決め、対局中は固定です。
       </span>
-     </article>
-     <article class="guide-card">
-      <b>
+</article>
+<article class="guide-card">
+<b>
        AIの強さ
       </b>
-      <span class="help">
+<span class="help">
        Lv1〜41の41段階です。Lv1〜5は入門級、6〜10は級位者上位、11〜16は中級者、17〜22は上級者、23〜28はアマ有段者、29〜34は高段者、35〜38はトップアマ級を意識した目安、39〜40は最上位の高負荷実験、41は深度50を目標に最大180秒・3,000万節点まで読む研究設定です。これは公式棋力・レーティングとの対応ではなく、端末性能と局面によって実到達深度は変わります。準備画面の「AI強さ百科・Lv1〜41」で各Lvの深さ、時間、節点、特徴、将棋界での目安を個別に確認できます。
       </span>
-     </article>
-    </div>
-   </div>
-  </section>
-  <section class="page" id="page-records">
-   <div class="wrap">
-    <header class="topbar">
-     <div class="brand">
-      <div class="seal">
+</article>
+</div>
+</div>
+</section>
+<section class="page" id="page-records">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="seal">
        譜
       </div>
-      <div>
-       <h1>
+<div>
+<h1>
         戦績と
         <span>
          棋譜
         </span>
-       </h1>
-       <div class="sub">
+</h1>
+<div class="sub">
         このブラウザに保存した対局
        </div>
-      </div>
-     </div>
-     <div class="nav">
-      <button class="ghost" id="recordsHome">
+</div>
+</div>
+<div class="nav">
+<button class="ghost" id="recordsHome">
        ホームへ
       </button>
-      <button id="clearRecords">
+<button id="clearRecords">
        戦績を消す
       </button>
-     </div>
-    </header>
-    <div class="paper">
-     <div class="record-list" id="recordList">
-     </div>
-    </div>
-   </div>
-  </section>
-  <section class="page" id="page-play">
-   <div class="wrap">
-    <header class="topbar">
-     <div class="brand">
-      <div class="seal">
+</div>
+</header>
+<div class="paper">
+<div class="record-list" id="recordList">
+</div>
+</div>
+</div>
+</section>
+<section class="page" id="page-play">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="seal">
        将
       </div>
-      <div>
-       <h1>
+<div>
+<h1>
         極上
         <span>
          将棋
         </span>
-       </h1>
-       <div class="sub" id="modeSub">
+</h1>
+<div class="sub" id="modeSub">
         対局ページ
        </div>
-      </div>
-     </div>
-     <div class="think" id="think">
-      <span class="dots">
-       <span>
+</div>
+</div>
+<div class="think" id="think">
+<span class="dots">
+<span>
         ●
        </span>
-       <span>
+<span>
         ●
        </span>
-       <span>
+<span>
         ●
        </span>
-      </span>
+</span>
       考慮中
      </div>
-     <div class="nav">
-      <button class="ghost" id="homeBtn">
+<div class="nav">
+<button class="ghost" id="homeBtn">
        ホーム
       </button>
-      <button class="ghost" id="soundBtn">
+<button class="ghost" id="soundBtn">
        音:ON
       </button>
-      <button class="ghost" id="focusExit">
+<button class="ghost" id="focusExit">
        拡大を戻す
       </button>
-     </div>
-    </header>
-    <div class="play-layout">
-     <aside class="panel" id="gotePanel">
-      <h2>
+</div>
+</header>
+<div class="play-layout">
+<aside class="panel" id="gotePanel">
+<h2>
        後手
        <span class="who G" id="goteTag">
         AI
        </span>
-      </h2>
-      <div class="timer" id="goteTime">
+</h2>
+<div class="timer" id="goteTime">
        持ち時間 10:00
       </div>
-      <div class="hand" id="goteHand">
-      </div>
-      <div class="only-friend">
-       <h2 style="margin-top:14px">
+<div class="hand" id="goteHand">
+</div>
+<div class="only-friend">
+<h2 style="margin-top:14px">
         オンライン対局
        </h2>
-       <div class="net-status" id="netStatus">
+<div class="net-status" id="netStatus">
         未接続　部屋を作るか、コードで参加
        </div>
-       <input class="field" id="nick" placeholder="なまえ" value="わたし"/>
-       <div class="room-code" id="roomCode">
+<input class="field" id="nick" placeholder="なまえ" value="わたし"/>
+<div class="room-code" id="roomCode">
         ----
        </div>
-       <div class="controls">
-        <button class="gold" id="hostBtn">
+<div class="controls">
+<button class="gold" id="hostBtn">
          部屋を作る
         </button>
-        <button id="copyRoomBtn">
+<button id="copyRoomBtn">
          コードをコピー
         </button>
-       </div>
-       <div class="join-row">
-        <input id="joinCode" maxlength="4" placeholder="4文字のコード"/>
-        <button id="joinBtn">
+</div>
+<div class="join-row">
+<input id="joinCode" maxlength="4" placeholder="4文字のコード"/>
+<button id="joinBtn">
          参加
         </button>
-       </div>
-       <div class="chat-log" id="chatLog">
-       </div>
-       <div class="chat-row">
-        <input id="chatInput" maxlength="80" placeholder="トーク（Enterで送信）"/>
-        <button id="sendChat">
+</div>
+<div class="chat-log" id="chatLog">
+</div>
+<div class="chat-row">
+<input id="chatInput" maxlength="80" placeholder="トーク（Enterで送信）"/>
+<button id="sendChat">
          送信
         </button>
-       </div>
-       <div class="help" style="margin-top:8px">
+</div>
+<div class="help" style="margin-top:8px">
         友達もこのページを開き、同じコードで参加すると別の端末で指せます。先に部屋を作った人が先手です。通信にはインターネットが必要です。
        </div>
-      </div>
-      <div class="only-tsume help" id="tsumeInfo" style="margin-top:10px">
+</div>
+<div class="only-tsume help" id="tsumeInfo" style="margin-top:10px">
        詰みを目指してください。
       </div>
-      <div class="only-dojo help" id="dojoInfo" style="margin-top:10px">
+<div class="only-dojo help" id="dojoInfo" style="margin-top:10px">
        光るマスへ駒を進めてください。
       </div>
-      <div class="only-local help" style="margin-top:10px">
+<div class="only-local help" style="margin-top:10px">
        一台で二人。手番が変わるたびに盤を相手へ渡してください。
       </div>
-     </aside>
-     <main class="board-wrap">
-      <div class="table-scene" id="tableScene">
-       <aside class="komadai" id="goteStand">
-        <b>
+</aside>
+<main class="board-wrap">
+<div class="table-scene" id="tableScene">
+<aside class="komadai" id="goteStand">
+<b>
          後手の駒台
         </b>
-        <div class="slots" id="goteStandSlots">
-        </div>
-        <div class="hand-val" id="goteHandVal">
+<div class="slots" id="goteStandSlots">
+</div>
+<div class="hand-val" id="goteHandVal">
          持ち駒評価 0
         </div>
-       </aside>
-       <div class="board-frame">
-        <div class="file-row">
-         <div>
-         </div>
-         <div class="files" id="fileCoords">
-         </div>
-         <div>
-         </div>
-        </div>
-        <div class="board-row">
-         <div class="ranks" id="rankLeft">
-         </div>
-         <div class="board" id="board">
-         </div>
-         <div class="ranks" id="rankRight">
-         </div>
-        </div>
-       </div>
-       <aside class="komadai" id="senteStand">
-        <b>
+</aside>
+<div class="board-frame">
+<div class="file-row">
+<div>
+</div>
+<div class="files" id="fileCoords">
+</div>
+<div>
+</div>
+</div>
+<div class="board-row">
+<div class="ranks" id="rankLeft">
+</div>
+<div class="board" id="board">
+</div>
+<div class="ranks" id="rankRight">
+</div>
+</div>
+</div>
+<aside class="komadai" id="senteStand">
+<b>
          先手の駒台
         </b>
-        <div class="slots" id="senteStandSlots">
-        </div>
-        <div class="hand-val" id="senteHandVal">
+<div class="slots" id="senteStandSlots">
+</div>
+<div class="hand-val" id="senteHandVal">
          持ち駒評価 0
         </div>
-       </aside>
-      </div>
-      <div class="eval-wrap">
-       <span>
+</aside>
+</div>
+<div class="eval-wrap">
+<span>
         後手
        </span>
-       <div class="eval" title="評価値">
-        <div id="evalBar">
-        </div>
-       </div>
-       <span>
+<div class="eval" title="評価値">
+<div id="evalBar">
+</div>
+</div>
+<span>
         先手
        </span>
-      </div>
-      <div class="speech" id="speech">
+</div>
+<div class="speech" id="speech">
        駒を選ぶと、指せるマスが光ります。
       </div>
-      <div class="status-pill" id="status">
+<div class="status-pill" id="status">
        先手番
       </div>
-     </main>
-     <aside class="panel">
-      <h2>
+</main>
+<aside class="panel">
+<h2>
        先手
        <span class="who S" id="senteTag">
         あなた
        </span>
-      </h2>
-      <div class="timer" id="senteTime">
+</h2>
+<div class="timer" id="senteTime">
        持ち時間 10:00
       </div>
-      <div class="hand" id="senteHand">
-      </div>
-      <div class="controls" style="margin-top:12px">
-       <button class="side-live side-finished gold" id="newBtn">
+<div class="hand" id="senteHand">
+</div>
+<div class="controls" style="margin-top:12px">
+<button class="side-live side-finished gold" id="newBtn">
         新規対局
        </button>
-       <button class="side-live" id="undoBtn">
+<button class="side-live" id="undoBtn">
         待った
        </button>
-       <button class="side-hidden" id="hintBtn">
+<button class="side-hidden" id="hintBtn">
         ヒント
        </button>
-       <button class="side-live side-finished" id="focusBtn">
+<button class="side-live side-finished" id="focusBtn">
         画面拡大
        </button>
-       <button class="side-live side-finished" id="copyBtn">
+<button class="side-live side-finished" id="copyBtn">
         棋譜コピー
        </button>
-       <button class="side-finished review-btn" id="highlightBtn">
+<button class="side-finished review-btn" id="highlightBtn">
         ハイライト
        </button>
-       <button class="side-hidden" id="analysisBtn">
+<button class="side-hidden" id="analysisBtn">
         深掘り解析
        </button>
-       <button class="side-hidden review-btn" id="labBtn">
+<button class="side-hidden review-btn" id="labBtn">
         AI研究室
        </button>
-       <button class="side-hidden" id="positionBtn">
+<button class="side-hidden" id="positionBtn">
         局面診断
        </button>
-       <button class="side-live side-finished" id="kifuExportBtn">
+<button class="side-live side-finished" id="kifuExportBtn">
         棋譜保存
        </button>
-       <button class="side-live" id="violationBtn">
+<button class="side-live" id="violationBtn">
         問題摘発
        </button>
-       <button class="side-live" id="resignBtn">
+<button class="side-live" id="resignBtn">
         投了
        </button>
-       <button class="side-live" id="flipBtn">
+<button class="side-live" id="flipBtn">
         盤面反転
        </button>
-       <button aria-pressed="false" class="side-live best-secret" id="bestBtn" type="button">
+<button aria-pressed="false" class="side-live best-secret" id="bestBtn" type="button">
         最善手
        </button>
-       <button class="side-hidden" id="problemsBtn">
+<button class="side-hidden" id="problemsBtn">
         問題一覧
        </button>
-      </div>
-      <div class="only-ai lv-box">
-       <div style="display:flex;justify-content:space-between">
-        <b>
+</div>
+<div class="only-ai lv-box">
+<div style="display:flex;justify-content:space-between">
+<b>
          AIの強さ
         </b>
-        <b id="lvLabelPlay">
+<b id="lvLabelPlay">
          Lv 16　中級
         </b>
-       </div>
-       <div class="help">
+</div>
+<div class="help">
         この対局の強さは準備画面で固定されています。対局中は変えられません。Lv41「異次元」はこのアプリ内の最上位実験モードです。大会優勝級を超えることを狙った実験的探索設定ですが、実力の絶対比較を保証するものではありません。
        </div>
-      </div>
-      <div class="rule-panel">
-       <div class="rule-row">
-        <div>
-         <b>
+</div>
+<div class="rule-panel">
+<div class="rule-row">
+<div>
+<b>
           ルール監査
          </b>
-         <div class="help">
+<div class="help">
           反則手を許可した場合、直前手を「問題摘発」で検査できます。
          </div>
-        </div>
-        <button class="rule-switch on" id="ruleTogglePlay" type="button">
+</div>
+<button class="rule-switch on" id="ruleTogglePlay" type="button">
          違反制御: ON
         </button>
-       </div>
-      </div>
-      <div class="rule-center" id="ruleCenter">
-       <details open="">
-        <summary>
+</div>
+</div>
+<div class="rule-center" id="ruleCenter">
+<details open="">
+<summary>
          反則制御・監査センター
          <span id="ruleCenterBadge">
           ON
          </span>
-        </summary>
-        <div class="rule-center-body">
-         <div class="rule-state">
-          <i class="lamp on" id="ruleLamp">
-          </i>
-          <b id="ruleStateText">
+</summary>
+<div class="rule-center-body">
+<div class="rule-state">
+<i class="lamp on" id="ruleLamp">
+</i>
+<b id="ruleStateText">
            違反制御 ON
           </b>
-          <span class="help" id="ruleStateHint">
+<span class="help" id="ruleStateHint">
            通常の合法手だけを生成します。
           </span>
-         </div>
-         <div class="rule-grid">
-          <div class="rule-chip">
-           <b>
+</div>
+<div class="rule-grid">
+<div class="rule-chip">
+<b>
             二歩
            </b>
            同じ筋に未成歩を2枚置く手を制限。
           </div>
-          <div class="rule-chip">
-           <b>
+<div class="rule-chip">
+<b>
             打ち歩詰め
            </b>
            歩を打って相手玉を詰ませる手を制限。
           </div>
-          <div class="rule-chip">
-           <b>
+<div class="rule-chip">
+<b>
             行き所のない駒
            </b>
            歩・香・桂の不可能な着地点への打ちを制限。
           </div>
-          <div class="rule-chip">
-           <b>
+<div class="rule-chip">
+<b>
             強制成り
            </b>
            歩・香・桂が成らなければ動けない場合を制限。
           </div>
-         </div>
-         <div class="help" style="margin-top:7px">
+</div>
+<div class="help" style="margin-top:7px">
           OFFでは上記4種類の反則候補を合法手生成から意図的に除外せず、検証・研究用として指せます。玉の安全性はOFFでも維持されます。
          </div>
-         <div class="audit-log" id="auditLog">
-          <div class="audit-item">
-           <span class="stamp">
+<div class="audit-log" id="auditLog">
+<div class="audit-item">
+<span class="stamp">
             --:--:--
            </span>
            監査ログを準備しています。
           </div>
-         </div>
-        </div>
-       </details>
-      </div>
-      <div class="telemetry-card" id="telemetryCard">
-       <div class="telemetry-head">
-        <b>
+</div>
+</div>
+</details>
+</div>
+<div class="telemetry-card" id="telemetryCard">
+<div class="telemetry-head">
+<b>
          AI・対局テレメトリ
         </b>
-        <span id="telemetryMode">
+<span id="telemetryMode">
          LIVE
         </span>
-       </div>
-       <div class="telemetry-grid">
-        <div class="telemetry-cell">
-         <b id="tmDepth">
+</div>
+<div class="telemetry-grid">
+<div class="telemetry-cell">
+<b id="tmDepth">
           —
          </b>
-         <span>
+<span>
           到達深さ
          </span>
-        </div>
-        <div class="telemetry-cell">
-         <b id="tmNodes">
+</div>
+<div class="telemetry-cell">
+<b id="tmNodes">
           0
          </b>
-         <span>
+<span>
           節点
          </span>
-        </div>
-        <div class="telemetry-cell">
-         <b id="tmMs">
+</div>
+<div class="telemetry-cell">
+<b id="tmMs">
           0
          </b>
-         <span>
+<span>
           思考ms
          </span>
-        </div>
-        <div class="telemetry-cell">
-         <b id="tmScore">
+</div>
+<div class="telemetry-cell">
+<b id="tmScore">
           0.00
          </b>
-         <span>
+<span>
           評価
          </span>
-        </div>
-        <div class="telemetry-cell">
-         <b id="tmBranch">
+</div>
+<div class="telemetry-cell">
+<b id="tmBranch">
           0
          </b>
-         <span>
+<span>
           候補手
          </span>
-        </div>
-        <div class="telemetry-cell">
-         <b id="tmMemory">
+</div>
+<div class="telemetry-cell">
+<b id="tmMemory">
           0
          </b>
-         <span>
+<span>
           監査件数
          </span>
-        </div>
-       </div>
-       <div class="telemetry-bar">
-        <i id="tmBar">
-        </i>
-       </div>
-       <div class="telemetry-line" id="tmLine">
+</div>
+</div>
+<div class="telemetry-bar">
+<i id="tmBar">
+</i>
+</div>
+<div class="telemetry-line" id="tmLine">
         AIが思考すると、探索状態をここへ反映します。
        </div>
-      </div>
-      <div class="position-tags" id="positionTags">
-       <h3>
+</div>
+<div class="position-tags" id="positionTags">
+<h3>
         局面タグ・自動診断
        </h3>
-       <div class="tag-cloud" id="tagCloud">
-        <span class="pos-tag">
+<div class="tag-cloud" id="tagCloud">
+<span class="pos-tag">
          初期局面
         </span>
-       </div>
-       <div class="pos-note" id="posNote">
+</div>
+<div class="pos-note" id="posNote">
         盤面・持ち駒・手数から、現在の局面の特徴を自動推定します。
        </div>
-      </div>
-      <section aria-live="polite" class="u54-status">
-       <div class="u54-status-head">
-        <b>
+</div>
+<section aria-live="polite" class="u54-status">
+<div class="u54-status-head">
+<b>
          対局コンディション
         </b>
-        <span id="u54UiState">
+<span id="u54UiState">
          安定
         </span>
-       </div>
-       <div class="u54-status-grid">
-        <div>
-         <small>
+</div>
+<div class="u54-status-grid">
+<div>
+<small>
           手番
          </small>
-         <b id="u54Turn">
+<b id="u54Turn">
           —
          </b>
-        </div>
-        <div>
-         <small>
+</div>
+<div>
+<small>
           局面手数
          </small>
-         <b id="u54Ply">
+<b id="u54Ply">
           0
          </b>
-        </div>
-        <div>
-         <small>
+</div>
+<div>
+<small>
           AI状態
          </small>
-         <b id="u54AiState">
+<b id="u54AiState">
           待機
          </b>
-        </div>
-        <div>
-         <small>
+</div>
+<div>
+<small>
           最善手
          </small>
-         <b id="u54BestState">
+<b id="u54BestState">
           未解禁
          </b>
-        </div>
-       </div>
-       <div class="u54-tip" id="u54Tip">
+</div>
+</div>
+<div class="u54-tip" id="u54Tip">
         操作中は解析結果を古い局面のまま表示しない安全弁が働きます。
        </div>
-      </section>
-      <details class="feature-drawer" id="featureDrawer">
-       <summary>
+</section>
+<details class="feature-drawer" id="featureDrawer">
+<summary>
         極上品質アップデート情報
        </summary>
-       <div class="feature-drawer-body">
-        <div class="feature-list">
-         <div class="feature-row">
-          <b>
+<div class="feature-drawer-body">
+<div class="feature-list">
+<div class="feature-row">
+<b>
            反則監査
           </b>
-          <span>
+<span>
            ON/OFF状態、直前手、検出理由を対局中に記録し、問題摘発との連携を強化。
           </span>
-         </div>
-         <div class="feature-row">
-          <b>
+</div>
+<div class="feature-row">
+<b>
            AIテレメトリ
           </b>
-          <span>
+<span>
            深さ・節点・時間・評価・候補枠を対局画面へ整理して表示。Lv41の長考も進行状況を把握しやすくします。
           </span>
-         </div>
-         <div class="feature-row">
-          <b>
+</div>
+<div class="feature-row">
+<b>
            局面診断
           </b>
-          <span>
+<span>
            駒得、王の安全、持ち駒、進展度、駒の集中などから局面タグを自動生成。
           </span>
-         </div>
-         <div class="feature-row">
-          <b>
+</div>
+<div class="feature-row">
+<b>
            表示安定化
           </b>
-          <span>
+<span>
            狭い画面でも盤・駒台・サイドバーが横にはみ出しにくいレイアウトを維持。
           </span>
-         </div>
-         <div class="feature-row">
-          <b>
+</div>
+<div class="feature-row">
+<b>
            研究向け
           </b>
-          <span>
+<span>
            反則制御OFFを合法手生成と監査ログへ一貫して接続し、研究用の特殊局面を扱いやすくします。
           </span>
-         </div>
-        </div>
-       </div>
-      </details>
-      <div class="only-ai lv-box">
-       <b>
+</div>
+</div>
+</div>
+</details>
+<div class="only-ai lv-box">
+<b>
         今の読み
        </b>
-       <div class="help" id="engineInfo">
+<div class="help" id="engineInfo">
         まだ考えていません。Lv41では目標深さ50・最大180秒・最大3,000万節点まで長考します。実到達深さは局面と端末性能で変わります。
        </div>
-       <div class="engine-meter">
-        <i id="playEngineMeter">
-        </i>
-       </div>
-       <div class="game-badges" id="playEngineBadges">
-       </div>
-      </div>
-      <div aria-live="polite" class="game-report-card" id="gameReportCard">
-       <div class="game-report-head">
-        <b>
+<div class="engine-meter">
+<i id="playEngineMeter">
+</i>
+</div>
+<div class="game-badges" id="playEngineBadges">
+</div>
+</div>
+<div aria-live="polite" class="game-report-card" id="gameReportCard">
+<div class="game-report-head">
+<b>
          対局カルテ
         </b>
-        <span id="gamePhaseBadge">
+<span id="gamePhaseBadge">
          序盤
         </span>
-       </div>
-       <div class="game-report-grid">
-        <div>
-         <b id="reportPly">
+</div>
+<div class="game-report-grid">
+<div>
+<b id="reportPly">
           0
          </b>
-         <span>
+<span>
           手数
          </span>
-        </div>
-        <div>
-         <b id="reportCaps">
+</div>
+<div>
+<b id="reportCaps">
           0
          </b>
-         <span>
+<span>
           駒取り
          </span>
-        </div>
-        <div>
-         <b id="reportProm">
+</div>
+<div>
+<b id="reportProm">
           0
          </b>
-         <span>
+<span>
           成り
          </span>
-        </div>
-        <div>
-         <b id="reportChecks">
+</div>
+<div>
+<b id="reportChecks">
           0
          </b>
-         <span>
+<span>
           王手
          </span>
-        </div>
-       </div>
-       <div class="report-material" id="reportMaterial">
+</div>
+</div>
+<div class="report-material" id="reportMaterial">
         盤上・持ち駒を集計するとここに表示します。
        </div>
-       <div class="report-note" id="reportNote">
+<div class="report-note" id="reportNote">
         対局中は局面情報を自動更新。終局後は対局全体のサマリーになります。
        </div>
-      </div>
-      <h2 style="margin-top:14px">
+</div>
+<h2 style="margin-top:14px">
        表示
       </h2>
-      <div class="tog-grid" id="playToggles">
-      </div>
-      <div class="help" style="margin-top:6px">
+<div class="tog-grid" id="playToggles">
+</div>
+<div class="help" style="margin-top:6px">
        緑が行ける場所、青みが置ける場所、赤が取れる場所です。オフにしても、知っているマスへは指せます。
       </div>
-      <h2 style="margin-top:14px">
+<h2 style="margin-top:14px">
        棋譜
       </h2>
-      <div class="kifu" id="kifu">
-      </div>
-      <h2 style="margin-top:14px">
+<div class="kifu" id="kifu">
+</div>
+<h2 style="margin-top:14px">
        遊び方
       </h2>
-      <div class="help">
+<div class="help">
        自分の駒をタップして、緑の地点へ。赤い地点は取れる駒です。青い地点は持ち駒を置ける場所です。持ち駒を選んで空いているマスへ打てます。盤の左が後手の駒台、右が先手の駒台で、飛・角・金・銀・桂・香・歩の順に置きます。画面拡大では盤と駒台と評価だけになります。ヒントをオフにするとヒントボタンは消えます。表示のボタンで、行ける場所・置ける場所・取れる場所などの有無を切り替えられます。成れるときは「成る／不成」を選べます。王手は玉が赤く揺れます。Uで待った、Fで反転、Hでヒント、Mで音です。
       </div>
-     </aside>
-    </div>
-   </div>
-  </section>
-  <div aria-hidden="true" class="modal" id="labOverlay">
-   <div class="card lab-card">
-    <div class="kicker">
+</aside>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="modal" id="labOverlay">
+<div class="card lab-card">
+<div class="kicker">
      AI RESEARCH LAB / LV41
     </div>
-    <h3>
+<h3>
      異次元AI研究室
     </h3>
-    <p>
+<p>
      Lv41は最大深さ50・最大180秒・最大3,000万節点を目標に、長時間探索を許容する実験モードです。端末性能と局面により実到達深さは変わります。
     </p>
-    <div class="lab-grid">
-     <button id="labAnalyze">
+<div class="lab-grid">
+<button id="labAnalyze">
       現在局面を異次元解析
      </button>
-     <button id="labStress">
+<button id="labStress">
       探索ベンチマーク
      </button>
-     <button id="labExplain">
+<button id="labExplain">
       読み筋・候補比較
      </button>
-     <button id="labClose">
+<button id="labClose">
       閉じる
      </button>
-    </div>
-    <div class="engine-meter">
-     <i id="labMeter">
-     </i>
-    </div>
-    <div class="inspector" id="labResult">
+</div>
+<div class="engine-meter">
+<i id="labMeter">
+</i>
+</div>
+<div class="inspector" id="labResult">
      研究室を起動すると、深度・節点・時間・候補手を記録します。
     </div>
-   </div>
-  </div>
-  <div class="promo" id="promo">
-   <div class="card">
-    <div style="letter-spacing:.2em;color:#8a5a28">
+</div>
+</div>
+<div class="promo" id="promo">
+<div class="card">
+<div style="letter-spacing:.2em;color:#8a5a28">
      成りの選択
     </div>
-    <h3 id="promoName">
+<h3 id="promoName">
      歩
     </h3>
-    <p>
+<p>
      敵陣に入りました。成りますか？
     </p>
-    <div class="controls" style="justify-content:center">
-     <button class="gold" id="doProm">
+<div class="controls" style="justify-content:center">
+<button class="gold" id="doProm">
       成る
      </button>
-     <button id="noProm">
+<button id="noProm">
       不成
      </button>
-    </div>
-   </div>
-  </div>
-  <div class="modal" id="modal">
-   <div class="card">
-    <div id="modalKicker" style="letter-spacing:.2em;color:#8a5a28">
+</div>
+</div>
+</div>
+<div class="modal" id="modal">
+<div class="card">
+<div id="modalKicker" style="letter-spacing:.2em;color:#8a5a28">
      対局終了
     </div>
-    <h3 id="modalTitle">
+<h3 id="modalTitle">
      詰み
     </h3>
-    <p id="modalText">
-    </p>
-    <div class="controls" style="justify-content:center">
-     <button class="gold" id="modalOk">
+<p id="modalText">
+</p>
+<div class="controls" style="justify-content:center">
+<button class="gold" id="modalOk">
       もう一局
      </button>
-     <button class="review-btn" id="modalReview">
+<button class="review-btn" id="modalReview">
       ハイライトを見る
      </button>
-     <button class="modal-close-x" id="modalClose">
+<button class="modal-close-x" id="modalClose">
       閉じる
      </button>
-     <button id="modalHome">
+<button id="modalHome">
       ホームへ
      </button>
-    </div>
-   </div>
-  </div>
-  <div class="pass" id="pass">
-   <div class="card">
-    <div class="kicker">
+</div>
+</div>
+</div>
+<div class="pass" id="pass">
+<div class="card">
+<div class="kicker">
      対面対局
     </div>
-    <h3 id="passTitle">
+<h3 id="passTitle">
      盤を渡す
     </h3>
-    <p id="passText">
+<p id="passText">
      次の人へ端末を渡してから、続けるを押してください。
     </p>
-    <button class="gold" id="passOk">
+<button class="gold" id="passOk">
      続ける
     </button>
-   </div>
-  </div>
-  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js">
-  </script>
-  <script>
+</div>
+</div>
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js">
+</script>
+<script>
    const TYPES = ["P","L","N","S","G","B","R","K"];
 const NAME = {P:"歩", L:"香", N:"桂", S:"銀", G:"金", B:"角", R:"飛", K:"玉", PT:"と", LT:"成香", NT:"成桂", ST:"成銀", BT:"馬", RT:"龍"};
 const RANK = ["一","二","三","四","五","六","七","八","九"];
@@ -2894,7 +2913,7 @@ paintProblems();
 paintStats();
 $("lvLabel").textContent = "Lv " + (+$("lv").value) + "　" + rankName(+$("lv").value) + "　開始後は固定";
   </script>
-  <style id="kyokujo-ultra-style">
+<style id="kyokujo-ultra-style">
    /* ── 極上将棋 ULTRA UI 拡張 ───────────────────────────── */
 :root{
   --u-gold:#f3cf72; --u-gold2:#9f7128; --u-wood:#d7aa67; --u-wood2:#8e5726;
@@ -3054,180 +3073,180 @@ button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visi
 
 .w55-analysis-panel{margin:10px 0;padding:12px;border:1px solid rgba(120,78,30,.28);border-radius:16px;background:linear-gradient(180deg,rgba(255,250,239,.96),rgba(245,229,199,.9));box-shadow:0 10px 26px rgba(55,35,15,.12);color:#24170d}.w55-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.w55-head span{font-size:11px;padding:3px 7px;border-radius:999px;background:#2e6b4e;color:#fff}.w55-line{font-size:12px;line-height:1.6;margin-bottom:8px}.w55-line span{opacity:.6;margin-right:6px}.w55-line strong{font-size:13px}.w55-cands{display:grid;gap:4px}.w55-c{display:grid;grid-template-columns:28px 1fr auto;gap:7px;align-items:center;padding:5px 7px;border-radius:8px;background:rgba(255,255,255,.55);font-size:11px}.w55-c em{font-style:normal;font-variant-numeric:tabular-nums}.w55-stats{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}.w55-stats span{font-size:10px;padding:3px 6px;border-radius:999px;background:rgba(70,50,25,.08)}.w55-note{margin-top:8px;font-size:10px;line-height:1.55;opacity:.7}.play-layout aside:last-child{scrollbar-width:thin}@media(max-width:900px){.w55-analysis-panel{font-size:11px}.w55-stats span{font-size:9px}}
   </style>
-  <!-- 追加UI: 終局後も画面を閉じて、詳細レビューへ移れる -->
-  <div aria-hidden="true" id="analysisOverlay">
-   <div class="analysis-shell">
-    <section class="analysis-board">
-     <div class="analysis-head">
-      <div>
-       <div class="kicker">
+<!-- 追加UI: 終局後も画面を閉じて、詳細レビューへ移れる -->
+<div aria-hidden="true" id="analysisOverlay">
+<div class="analysis-shell">
+<section class="analysis-board">
+<div class="analysis-head">
+<div>
+<div class="kicker">
         DEEP REVIEW / HIGHLIGHTS
        </div>
-       <h2>
+<h2>
         対局ハイライト・深掘り解析
        </h2>
-       <div id="reviewTitleLine">
+<div id="reviewTitleLine">
         棋譜を一手ずつ再生しながら、評価・局面・候補手を確認できます。
        </div>
-      </div>
-      <div class="ultra-row">
-       <button id="reviewAuto">
+</div>
+<div class="ultra-row">
+<button id="reviewAuto">
         ▶ 自動再生
        </button>
-       <button class="gold" id="reviewClose">
+<button class="gold" id="reviewClose">
         閉じる
        </button>
-      </div>
-     </div>
-     <div class="analysis-stage">
-      <div id="reviewBoardMount">
-      </div>
-     </div>
-     <div class="ultra-row" style="justify-content:center;margin-top:8px">
-      <button class="ultra-mini" id="reviewStatus">
+</div>
+</div>
+<div class="analysis-stage">
+<div id="reviewBoardMount">
+</div>
+</div>
+<div class="ultra-row" style="justify-content:center;margin-top:8px">
+<button class="ultra-mini" id="reviewStatus">
        第0局面 / 0手
       </button>
-      <button class="ultra-mini" id="reviewEval">
+<button class="ultra-mini" id="reviewEval">
        評価 +0.00
       </button>
-      <button class="ultra-mini" id="reviewSide">
+<button class="ultra-mini" id="reviewSide">
        先手番
       </button>
-     </div>
-    </section>
-    <aside class="analysis-side">
-     <div class="analysis-tabs">
-      <button class="analysis-tab on" data-pane="highlights">
+</div>
+</section>
+<aside class="analysis-side">
+<div class="analysis-tabs">
+<button class="analysis-tab on" data-pane="highlights">
        ハイライト
       </button>
-      <button class="analysis-tab" data-pane="engine">
+<button class="analysis-tab" data-pane="engine">
        AI解析
       </button>
-      <button class="analysis-tab" data-pane="stats">
+<button class="analysis-tab" data-pane="stats">
        統計
       </button>
-      <button class="analysis-tab" data-pane="position">
+<button class="analysis-tab" data-pane="position">
        局面
       </button>
-     </div>
-     <div class="analysis-pane on" id="pane-highlights">
-      <div class="review-nav">
-       <button id="rvFirst">
+</div>
+<div class="analysis-pane on" id="pane-highlights">
+<div class="review-nav">
+<button id="rvFirst">
         ⏮
        </button>
-       <button id="rvPrev">
+<button id="rvPrev">
         ◀
        </button>
-       <button id="rvNext">
+<button id="rvNext">
         ▶
        </button>
-       <button id="rvLast">
+<button id="rvLast">
         ⏭
        </button>
-       <button id="rvClose2">
+<button id="rvClose2">
         ×
        </button>
-      </div>
-      <div class="analysis-kpi">
-       <div>
-        <b id="rvMoves">
+</div>
+<div class="analysis-kpi">
+<div>
+<b id="rvMoves">
          0
         </b>
-        <span>
+<span>
          総手数
         </span>
-       </div>
-       <div>
-        <b id="rvChecks">
+</div>
+<div>
+<b id="rvChecks">
          0
         </b>
-        <span>
+<span>
          王手
         </span>
-       </div>
-       <div>
-        <b id="rvCaps">
+</div>
+<div>
+<b id="rvCaps">
          0
         </b>
-        <span>
+<span>
          駒取り
         </span>
-       </div>
-       <div>
-        <b id="rvPromos">
+</div>
+<div>
+<b id="rvPromos">
          0
         </b>
-        <span>
+<span>
          成り
         </span>
-       </div>
-      </div>
-      <h3>
+</div>
+</div>
+<h3>
        注目手
       </h3>
-      <div id="highlightCards">
-      </div>
-      <h3>
+<div id="highlightCards">
+</div>
+<h3>
        棋譜ナビ
       </h3>
-      <div class="review-list" id="reviewMoveList">
-      </div>
-     </div>
-     <div class="analysis-pane" id="pane-engine">
-      <div class="ultra-mini">
+<div class="review-list" id="reviewMoveList">
+</div>
+</div>
+<div class="analysis-pane" id="pane-engine">
+<div class="ultra-mini">
        長考モード：このブラウザ内で合法手を深く探索します。レベル40ほど時間を使い、候補手・評価・探索量を増やします。
       </div>
-      <div class="engine-meter">
-       <i id="reviewEngineMeter">
-       </i>
-      </div>
-      <div class="analysis-kpi">
-       <div>
-        <b id="reviewDepth">
+<div class="engine-meter">
+<i id="reviewEngineMeter">
+</i>
+</div>
+<div class="analysis-kpi">
+<div>
+<b id="reviewDepth">
          —
         </b>
-        <span>
+<span>
          探索深さ
         </span>
-       </div>
-       <div>
-        <b id="reviewNodes">
+</div>
+<div>
+<b id="reviewNodes">
          —
         </b>
-        <span>
+<span>
          節点
         </span>
-       </div>
-      </div>
-      <div class="inspector" id="reviewEngineText" style="margin-top:8px">
+</div>
+</div>
+<div class="inspector" id="reviewEngineText" style="margin-top:8px">
        現在の局面を解析できます。
       </div>
-      <button class="gold" id="analyzePosition" style="width:100%;margin-top:8px">
+<button class="gold" id="analyzePosition" style="width:100%;margin-top:8px">
        この局面を深く解析
       </button>
-      <div id="candidateList">
-      </div>
-     </div>
-     <div class="analysis-pane" id="pane-stats">
-      <div class="eval-chart" id="evalChart">
-      </div>
-      <div class="inspector" id="statsText" style="margin-top:8px">
-      </div>
-     </div>
-     <div class="analysis-pane" id="pane-position">
-      <div class="inspector" id="positionInspector">
-      </div>
-      <button id="copyPosition" style="width:100%;margin-top:8px">
+<div id="candidateList">
+</div>
+</div>
+<div class="analysis-pane" id="pane-stats">
+<div class="eval-chart" id="evalChart">
+</div>
+<div class="inspector" id="statsText" style="margin-top:8px">
+</div>
+</div>
+<div class="analysis-pane" id="pane-position">
+<div class="inspector" id="positionInspector">
+</div>
+<button id="copyPosition" style="width:100%;margin-top:8px">
        局面データをコピー
       </button>
-      <button id="exportReview" style="width:100%;margin-top:6px">
+<button id="exportReview" style="width:100%;margin-top:6px">
        詳細棋譜JSONを書き出す
       </button>
-     </div>
-    </aside>
-   </div>
-  </div>
-  <script id="kyokujo-ultra-script">
+</div>
+</aside>
+</div>
+</div>
+<script id="kyokujo-ultra-script">
    (() => {
   "use strict";
   const U = {
@@ -4580,7 +4599,7 @@ function W55RootMultiPV(b,h,side,depth,rootMoves,count){
   for(const m of arr){if(W55.stop)break;const gives=W55GivesCheck(b,h,m,side),cap=apply(b,h,m,side);const d2=Math.max(0,depth-1+(gives?1:0));const sc=W55AB(b,h,side==='S'?'G':'S',d2,-1e9,1e9,1,0);revert(b,h,m,side,cap);if(W55.stop)break;out.push({m,score:sc});}
   out.sort((a,b)=>side==='S'?b.score-a.score:a.score-b.score);return out;
 }
-function W55Search(msg){const b=msg.board,h=msg.hands,side=msg.side,profile=msg.profile||{depth:4,time:2000,nodes:50000};ruleControl=true;W55.tt=new Map();W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.rootSide=side;let root=legalMoves(b,h,side,true);if(!root.length){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:null,depth:0,nodes:0,score:0,candidates:[],pv:[]});return;}root.sort((x,y)=>W55Order(b,h,y,side,0,null)-W55Order(b,h,x,side,0,null));let best=root[0],bestScore=side==='S'?-1e9:1e9,reached=0,lastScore=0;const scores=new Map();for(let depth=1;depth<=profile.depth;depth++){if(W55.stop||performance.now()>=W55.deadline)break;let result=null;let delta=depth>=3?Math.max(60,Math.min(600,Math.abs(lastScore)*0.18+90)):1e9;let attempts=0;do{attempts++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W55Root(b,h,side,depth,depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9);if(W55.stop)break;if(depth>=3&&attempts<4&&((side==='S'&&result.score<=a)||(side==='S'&&result.score>=beta)||(side==='G'&&result.score>=beta)||(side==='G'&&result.score<=a))){delta*=2;continue;}break;}while(attempts<4);if(W55.stop||!result)break;best=result.move;bestScore=result.score;lastScore=result.score;reached=depth;W55.tt.set(W55Hash(b,h,side),{depth,score:bestScore,flag:'EXACT',move:best});if(W55.nodes<W55.limit&&performance.now()<W55.deadline){const mp=W55RootMultiPV(b,h,side,depth,root,8);for(const x of mp)scores.set(W55MKey(x.m),x.score);}root=legalMoves(b,h,side,true).sort((x,y)=>{const ex=scores.get(W55MKey(x)),ey=scores.get(W55MKey(y));if(ex==null&&ey==null)return W55Order(b,h,y,side,0,null)-W55Order(b,h,x,side,0,null);if(ex==null)return 1;if(ey==null)return -1;return side==='S'?ey-ex:ex-ey;});const pv=W55BuildPV(b,h,side,Math.min(depth,12));const candidates=root.slice(0,Math.min(10,root.length)).map(m=>({m,score:scores.has(W55MKey(m))?scores.get(W55MKey(m)):W55Eval(b,h)}));self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates});if(Math.abs(bestScore)>49000)break;}const pv=W55BuildPV(b,h,side,Math.min(reached,12));const candidates=root.slice(0,Math.min(10,root.length)).map(m=>({m,score:scores.has(W55MKey(m))?scores.get(W55MKey(m)):W55Eval(b,h)}));self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv});}
+function W55Search(msg){const b=msg.board,h=msg.hands,side=msg.side,profile=msg.profile||{depth:4,time:2000,nodes:50000};ruleControl=msg.ruleControl!==false;W55.tt=new Map();W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.rootSide=side;let root=legalMoves(b,h,side,true);if(!root.length){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:null,depth:0,nodes:0,score:0,candidates:[],pv:[]});return;}root.sort((x,y)=>W55Order(b,h,y,side,0,null)-W55Order(b,h,x,side,0,null));let best=root[0],bestScore=side==='S'?-1e9:1e9,reached=0,lastScore=0;const scores=new Map();for(let depth=1;depth<=profile.depth;depth++){if(W55.stop||performance.now()>=W55.deadline)break;let result=null;let delta=depth>=3?Math.max(60,Math.min(600,Math.abs(lastScore)*0.18+90)):1e9;let attempts=0;do{attempts++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W55Root(b,h,side,depth,depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9);if(W55.stop)break;if(depth>=3&&attempts<4&&((side==='S'&&result.score<=a)||(side==='S'&&result.score>=beta)||(side==='G'&&result.score>=beta)||(side==='G'&&result.score<=a))){delta*=2;continue;}break;}while(attempts<4);if(W55.stop||!result)break;best=result.move;bestScore=result.score;lastScore=result.score;reached=depth;W55.tt.set(W55Hash(b,h,side),{depth,score:bestScore,flag:'EXACT',move:best});if(W55.nodes<W55.limit&&performance.now()<W55.deadline){const mp=W55RootMultiPV(b,h,side,depth,root,8);for(const x of mp)scores.set(W55MKey(x.m),x.score);}root=legalMoves(b,h,side,true).sort((x,y)=>{const ex=scores.get(W55MKey(x)),ey=scores.get(W55MKey(y));if(ex==null&&ey==null)return W55Order(b,h,y,side,0,null)-W55Order(b,h,x,side,0,null);if(ex==null)return 1;if(ey==null)return -1;return side==='S'?ey-ex:ex-ey;});const pv=W55BuildPV(b,h,side,Math.min(depth,12));const candidates=root.slice(0,Math.min(10,root.length)).map(m=>({m,score:scores.has(W55MKey(m))?scores.get(W55MKey(m)):W55Eval(b,h)}));self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates});if(Math.abs(bestScore)>49000)break;}const pv=W55BuildPV(b,h,side,Math.min(reached,12));const candidates=root.slice(0,Math.min(10,root.length)).map(m=>({m,score:scores.has(W55MKey(m))?scores.get(W55MKey(m)):W55Eval(b,h)}));self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv});}
 function W55OneGame(profile,maxPlies){
   const b=Array.from({length:9},()=>Array(9).fill(null));const back=['L','N','S','G','K','G','S','N','L'];back.forEach((t,c)=>{b[0][c]={t:t,s:'G',p:false};b[8][c]={t:t,s:'S',p:false};});b[1][1]={t:'R',s:'G',p:false};b[1][7]={t:'B',s:'G',p:false};b[7][1]={t:'B',s:'S',p:false};b[7][7]={t:'R',s:'S',p:false};for(let c=0;c<9;c++){b[2][c]={t:'P',s:'G',p:false};b[6][c]={t:'P',s:'S',p:false};}const h={S:{P:0,L:0,N:0,S:0,G:0,B:0,R:0},G:{P:0,L:0,N:0,S:0,G:0,B:0,R:0}};let side='S',plies=0;while(plies<maxPlies){const moves=legalMoves(b,h,side,true);if(!moves.length)return {result:inCheck(b,side)?(side==='S'?'G':'S'):'draw',plies};W55.tt=new Map();W55.nodes=0;W55.stop=false;W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.killers=[];W55.history=new Map();const root=moves.slice().sort((a,c)=>W55Order(b,h,c,side,0,null)-W55Order(b,h,a,side,0,null));let best=root[0],bs=side==='S'?-1e9:1e9;for(const m of root.slice(0,Math.min(16,root.length))){if(W55.stop)break;const cap=apply(b,h,m,side);const sc=W55AB(b,h,side==='S'?'G':'S',Math.max(1,profile.depth-1),-1e9,1e9,1,0);revert(b,h,m,side,cap);if(W55.stop)break;if(side==='S'?sc>bs:sc<bs){bs=sc;best=m;}}apply(b,h,best,side);side=side==='S'?'G':'S';plies++;}return {result:'draw',plies};}
 function W55SelfPlay(msg){const games=Math.max(1,Math.min(1000,msg.games||10)),profile=msg.profile||{depth:2,time:120,nodes:5000},stats={S:0,G:0,draw:0,plies:0};for(let i=0;i<games;i++){const r=W55OneGame(profile,msg.maxPlies||180);stats[r.result]=(stats[r.result]||0)+1;stats.plies+=r.plies;if((i+1)%10===0)self.postMessage({type:'selfPlayProgress',id:msg.id,game:i+1,games,stats});}stats.avgPlies=stats.plies/games;self.postMessage({type:'selfPlayDone',id:msg.id,stats});}
@@ -4627,7 +4646,236 @@ let flag='EXACT';if(best<=oa)flag='HIGH';else if(best>=ob)flag='LOW';W55.tt.set(
 function W56Root(b,h,side,depth,alpha,beta,hkey){const root=legalMoves(b,h,side,true);root.sort((a,c)=>W56Order(b,h,c,side,0,null)-W56Order(b,h,a,side,0,null));let best=side==='S'?-1e9:1e9,bm=root[0],scores=[];const path=new Map([[hkey,1]]);for(let i=0;i<root.length;i++){if(W55.stop)break;const m=root[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const d2=Math.max(0,depth-1+(gives?1:0));let sc;if(i>0){if(side==='S')sc=W56AB(b,h,'G',d2,alpha,alpha+1,1,nh,0,path);else sc=W56AB(b,h,'S',d2,beta-1,beta,1,nh,0,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,1,nh,0,path)}else sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,1,nh,0,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(W55.stop)break;scores.push({m,score:sc});if(side==='S'){if(sc>best){best=sc;bm=m}if(sc>alpha)alpha=sc}else{if(sc<best){best=sc;bm=m}if(sc<beta)beta=sc}if(alpha>=beta)break}return {score:best,move:bm,scores}}
 function W56ExactMultiPV(b,h,side,depth,hkey,rootScores,count){const ranked=rootScores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,Math.min(count,rootScores.length));const out=[];for(const item of ranked){if(W55.stop)break;const m=item.m,cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);const path=new Map([[hkey,1],[nh,1]]);const sc=W56AB(b,h,side==='S'?'G':'S',Math.max(0,depth-1),-1e9,1e9,1,nh,0,path);revert(b,h,m,side,cap);if(W55.stop)break;out.push({m,score:sc})}return out.sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score)}
 function W56BuildPV(b,h,side,depth,hkey){const bb=W55CloneBoard(b),hh=W55CloneHands(h),pv=[],seen=new Set();let key=hkey;for(let d=0;d<depth;d++){const e=W55.tt.get(key);if(!e||!e.moveKey)break;if(seen.has(e.moveKey))break;const m=legalMoves(bb,hh,side,true).find(x=>W56MKey(x)===e.moveKey);if(!m)break;pv.push(m);seen.add(e.moveKey);const cap=bb[m.toR]?.[m.toC]||null;key=W56MoveHash(key,bb,hh,m,side,cap);apply(bb,hh,m,side);side=side==='S'?'G':'S'}return pv}
+
+/* WORLD-CLASS 57 PERFORMANCE / EVALUATION LAYER -----------------------
+   Keeps the ULTRA57 architecture intact while fixing the two largest
+   practical bottlenecks: recursive SEE->legalMoves and quiescence that
+   regenerated the entire legal move list at every leaf. Also improves
+   king safety, piece-square scoring, promotion potential and endgame phase.
+----------------------------------------------------------------------- */
+function W57Phase(b,h){
+  let major=0;
+  for(let r=0;r<9;r++)for(let c=0;c<9;c++){
+    const p=b[r][c]; if(!p)continue;
+    if(p.t==='R'||p.t==='B')major+=p.p?1.35:1.8;
+    else if(p.t==='G'||p.t==='S')major+=.55;
+    else if(p.t==='N'||p.t==='L')major+=.3;
+  }
+  for(const s of ['S','G'])for(const t of ['R','B','G','S','N','L'])major+=(h[s][t]||0)*({R:1.8,B:1.8,G:.55,S:.55,N:.3,L:.3}[t]);
+  return Math.max(0,Math.min(1,major/10));
+}
+function W57KingShell(b,k,side){
+  if(!k)return 0;
+  const home=side==='S'?8:0, adv=Math.abs(home-k[0]);
+  let own=0,enemy=0,empty=0;
+  for(let dr=-2;dr<=2;dr++)for(let dc=-2;dc<=2;dc++){
+    if(!dr&&!dc)continue; const r=k[0]+dr,c=k[1]+dc;
+    if(!inb(r,c))continue; const p=b[r][c];
+    if(!p){empty++;continue;} if(p.s===side)own++;else enemy++;
+  }
+  const edge=(k[1]===0||k[1]===8)?1:0;
+  return own*10 - enemy*22 - empty*2 - adv*13 - Math.abs(k[1]-4)*1.5 + edge*5;
+}
+function W57Eval(b,h){
+  let sc=evaluate(b,h), sk=null,gk=null;
+  const phase=W57Phase(b,h);
+  let sf=0,gf=0;
+  for(let r=0;r<9;r++)for(let c=0;c<9;c++){
+    const p=b[r][c];if(!p)continue;
+    const adv=p.s==='S'?8-r:r, center=4-Math.abs(c-4);
+    let x=0;
+    if(p.t==='P'){
+      x += adv*(p.p?5.5:3.2);
+      if(!p.p && adv>=6)x+=18;
+      if(!p.p && adv<=1)x-=10;
+    } else if(p.t==='L') x += adv*2.6 + (adv>=5?10:0);
+    else if(p.t==='N') x += (adv>2&&adv<8?11:0) + (Math.abs(c-4)<=2?4:0);
+    else if(p.t==='S') x += adv*3.4 + center*1.5;
+    else if(p.t==='G') x += adv*1.4;
+    else if(p.t==='R') x += center*3 + (adv>=3?7:0) + (p.p?9:0);
+    else if(p.t==='B') x += center*2.4 + (adv>=3?6:0) + (p.p?8:0);
+    else if(p.t==='K'){if(p.s==='S')sk=[r,c];else gk=[r,c];x += -Math.abs(c-4)*2;}
+    if(p.s==='S')sf+=x;else gf+=x;
+  }
+  sc += sf-gf;
+  if(sk)sc += W57KingShell(b,sk,'S')*(1.0+.35*(1-phase));
+  if(gk)sc -= W57KingShell(b,gk,'G')*(1.0+.35*(1-phase));
+  // Open-file / long-range pressure. This is deliberately cheap: no move generation.
+  for(let c=0;c<9;c++){
+    let sp=0,gp=0,occ=0;
+    for(let r=0;r<9;r++){const p=b[r][c];if(!p)continue;occ++;if(p.t==='P'&&!p.p){if(p.s==='S')sp++;else gp++;}}
+    if(!sp&&!gp){for(let r=0;r<9;r++){const p=b[r][c];if(!p)continue;if(p.t==='R'){if(p.s==='S')sc+=11;else sc-=11;}if(p.t==='L'){if(p.s==='S')sc+=2;else sc-=2;}}}
+    else if(sp===1&&gp===0){for(let r=0;r<9;r++){const p=b[r][c];if(p&&p.t==='R'){if(p.s==='S')sc+=5;else sc-=5;}}}
+    else if(gp===1&&sp===0){for(let r=0;r<9;r++){const p=b[r][c];if(p&&p.t==='R'){if(p.s==='G')sc-=5;else sc+=5;}}}
+  }
+  // Hand material is already valued by evaluate(); this term rewards the side
+  // that has the initiative in the late phase without overwhelming material.
+  let handS=0,handG=0;for(const t of ['R','B','G','S','N','L','P']){handS+=(h.S[t]||0)*(VAL[t]||0);handG+=(h.G[t]||0)*(VAL[t]||0);}
+  sc+=(handS-handG)*(0.025+0.04*phase);
+  return sc;
+}
+function W57SEE(b,h,m,side){
+  if(!m.capture)return 0;
+  const victim=W56PieceVal(b[m.toR]?.[m.toC]);
+  const attacker=W56PieceVal(b[m.fromR]?.[m.fromC]||{t:m.t,p:false});
+  const promotion=m.promote?(VAL[m.t+'T']||VAL[m.t]||0)-(VAL[m.t]||0):0;
+  // Fast SEE-lite: never recursively generates legalMoves. The search itself
+  // verifies legality, so ordering can remain deliberately conservative.
+  let gain=victim-attacker*0.58+promotion;
+  if(m.t==='P'&&m.promote)gain+=80;
+  if(m.t==='N'&&m.promote)gain+=70;
+  return gain;
+}
+W56SEE=W57SEE;
+W55Eval=W57Eval;
+
+function W57Q(b,h,side,alpha,beta,ply,qdepth,hkey,path){
+  if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}
+  W55.nodes++;
+  if(path.get(hkey)>=3)return 0;
+  const check=inCheck(b,side);
+  if(check){
+    const ms=legalMoves(b,h,side,true);
+    if(!ms.length)return side==='S'?-50000+ply:50000-ply;
+    if(qdepth<=0)return side==='S'?-48000+ply:48000-ply;
+    ms.sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));
+    let best=side==='S'?-1e9:1e9;
+    for(const m of ms){if(W55.stop)break;const cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W57Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}
+    return best;
+  }
+  let best=side==='S'?-1e9:1e9,found=false;
+  const raw=pseudo(b,h,side);
+  const tactical=[];
+  for(const m of raw){if(!m.capture&&!m.promote)continue;const cap=b[m.toR]?.[m.toC]||null;apply(b,h,m,side);const legal=!inCheck(b,side);revert(b,h,m,side,cap);if(legal)tactical.push(m)}
+  tactical.sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));
+  for(const m of tactical){if(W55.stop)break;found=true;const cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W57Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}
+  return found?best:W55Eval(b,h);
+}
+W56Q=W57Q;
 function W55Search(msg){const b=msg.board,h=msg.hands,side=msg.side,profile=msg.profile||{depth:4,time:2000,nodes:50000};ruleControl=true;W55.tt=new Map();W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.rootSide=side;const hkey=W56HashFull(b,h,side);let root=legalMoves(b,h,side,true);if(!root.length){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:null,depth:0,nodes:0,score:0,candidates:[],pv:[]});return}let best=root[0],bestScore=side==='S'?-1e9:1e9,reached=0,lastScore=0,lastScores=[];for(let depth=1;depth<=profile.depth;depth++){if(W55.stop||performance.now()>=W55.deadline)break;let result=null,attempt=0,delta=depth>=3&&Number.isFinite(lastScore)?Math.max(40,Math.min(900,Math.abs(lastScore)*0.2+70)):1e9;while(attempt<4){attempt++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W56Root(b,h,side,depth,a,beta,hkey);if(W55.stop)break;const fail=depth>=3&&((side==='S'&&(result.score<=a||result.score>=beta))||(side==='G'&&(result.score<=a||result.score>=beta)));if(fail){delta*=2;continue}break}if(W55.stop||!result)break;best=result.move;bestScore=result.score;lastScore=result.score;lastScores=result.scores;reached=depth;W55.tt.set(hkey,{depth,score:bestScore,flag:'EXACT',moveKey:W56MKey(best)});const pv=W56BuildPV(b,h,side,Math.min(depth,16),hkey);let candidates=result.scores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);if(depth>=3&&performance.now()<W55.deadline&&W55.nodes<W55.limit*0.72)candidates=W56ExactMultiPV(b,h,side,depth,hkey,candidates,Math.min(5,candidates.length));self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates});if(Math.abs(bestScore)>49000)break}const pv=W56BuildPV(b,h,side,Math.min(reached,16),hkey);let candidates=lastScores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);if(reached>=2&&performance.now()<W55.deadline&&W55.nodes<W55.limit)candidates=W56ExactMultiPV(b,h,side,reached,hkey,candidates,Math.min(5,candidates.length));self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv})}
+
+
+/* ULTRA58 ENGINE CORE -----------------------------------------------------
+   Additive search upgrade. Existing move/rule code is intentionally retained.
+   Goals: bounded TT, counter-move ordering, depth-aware history, search telemetry,
+   safer quiet pruning, PV stability, and zero changes to rule semantics. */
+class W58BoundedTT{
+  constructor(max){this.max=Math.max(2048,max||65536);this.m=new Map();this.clock=0}
+  get(k){const e=this.m.get(k);if(e)e.age=this.clock++;return e}
+  set(k,e){e={...e,age:this.clock++};if(this.m.has(k)){this.m.set(k,e);return}
+    if(this.m.size>=this.max){let victim=null,va=Infinity,vd=-1;for(const [kk,v] of this.m){const age=v.age||0,dep=v.depth||0,score=age-dep*100000;if(score<va){va=score;victim=kk;vd=dep}}if(victim!==null)this.m.delete(victim)}this.m.set(k,e)}
+  clear(){this.m.clear();this.clock=0}
+  get size(){return this.m.size}
+}
+W55.tt=new W58BoundedTT(65536);
+W55.counter=new Map();
+W55.lastMoveByPly=[];
+W55.stableMoveKey='';W55.stableCount=0;W55.lastProgressMoveKey='';
+
+function W58HistoryScore(key,depth){const v=W55.history.get(key)||0;return v+(depth*depth*3)}
+function W58CounterScore(ply,key){const prev=W55.lastMoveByPly[Math.max(0,ply-1)];if(!prev)return 0;return W55.counter.get(prev+'|'+key)||0}
+function W58Order(b,h,m,side,ply,ttKey){
+  const key=W56MKey(m);let s=0;
+  if(ttKey===key)s+=1e12;
+  if((W55.killers[ply]||[]).includes(key))s+=2e8;
+  s+=W58CounterScore(ply,key);
+  s+=W58HistoryScore(key,Math.max(1,ply+1));
+  if(m.capture)s+=8e6+W56SEE(b,h,m,side)*5000;
+  if(m.promote)s+=1.2e6+(VAL[m.t]||0)*6000;
+  if(m.drop)s+=3500+(m.t==='R'||m.t==='B'?5000:m.t==='G'?2400:500);
+  if(W56Check(b,h,m,side))s+=1.5e7;
+  return s;
+}
+W56Order=W58Order;
+
+function W58RecordCutoff(m,side,ply,depth){
+  const key=W56MKey(m),old=W55.history.get(key)||0;
+  W55.history.set(key,Math.max(-200000,Math.min(200000,old+depth*depth*4-(old>0?Math.floor(old/32):0))));
+  const prev=W55.lastMoveByPly[Math.max(0,ply-1)];
+  if(prev){const ck=prev+'|'+key,cv=W55.counter.get(ck)||0;W55.counter.set(ck,Math.min(200000,cv+depth*depth*3))}
+  W55.killers[ply]=[key,...(W55.killers[ply]||[])].filter((x,i,a)=>a.indexOf(x)===i).slice(0,2);
+}
+
+function W58AB(b,h,side,depth,alpha,beta,ply,hkey,ext,path){
+  if(typeof hkey!=='bigint'){hkey=W56HashFull(b,h,side);path=new Map([[hkey,1]]);ext=0}
+  if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}
+  W55.nodes++;
+  const rep=path.get(hkey)||0;if(rep>=3)return 0;
+  const old=W55.tt.get(hkey);
+  if(old&&old.depth>=depth){if(old.flag==='EXACT')return old.score;if(old.flag==='LOW'&&old.score>alpha)alpha=old.score;if(old.flag==='HIGH'&&old.score<beta)beta=old.score;if(alpha>=beta)return old.score}
+  if(depth<=0)return W57Q(b,h,side,alpha,beta,ply,4,hkey,path);
+  const ms=legalMoves(b,h,side,true);
+  if(!ms.length)return inCheck(b,side)?(side==='S'?-50000+ply:50000-ply):0;
+  const ttMove=old?.moveKey;ms.sort((a,c)=>W58Order(b,h,c,side,ply,ttMove)-W58Order(b,h,a,side,ply));
+  const oa=alpha,ob=beta;let best=side==='S'?-1e9:1e9,bm=ms[0];
+  for(let i=0;i<ms.length;i++){
+    if(W55.stop)break;
+    const m=ms[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);
+    W55.lastMoveByPly[ply]=W56MKey(m);
+    apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);
+    let d2=depth-1+(gives&&ext<6?1:0),sc;
+    const quiet=!m.capture&&!m.promote&&!gives&&!m.drop;
+    /* Conservative late-move reduction. We deliberately do not reduce the first
+       4 moves, checks, captures, promotions, drops, or killer/TT moves. */
+    if(i>=4&&depth>=7&&quiet&&ttMove!==W56MKey(m)&&!(W55.killers[ply]||[]).includes(W56MKey(m))){
+      const hist=W55.history.get(W56MKey(m))||0;
+      const red=hist>2500?1:hist<-500?2:(i>12?2:1);
+      sc=W58AB(b,h,side==='S'?'G':'S',Math.max(1,d2-red),alpha,beta,ply+1,nh,ext,path);
+      if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W58AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path);
+    }else if(i>0){
+      if(side==='S')sc=W58AB(b,h,'G',d2,alpha,alpha+1,ply+1,nh,ext,path);else sc=W58AB(b,h,'S',d2,beta-1,beta,ply+1,nh,ext,path);
+      if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W58AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path);
+    }else sc=W58AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path);
+    path.set(nh,Math.max(0,(path.get(nh)||1)-1));revert(b,h,m,side,cap);
+    if(W55.stop)break;
+    if(side==='S'){if(sc>best){best=sc;bm=m}if(sc>alpha)alpha=sc}else{if(sc<best){best=sc;bm=m}if(sc<beta)beta=sc}
+    if(alpha>=beta){W58RecordCutoff(m,side,ply,depth);break}
+  }
+  W55.lastMoveByPly[ply]=null;
+  let flag='EXACT';if(best<=oa)flag='HIGH';else if(best>=ob)flag='LOW';
+  W55.tt.set(hkey,{depth,score:best,flag,moveKey:W56MKey(bm)});return best;
+}
+W56AB=W58AB;
+
+function W58Root(b,h,side,depth,alpha,beta,hkey){
+  const root=legalMoves(b,h,side,true);root.sort((a,c)=>W58Order(b,h,c,side,0,null)-W58Order(b,h,a,side,0,null));
+  let best=side==='S'?-1e9:1e9,bm=root[0],scores=[];const path=new Map([[hkey,1]]);
+  for(let i=0;i<root.length;i++){
+    if(W55.stop)break;const m=root[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);
+    W55.lastMoveByPly[0]=W56MKey(m);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const d2=Math.max(0,depth-1+(gives?1:0));let sc;
+    if(i>0){if(side==='S')sc=W58AB(b,h,'G',d2,alpha,alpha+1,1,nh,0,path);else sc=W58AB(b,h,'S',d2,beta-1,beta,1,nh,0,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W58AB(b,h,side==='S'?'G':'S',d2,alpha,beta,1,nh,0,path)}else sc=W58AB(b,h,side==='S'?'G':'S',d2,alpha,beta,1,nh,0,path);
+    path.set(nh,Math.max(0,(path.get(nh)||1)-1));revert(b,h,m,side,cap);if(W55.stop)break;scores.push({m,score:sc});
+    if(side==='S'){if(sc>best){best=sc;bm=m}if(sc>alpha)alpha=sc}else{if(sc<best){best=sc;bm=m}if(sc<beta)beta=sc}if(alpha>=beta)break;
+  }
+  W55.lastMoveByPly[0]=null;return {score:best,move:bm,scores};
+}
+
+function W58Search(msg){
+  const b=msg.board,h=msg.hands,side=msg.side,profile=msg.profile||{depth:4,time:2000,nodes:50000};
+  ruleControl=true;W55.tt=new W58BoundedTT(Math.max(8192,Math.min(220000,Math.floor((profile.nodes||50000)/4))));W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.counter=new Map();W55.lastMoveByPly=[];W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.rootSide=side;
+  const started=performance.now(),hkey=W56HashFull(b,h,side),root=legalMoves(b,h,side,true);
+  if(!root.length){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:null,depth:0,nodes:0,score:0,candidates:[],pv:[],ms:0,nps:0,ttSize:0,stable:0});return}
+  let best=root[0],bestScore=side==='S'?-1e9:1e9,reached=0,lastScore=0,lastScores=[],stable=0,lastBestKey='';
+  for(let depth=1;depth<=profile.depth;depth++){
+    if(W55.stop||performance.now()>=W55.deadline)break;let result=null,attempt=0;
+    let delta=depth>=3&&Number.isFinite(lastScore)?Math.max(35,Math.min(800,Math.abs(lastScore)*0.18+55)):1e9;
+    while(attempt<5){attempt++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W58Root(b,h,side,depth,a,beta,hkey);if(W55.stop)break;const fail=depth>=3&&((side==='S'&&(result.score<=a||result.score>=beta))||(side==='G'&&(result.score<=a||result.score>=beta)));if(!fail)break;delta=Math.min(200000,delta*2)}
+    if(W55.stop||!result||!result.move)break;
+    best=result.move;bestScore=result.score;lastScore=result.score;lastScores=result.scores;reached=depth;const bk=W56MKey(best);stable=bk===lastBestKey?stable+1:1;lastBestKey=bk;
+    W55.tt.set(hkey,{depth,score:bestScore,flag:'EXACT',moveKey:bk});
+    const pv=W56BuildPV(b,h,side,Math.min(depth,20),hkey);
+    let candidates=result.scores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);
+    if(depth>=3&&performance.now()<W55.deadline&&W55.nodes<W55.limit*0.68)candidates=W56ExactMultiPV(b,h,side,depth,hkey,candidates,Math.min(5,candidates.length));
+    const elapsed=Math.max(1,performance.now()-started),nps=Math.round(W55.nodes*1000/elapsed);
+    self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates,ms:Math.round(elapsed),nps,ttSize:W55.tt.size,stable});
+    if(Math.abs(bestScore)>49000)break;
+  }
+  const elapsed=Math.max(1,performance.now()-started),pv=W56BuildPV(b,h,side,Math.min(reached,20),hkey);
+  let candidates=lastScores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);
+  if(reached>=2&&performance.now()<W55.deadline&&W55.nodes<W55.limit)candidates=W56ExactMultiPV(b,h,side,reached,hkey,candidates,Math.min(5,candidates.length));
+  self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv,ms:Math.round(elapsed),nps:Math.round(W55.nodes*1000/elapsed),ttSize:W55.tt.size,stable});
+}
+W55Search=W58Search;
 
 self.onmessage=e=>{try{const d=e.data||{};if(d.type==='search'||d.type==='gameSearch'){W55Search(d);return;}if(d.type==='perft'){ruleControl=true;const n=W55Perft(d.board,d.hands,d.side||'S',Math.max(0,Math.min(5,d.depth||1)));self.postMessage({type:'perftDone',id:d.id,nodes:n});return;}if(d.type==='ruleAudit'){self.postMessage({type:'ruleAuditDone',id:d.id,result:W55RuleAudit(d.board,d.hands,d.side||'S')});return;}if(d.type==='selfPlay'){W55SelfPlay(d);return;}}catch(err){self.postMessage({type:'error',mode:e.data&&e.data.mode,id:e.data&&e.data.id,message:String(err&&err.stack||err)})}};
 `;
@@ -4636,7 +4884,7 @@ function killWorker(){if(worker){try{worker.terminate()}catch(e){}worker=null;}i
 function ensureWorker(){
  if(worker)return worker;workerURL=URL.createObjectURL(new Blob([WORKER_SOURCE],{type:'text/javascript'}));worker=new Worker(workerURL);worker.onmessage=e=>{const d=e.data||{};
   if(d.mode==='game'){if(d.id!==GAME_AI.id||!GAME_AI.working)return;if(d.type==='progress'){const p=aiProfile(aiLevel());const info=$('engineInfo');if(info)info.textContent='Lv'+aiLevel()+' '+rankName(aiLevel())+'　目標深さ'+p.depth+'　到達'+d.depth+'　節点'+Number(d.nodes||0).toLocaleString()+'　解析中…';const meter=$('playEngineMeter');if(meter)meter.style.width=Math.min(100,Math.round((d.depth||0)/Math.max(1,p.depth)*100))+'%';return;}if(d.type==='error'){GAME_AI.working=false;$('think')?.classList.remove('on');return;}if(d.type==='done'){GAME_AI.working=false;$('think')?.classList.remove('on');if(gameOver||page!=='play'||mode!=='ai'||online||turn!==GAME_AI.side||u46Key()!==GAME_AI.key)return;const m=d.best;if(!m||!u52StrictLegal(m))return;const p=aiProfile(aiLevel());const pawn=Math.round(Number(d.score||0)/100);const who=pawn>30?'先手有利':pawn<-30?'後手有利':'互角付近';const info=$('engineInfo');if(info)info.textContent='Lv'+aiLevel()+' '+rankName(aiLevel())+'　目標深さ'+p.depth+'　到達'+d.depth+'　節点'+Number(d.nodes||0).toLocaleString()+'　評価'+pawn+'（'+who+'）　思考上限'+Math.round(p.time/1000)+'秒　探索上限'+Number(p.nodes).toLocaleString()+'。';const meter=$('playEngineMeter');if(meter)meter.style.width=Math.min(100,Math.round((d.depth||0)/Math.max(1,p.depth)*100))+'%';const badges=$('playEngineBadges');if(badges)badges.innerHTML='<span>深さ '+d.depth+'/'+p.depth+'</span><span>節点 '+Number(d.nodes||0).toLocaleString()+'</span><span>最大 '+Math.round(p.time/1000)+'秒</span>';commit(m);}return;}
-  if(d.id&&d.id!==bestSerial)return;if(d.type==='progress')return;if(d.type==='error'){state.working=false;return;}if(d.type==='done'){state.working=false;if(!ULTRA46.enabled||page!=='play'||gameOver)return;const key=u46Key();if(key!==state.pendingKey)return;const m=d.best;if(!m||!u52StrictLegal(m)){u46ClearOverlay();state.best=null;return;}const candidates=(d.candidates||[]).filter(x=>x&&x.m&&u52StrictLegal(x.m)).map(x=>({m:x.m,note:notation(x.m,turn),score:x.score}));const pv=(d.pv||[]).filter(x=>x&&u52StrictLegal(x));const result={best:m,bestNote:notation(m,turn),score:d.score,depth:d.depth,nodes:d.nodes,ms:0,candidates,pv};state.best=m;state.lastKey=key;ULTRA46.best=result;u46SetResult(result);u55RenderAnalysis(result);}};return worker;}
+  if(d.id&&d.id!==bestSerial)return;if(d.type==='progress'){if(window.KYOKUJO_ULTRA58_UI&&d.mode==='best')window.KYOKUJO_ULTRA58_UI.progress(d);return;}if(d.type==='error'){state.working=false;return;}if(d.type==='done'){state.working=false;if(!ULTRA46.enabled||page!=='play'||gameOver)return;const key=u46Key();if(key!==state.pendingKey)return;const m=d.best;if(!m||!u52StrictLegal(m)){u46ClearOverlay();state.best=null;return;}const candidates=(d.candidates||[]).filter(x=>x&&x.m&&u52StrictLegal(x.m)).map(x=>({m:x.m,note:notation(x.m,turn),score:x.score}));const pv=(d.pv||[]).filter(x=>x&&u52StrictLegal(x));const result={best:m,bestNote:notation(m,turn),score:d.score,depth:d.depth,nodes:d.nodes,ms:d.ms||0,nps:d.nps||0,ttSize:d.ttSize||0,stable:d.stable||0,candidates,pv};state.best=m;state.lastKey=key;ULTRA46.best=result;u46SetResult(result);if(window.KYOKUJO_ULTRA58_UI)window.KYOKUJO_ULTRA58_UI.done(d);u55RenderAnalysis(result);}};return worker;}
 function u52StrictLegal(m){try{const old=ruleControl;ruleControl=true;const ms=legalMoves(board,hands,turn,true);ruleControl=old;return ms.some(x=>x.drop===m.drop&&x.t===m.t&&x.fromR===m.fromR&&x.fromC===m.fromC&&x.toR===m.toR&&x.toC===m.toC&&!!x.promote===!!m.promote);}catch(e){ruleControl=true;return false;}}
 function start(){if(!ULTRA46.enabled||gameOver||page!=='play'||!board)return;if(mode==='ai'&&userSide!==turn)return;const key=u46Key();if(key===state.lastKey&&state.best&&u52StrictLegal(state.best))return;state.pendingKey=key;state.token++;state.working=true;state.best=null;ULTRA46.best=null;const id=++bestSerial,profile=aiProfile(aiLevel());ensureWorker().postMessage({type:'search',mode:'best',id,board:board.map(r=>r.map(p=>p?{...p}:null)),hands:{S:{...hands.S},G:{...hands.G}},side:turn,profile:{depth:profile.depth,time:profile.time,nodes:profile.nodes},ruleControl:true});}
 function startGameAI(){if(gameOver||online||page!=='play'||mode!=='ai'||userSide==='H'||turn===userSide||GAME_AI.working)return;const key=u46Key(),side=turn,profile=aiProfile(aiLevel());GAME_AI.working=true;GAME_AI.id=++gameSerial;GAME_AI.key=key;GAME_AI.side=side;GAME_AI.token++;$('think')?.classList.add('on');ensureWorker().postMessage({type:'gameSearch',mode:'game',id:GAME_AI.id,board:board.map(r=>r.map(p=>p?{...p}:null)),hands:{S:{...hands.S},G:{...hands.G}},side,profile:{depth:profile.depth,time:profile.time,nodes:profile.nodes},ruleControl:true});}
@@ -4658,7 +4906,7 @@ function u55EnsurePanel(){
 function u55PvText(pv){return (pv||[]).map((m,i)=>{try{return (i+1)+'. '+notation(m,i%2===0?turn:(turn==='S'?'G':'S'));}catch(e){return '?';}}).join('  →  ');}
 function u55RenderAnalysis(r){u55EnsurePanel();if(!r)return;const st=$('w55State');if(st)st.textContent='解析完了';const pv=$('w55PV');if(pv)pv.textContent=u55PvText(r.pv)||r.bestNote||'—';const dep=$('w55Depth');if(dep)dep.textContent='深さ '+(r.depth??'—');const nod=$('w55Nodes');if(nod)nod.textContent='節点 '+Number(r.nodes||0).toLocaleString();const ev=$('w55Eval');if(ev)ev.textContent='評価 '+(Number(r.score||0)/100).toFixed(2);const hs=$('w55Hash');if(hs)hs.textContent='Zobrist 64bit';const c=$('w55Candidates');if(c)c.innerHTML=(r.candidates||[]).slice(0,5).map((x,i)=>'<div class="w55-c"><b>#'+(i+1)+'</b><span>'+notation(x.m,turn)+'</span><em>'+((Number(x.score||0))/100).toFixed(2)+'</em></div>').join('');}
 function u55CancelAnalysis(){if(window.u52Cancel)window.u52Cancel();const s=$('w55State');if(s)s.textContent='待機';}
-window.KYOKUJO_WORLD_CLASS={version:'ULTRA56',features:['Zobrist64','PV','MultiPV','Aspiration','LMR','CheckExtension','SEE','KingSafety','MateProbe','Perft','RuleAudit','WorkerAI','IncrementalZobrist','RepetitionGuard','ExactRootMultiPV','PV16']};
+window.KYOKUJO_WORLD_CLASS={version:'ULTRA58',features:['Zobrist64','BoundedTT','CounterMove','DepthHistory','SearchTelemetry','PV20','PV','MultiPV','Aspiration','LMR','CheckExtension','SEE','KingSafety','MateProbe','Perft','RuleAudit','WorkerAI','IncrementalZobrist','RepetitionGuard','ExactRootMultiPV','PV16']};
 
 /* WORLD-CLASS UI / ANALYSIS ------------------------------------------------ */
 function u55RunQA(){
@@ -4760,7 +5008,7 @@ const U48 = (() => {
   window.KYOKUJO_ULTRA=U;
 })();
   </script>
-  <!-- ULTRA44 ENGINE REFERENCE APPENDIX
+<!-- ULTRA44 ENGINE REFERENCE APPENDIX
 This appendix intentionally documents the architecture so the single-file application remains auditable and maintainable.
 It describes the design contract for the existing engine without changing its rules.
 
@@ -4820,116 +5068,116 @@ K. DEBUGGING CHECKLIST
 L. RELEASE NOTES
 ULTRA44 restores the live rule switch, adds a dedicated audit center, AI telemetry, position tags, responsive polish, and a maintenance appendix. Existing ULTRA41/42/43 functionality is intentionally retained.
 -->
-  <div aria-hidden="true" class="best-overlay" id="bestOverlay">
-  </div>
-  <div aria-live="polite" class="ai-cockpit" id="ultra47Cockpit">
-   <div class="ai-cockpit-head">
-    <div>
-     <b>
+<div aria-hidden="true" class="best-overlay" id="bestOverlay">
+</div>
+<div aria-live="polite" class="ai-cockpit" id="ultra47Cockpit">
+<div class="ai-cockpit-head">
+<div>
+<b>
       AI解析コックピット
      </b>
-     <br/>
-     <small>
+<br/>
+<small>
       最善手探索・評価・候補手・局面指紋を一画面で監視
      </small>
-    </div>
-    <div>
-     <span id="u47State">
+</div>
+<div>
+<span id="u47State">
       待機
      </span>
-    </div>
-   </div>
-   <div class="ai-cockpit-grid">
-    <section class="ai-cockpit-card">
-     <h4>
+</div>
+</div>
+<div class="ai-cockpit-grid">
+<section class="ai-cockpit-card">
+<h4>
       局面評価
      </h4>
-     <div class="ai-cockpit-score" id="u47Score">
+<div class="ai-cockpit-score" id="u47Score">
       —
      </div>
-     <div class="ai-cockpit-meter">
-      <i id="u47Meter">
-      </i>
-     </div>
-     <div class="ai-cockpit-stats">
-      <div class="ai-cockpit-stat">
-       <b id="u47Depth">
+<div class="ai-cockpit-meter">
+<i id="u47Meter">
+</i>
+</div>
+<div class="ai-cockpit-stats">
+<div class="ai-cockpit-stat">
+<b id="u47Depth">
         —
        </b>
-       <span>
+<span>
         深さ
        </span>
-      </div>
-      <div class="ai-cockpit-stat">
-       <b id="u47Nodes">
+</div>
+<div class="ai-cockpit-stat">
+<b id="u47Nodes">
         —
        </b>
-       <span>
+<span>
         節点
        </span>
-      </div>
-      <div class="ai-cockpit-stat">
-       <b id="u47Ms">
+</div>
+<div class="ai-cockpit-stat">
+<b id="u47Ms">
         —
        </b>
-       <span>
+<span>
         時間
        </span>
-      </div>
-      <div class="ai-cockpit-stat">
-       <b id="u47Count">
+</div>
+<div class="ai-cockpit-stat">
+<b id="u47Count">
         —
        </b>
-       <span>
+<span>
         候補
        </span>
-      </div>
-     </div>
-     <div class="ai-alert" id="u47Alert">
+</div>
+</div>
+<div class="ai-alert" id="u47Alert">
       最善手誘導を解禁すると、ここに現在局面の探索品質が表示されます。
      </div>
-     <div class="ai-fingerprint" id="u47Fingerprint">
+<div class="ai-fingerprint" id="u47Fingerprint">
       position: —
      </div>
-    </section>
-    <section class="ai-cockpit-card">
-     <h4>
+</section>
+<section class="ai-cockpit-card">
+<h4>
       候補手ランキング
      </h4>
-     <div id="u47Candidates">
-      <div class="ai-candidate">
-       <span class="rank">
+<div id="u47Candidates">
+<div class="ai-candidate">
+<span class="rank">
         —
        </span>
-       <span class="pv">
+<span class="pv">
         まだ解析されていません
        </span>
-       <span class="eval">
+<span class="eval">
         —
        </span>
-      </div>
-     </div>
-    </section>
-   </div>
-   <div class="ai-cockpit-foot">
-    <button id="u47Recalc" type="button">
+</div>
+</div>
+</section>
+</div>
+<div class="ai-cockpit-foot">
+<button id="u47Recalc" type="button">
      再探索
     </button>
-    <button id="u47Focus" type="button">
+<button id="u47Focus" type="button">
      盤面フォーカス
     </button>
-    <button id="u47Clear" type="button">
+<button id="u47Clear" type="button">
      履歴表示を消去
     </button>
-    <span class="ultra47-hotkey">
+<span class="ultra47-hotkey">
      Ctrl+Shift+A
     </span>
-    <span class="ultra47-hotkey">
+<span class="ultra47-hotkey">
      Escで閉じる
     </span>
-   </div>
-  </div>
-  <!-- ULTRA46 QUALITY REFERENCE / 300KB+ DESIGN APPENDIX
+</div>
+</div>
+<!-- ULTRA46 QUALITY REFERENCE / 300KB+ DESIGN APPENDIX
 
 第01章：探索設計
 本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。
@@ -5022,7 +5270,7 @@ ULTRA44 restores the live rule switch, adds a dedicated audit center, AI telemet
 本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。本アプリでは対局状態・表示状態・探索状態を同期し、既存機能を削除せず拡張できる設計を採用しています。各機能は局面変化、手番変更、表示倍率、盤面反転、対局終了、通信状態、AI思考状態を考慮して更新されます。
 
 -->
-  <script id="ultra47-cockpit-js">
+<script id="ultra47-cockpit-js">
    (()=>{
 'use strict';const U47={version:'ULTRA47',history:[],last:null,open:false,focus:false};const q=id=>document.getElementById(id);const safe=(fn,f=null)=>{try{return fn()}catch(e){return f}};const posKey=()=>safe(()=>typeof u46Key==='function'?u46Key():'no-position','no-position');const fmt=v=>{if(typeof v!=='number'||!Number.isFinite(v))return'—';const n=v/100;return(n>0?'+':'')+n.toFixed(2)};
 function render(r){if(!r)return;const best=r.best,score=r.score;q('u47Score')&&(q('u47Score').textContent=fmt(score));q('u47Depth')&&(q('u47Depth').textContent=r.depth??'—');q('u47Nodes')&&(q('u47Nodes').textContent=Number(r.nodes||0).toLocaleString());q('u47Ms')&&(q('u47Ms').textContent=Number(r.ms||0).toLocaleString()+'ms');q('u47Count')&&(q('u47Count').textContent=Array.isArray(r.candidates)?r.candidates.length:'—');q('u47State')&&(q('u47State').textContent=best?'解析完了':'解析中');const m=q('u47Meter');if(m){const n=Math.max(-600,Math.min(600,Number(score)||0));m.style.width=((n+600)/12)+'%'}q('u47Fingerprint')&&(q('u47Fingerprint').textContent='position: '+posKey());const a=q('u47Alert');if(a){a.className='ai-alert '+((r.depth||0)>=3?'ok':'');a.textContent=(best?'第一候補あり / ':'')+'探索深さ '+(r.depth??'—')+'、'+Number(r.nodes||0).toLocaleString()+'節点。有限探索による推奨で、完全な勝利保証ではありません。'}const box=q('u47Candidates');if(box){const cs=Array.isArray(r.candidates)?r.candidates:[];box.innerHTML=cs.length?cs.slice(0,10).map((c,i)=>'<div class="ai-candidate"><span class="rank">'+(i+1)+'</span><span class="pv">'+safe(()=>notation(c.m||c,turn),'候補手')+'</span><span class="eval">'+fmt(c.score??c.sc)+'</span></div>').join(''):'<div class="ai-candidate"><span class="rank">—</span><span class="pv">候補なし</span><span class="eval">—</span></div>'}U47.last=r;U47.history.push({t:Date.now(),key:posKey(),depth:r.depth||0,nodes:r.nodes||0,score:score||0});if(U47.history.length>80)U47.history.shift();safe(()=>localStorage.setItem('kyokujo-ultra47-history',JSON.stringify(U47.history.slice(-30))))}
@@ -5031,7 +5279,7 @@ q('u47Recalc')?.addEventListener('click',recalc);q('u47Clear')?.addEventListener
 function mount(){if(!document.body||q('u47CockpitBtn'))return;const b=document.createElement('button');b.id='u47CockpitBtn';b.type='button';b.className='side-live';b.textContent='AI解析';b.title='AI解析コックピット（Ctrl+Shift+A）';b.style.display='none';b.onclick=toggle;const best=q('bestBtn');if(best&&best.parentElement)best.parentElement.insertBefore(b,best.nextSibling);const sync=()=>{b.style.display=(document.body.classList.contains('best-unlocked')&&document.body.classList.contains('game-live'))?'inline-flex':'none'};new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['class']});sync()}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
 const t=setInterval(()=>{if(typeof u46SetResult==='function'&&!u46SetResult.__u47){const old=u46SetResult;const wrap=function(r){const z=old.apply(this,arguments);render(r);return z};wrap.__u47=true;u46SetResult=wrap;clearInterval(t)}},80);safe(()=>{const x=JSON.parse(localStorage.getItem('kyokujo-ultra47-history')||'[]');if(Array.isArray(x))U47.history=x.slice(-30)});window.KYOKUJO_ULTRA47=U47})();
   </script>
-  <script id="ultra49-bestmaster-js">
+<script id="ultra49-bestmaster-js">
    (function(){'use strict';const BM={version:'ULTRA49',nodes:[],resize:0,visible:false,signature:''};const q=id=>document.getElementById(id);const clear=e=>{while(e&&e.firstChild)e.removeChild(e.firstChild)};function ensure(){const host=q('bestGuidePanel')||document.querySelector('.best-guide-panel');if(!host)return null;let d=q('bestMasterDock');if(d)return d;d=document.createElement('section');d.id='bestMasterDock';d.className='best-master-dock';d.innerHTML='<div class="best-master-head"><strong>BEST-MASTER / 常時誘導</strong><span id="bmState" class="best-master-state">待機</span></div><div class="best-master-body"><div class="best-master-main"><div class="best-master-metric"><small>手番</small><b id="bmSide">—</b></div><div class="best-master-metric"><small>探索深さ</small><b id="bmDepth">—</b></div><div class="best-master-metric"><small>探索節点</small><b id="bmNodes">—</b></div><div class="best-master-metric"><small>評価</small><b id="bmScore">—</b></div></div><div class="best-master-move"><small>現在の第一候補</small><strong id="bmMove">計算待ち</strong></div><div class="best-master-radar" id="bmRadar"></div><div class="best-master-actions"><button type="button" id="bmRecalc">今すぐ再探索</button><button type="button" id="bmFocus">誘導を再表示</button></div></div><div class="best-master-foot">「最善手」がONの間、局面が変わるたびに第一候補を再探索し、盤上へ誘導表示します。</div>';host.appendChild(d);q('bmRecalc').onclick=()=>{if(window.ULTRA46?.enabled&&typeof u46BestSearch==='function'){ULTRA46.lastKey='';u46BestSearch()}};q('bmFocus').onclick=()=>{if(window.ULTRA46?.enabled&&ULTRA46.best?.best&&typeof u46ShowOverlay==='function'){u46ShowOverlay(ULTRA46.best.best);paint(ULTRA46.best.best,true)}};return d}function cell(r,c){try{return typeof cellEl==='function'?cellEl(r,c):null}catch(e){return null}}function center(el){if(!el)return null;const r=el.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2,w:r.width,h:r.height}}function destroy(){BM.nodes.splice(0).forEach(n=>n.remove&&n.remove());BM.visible=false}function add(cls,st){const n=document.createElement('div');n.className=cls;Object.assign(n.style,st||{});document.body.appendChild(n);BM.nodes.push(n);return n}function arrow(a,b){if(!a||!b)return;const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('best-master-path');Object.assign(svg.style,{left:'0',top:'0',width:'100vw',height:'100vh'});const p=document.createElementNS('http://www.w3.org/2000/svg','path'),dx=b.x-a.x,dy=b.y-a.y,len=Math.max(1,Math.hypot(dx,dy)),bend=Math.min(80,len*.16),nx=-dy/len,ny=dx/len,mx=(a.x+b.x)/2+nx*bend,my=(a.y+b.y)/2+ny*bend;p.setAttribute('d',`M ${a.x} ${a.y} Q ${mx} ${my} ${b.x} ${b.y}`);const defs=document.createElementNS('http://www.w3.org/2000/svg','defs'),marker=document.createElementNS('http://www.w3.org/2000/svg','marker'),poly=document.createElementNS('http://www.w3.org/2000/svg','path');marker.setAttribute('id','bmArrow49');marker.setAttribute('viewBox','0 0 10 10');marker.setAttribute('refX','8');marker.setAttribute('refY','5');marker.setAttribute('markerWidth','7');marker.setAttribute('markerHeight','7');marker.setAttribute('orient','auto');poly.setAttribute('d','M 0 0 L 10 5 L 0 10 z');poly.setAttribute('fill','#d6ad55');marker.appendChild(poly);defs.appendChild(marker);svg.appendChild(defs);p.setAttribute('marker-end','url(#bmArrow49)');svg.appendChild(p);document.body.appendChild(svg);BM.nodes.push(svg)}function spark(x,y,i){const n=add('best-master-spark',{left:x-3+'px',top:y-3+'px'}),a=Math.PI*2*i/8,d=28+Math.random()*34;n.style.setProperty('--sx',Math.cos(a)*d+'px');n.style.setProperty('--sy',Math.sin(a)*d+'px')}function paint(m,force){if(!m)return;const sig=JSON.stringify([m.fromR,m.fromC,m.toR,m.toC,!!m.drop,!!m.promote]);if(!force&&BM.signature===sig)return;BM.signature=sig;destroy();const tc=center(cell(m.toR,m.toC));if(!tc)return;const fc=!m.drop?center(cell(m.fromR,m.fromC)):null;if(fc)add('best-master-source',{left:fc.x-fc.w*.25+'px',top:fc.y-fc.h*.25+'px',width:fc.w*.5+'px',height:fc.h*.5+'px'});add('best-master-target-ring',{left:tc.x-tc.w*.34+'px',top:tc.y-tc.h*.34+'px',width:tc.w*.68+'px',height:tc.h*.68+'px'});if(fc)arrow(fc,tc);const label=add('best-master-label',{left:tc.x+'px',top:tc.y-tc.h*.65-16+'px'});label.textContent=m.drop?'ここへ駒を打つ':'ここへ指す';let ghost='';try{
   const raw=m.drop?m.t:(board?.[m.fromR]?.[m.fromC]?.t||m.t);
   const promoted=!!m.promote;
@@ -5040,11 +5288,11 @@ const t=setInterval(()=>{if(typeof u46SetResult==='function'&&!u46SetResult.__u4
 }catch(e){}
 if(ghost){const g=add('best-master-ghost',{left:tc.x+'px',top:tc.y+'px'});g.textContent=ghost;g.setAttribute('aria-hidden','true');}for(let i=0;i<8;i++)spark(tc.x,tc.y,i);BM.visible=true}function update(r){const d=ensure();if(!d||!r)return;q('bmSide').textContent=typeof turn==='string'?(turn==='S'?'先手':'後手'):'—';q('bmDepth').textContent=r.depth==null?'—':r.depth;q('bmNodes').textContent=r.nodes==null?'—':Number(r.nodes).toLocaleString();q('bmScore').textContent=r.score==null?'—':(Number(r.score)/100).toFixed(2);q('bmMove').textContent=r.bestNote||'計算待ち';const st=q('bmState');st.textContent=r.best?'誘導中':'解析中';st.classList.toggle('live',!!r.best);const rad=q('bmRadar');clear(rad);(r.candidates||[]).slice(0,5).forEach((x,i)=>{const row=document.createElement('div');row.className='best-master-row';const n=document.createElement('span');n.textContent=String(i+1).padStart(2,'0');const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('i');fill.style.width=Math.max(8,100-i*17)+'%';bar.appendChild(fill);const note=document.createElement('b');note.textContent=x.note||'候補';row.append(n,bar,note);rad.appendChild(row)});if(r.best)paint(r.best,false)}function tick(){try{if(!window.ULTRA46||!ULTRA46.enabled||typeof page!=='undefined'&&page!=='play'){if(BM.visible)destroy();return}if(ULTRA46.best)update(ULTRA46.best)}catch(e){}}new MutationObserver(()=>{if(window.ULTRA46?.unlocked)ensure()}).observe(document.body,{childList:true,subtree:true});document.addEventListener('click',e=>{if(e.target?.id==='bestBtn')setTimeout(tick,140)});window.addEventListener('resize',()=>{clearTimeout(BM.resize);BM.resize=setTimeout(tick,80)});window.addEventListener('scroll',()=>{if(window.ULTRA46?.enabled&&ULTRA46.best?.best)paint(ULTRA46.best.best,true)},{passive:true});setInterval(tick,650);window.KYOKUJO_BEST_MASTER=BM})();
   </script>
-  <script>
+<script>
    (function U54Status(){function q(id){return document.getElementById(id)}function sync(){const box=q('u54Turn');if(!box)return;box.textContent=typeof turn==='string'?(turn==='S'?'先手':'後手'):'—';q('u54Ply').textContent=String(Array.isArray(hist)?hist.length:0);const ga=q('u54AiState');ga.textContent=(window.GAME_AI&&GAME_AI.working)?'思考中':'待機';const bs=q('u54BestState');bs.textContent=window.ULTRA46?.enabled?'誘導ON':window.ULTRA46?.unlocked?'解禁済み':'未解禁';const bb=q('bestBtn');if(bb){const blocked=typeof mode!=='undefined'&&mode==='ai'&&typeof userSide!=='undefined'&&userSide!==turn;bb.disabled=blocked;bb.title=blocked?'AIの思考中は最善手誘導を人間側の手番に切り替えてから使用できます。':'最善手誘導（開発者向け）'}const st=q('u54UiState'),panel=q('u54Tip');if(st)st.textContent=(window.GAME_AI&&GAME_AI.working)?'AI思考中':(window.ULTRA46?.enabled&&window.U52?.working)?'最善手解析中':'安定';if(panel)panel.textContent=(window.GAME_AI&&GAME_AI.working)?'AIはバックグラウンドで探索しています。盤面UIは探索から分離されています。':(window.ULTRA46?.enabled&&window.U52?.working)?'最善手を探索中です。探索完了前は古い候補を新局面へ引き継ぎません。':'操作中は解析結果を古い局面のまま表示しない安全弁が働きます。'}setInterval(sync,500);document.addEventListener('visibilitychange',sync);sync()})();
   </script>
-  <script>
-   /* ULTRA56 PRESENTATION LAYER: does not replace existing controls. */
+<script>
+   /* ULTRA57 PRESENTATION LAYER: does not replace existing controls. */
 (()=>{
  'use strict';
  const q=id=>document.getElementById(id);
@@ -5063,5 +5311,42 @@ if(ghost){const g=add('best-master-ghost',{left:tc.x+'px',top:tc.y+'px'});g.text
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ensure);else ensure();
 })();
   </script>
- </body>
+<script id="ultra57-diagnostics">
+(()=>{
+  window.KYOKUJO_WORLD_CLASS57={version:'ULTRA57',features:['fast-see','quiescence-tactical-only','king-shell-eval','phase-aware-eval','rule-aware-search','layout-polish'],note:'ULTRA57 functionality preserved; ULTRA57 is additive.'};
+  const oldStart=window.u46BestSearch;
+  const oldGame=window.GAME_AI;
+  // Avoid stale best-guide results occupying the shared Worker while the game AI starts.
+  const sync=()=>{try{if(oldGame&&oldGame.working&&typeof window.u52Cancel==='function')window.u52Cancel()}catch(e){}};
+  if(typeof oldStart==='function')window.u46BestSearch=function(){sync();return oldStart.apply(this,arguments)};
+})();
+</script>
+<script id="ultra58-ui-js">
+(function(){'use strict';
+  function q(id){return document.getElementById(id)}
+  function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  const U58={panel:null,open:true,last:null};
+  function ensure(){
+    if(U58.panel)return U58.panel;
+    const host=q('w56AnalysisPanel')||q('w55AnalysisPanel')||q('bestGuidePanel');
+    if(!host)return null;
+    const el=document.createElement('section');el.id='w58Cockpit';el.className='w58-cockpit';
+    el.innerHTML='<div class="w58-head" id="w58Head"><b>ENGINE COCKPIT / 探索品質</b><span class="w58-state" id="w58State">待機</span><span class="w58-collapse" id="w58Collapse">詳細を閉じる</span></div><div class="w58-body"><div class="w58-grid"><div class="w58-metric"><small>実効深さ</small><strong id="w58Depth">—</strong></div><div class="w58-metric"><small>Nodes/s</small><strong id="w58Nps">—</strong></div><div class="w58-metric"><small>TT</small><strong id="w58TT">—</strong></div><div class="w58-metric"><small>安定度</small><strong id="w58Stable">—</strong></div></div><div class="w58-bar"><i id="w58Bar"></i></div><div class="w58-foot" id="w58Foot">探索中は深さ・節点速度・TT使用量・第一候補の安定度を表示します。これらは診断値で、合法手や評価そのものを変更しません。</div></div>';
+    host.parentNode.insertBefore(el,host.nextSibling);U58.panel=el;
+    q('w58Head').onclick=()=>{U58.open=!U58.open;el.classList.toggle('collapsed',!U58.open);q('w58Collapse').textContent=U58.open?'詳細を閉じる':'詳細を開く'};
+    return el;
+  }
+  function progress(d){
+    const el=ensure();if(!el)return;el.hidden=false;
+    q('w58State').textContent='探索中';q('w58Depth').textContent=String(d.depth??'—');q('w58Nps').textContent=Number(d.nps||0).toLocaleString();q('w58TT').textContent=Number(d.ttSize||0).toLocaleString();q('w58Stable').textContent=(d.stable||0)+'段';
+    const target=typeof aiLevel==='function'&&typeof aiProfile==='function'?((aiProfile(aiLevel())||{}).depth||1):20; q('w58Bar').style.width=Math.min(100,Math.max(2,Number(d.depth||0)/Math.max(1,target)*100))+'%';
+    q('w58Foot').textContent='探索 '+Number(d.nodes||0).toLocaleString()+' nodes / '+Number(d.ms||0).toLocaleString()+'ms。TT '+Number(d.ttSize||0).toLocaleString()+'件。第一候補の連続一致 '+(d.stable||0)+'回。';U58.last=d;
+  }
+  function done(d){const el=ensure();if(!el)return;el.hidden=false;q('w58State').textContent='解析完了';q('w58Depth').textContent=String(d.depth??'—');q('w58Nps').textContent=Number(d.nps||0).toLocaleString();q('w58TT').textContent=Number(d.ttSize||0).toLocaleString();q('w58Stable').textContent=(d.stable||0)+'段';q('w58Bar').style.width='100%';q('w58Foot').textContent='完了 '+Number(d.nodes||0).toLocaleString()+' nodes / '+Number(d.ms||0).toLocaleString()+'ms。第一候補の安定度 '+(d.stable||0)+'。';U58.last=d}
+  window.KYOKUJO_ULTRA58_UI={ensure,progress,done};
+  document.addEventListener('click',e=>{if(e.target&&e.target.id==='bestBtn')setTimeout(ensure,150)});
+  window.addEventListener('visibilitychange',()=>{if(document.hidden&&U58.panel)U58.panel.classList.add('collapsed')});
+})();
+</script>
+</body>
 </html>
