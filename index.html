@@ -489,7 +489,25 @@ body.best-unlocked .best-guide-panel{display:block}
 .best-dev-console{margin-top:10px;padding:9px;border-radius:10px;background:#17110d;color:#e9d5a4;font:10px/1.6 ui-monospace,monospace}
 .best-dev-console code{color:#fff2bf}
 @media(max-width:560px){.best-guide-meta{grid-template-columns:1fr 1fr}.best-guide-controls{flex-wrap:wrap}.best-guide-controls button{min-width:45%}}
-  </style>
+  
+/* ULTRA61: focused engine health / responsive diagnostics */
+.u61-health{margin-top:10px;border:1px solid rgba(184,137,58,.24);border-radius:14px;background:rgba(255,252,244,.78);padding:10px;display:grid;gap:8px;min-width:0}
+.u61-health-head{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:12px;font-weight:800}
+.u61-health-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.u61-health-cell{min-width:0;border-radius:10px;background:rgba(255,255,255,.7);padding:7px 8px}
+.u61-health-cell b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.u61-health-cell span{display:block;font-size:10px;opacity:.62;margin-top:2px}
+.u61-health-bar{height:5px;border-radius:99px;background:rgba(0,0,0,.08);overflow:hidden}
+.u61-health-bar i{display:block;height:100%;width:0%;transition:width .18s ease}
+.u61-note{font-size:10px;line-height:1.45;opacity:.7}
+.u61-diag{position:fixed;right:14px;bottom:14px;z-index:9999;width:min(420px,calc(100vw - 28px));max-height:60vh;overflow:auto;background:rgba(27,24,20,.96);color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:12px;box-shadow:0 18px 50px rgba(0,0,0,.28);font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;display:none}
+.u61-diag.on{display:block}
+.u61-diag h3{margin:0 0 8px;font:700 13px/1.3 system-ui,sans-serif}
+.u61-diag pre{white-space:pre-wrap;word-break:break-word;margin:0}
+@media(max-width:720px){.u61-health-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.u61-health{padding:8px}.u61-health-grid{gap:5px}.u61-health-cell{padding:6px}.u61-health-cell b{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.u61-health-bar i{transition:none}}
+</style>
 <style id="ultra47-cockpit-css">
    .ai-cockpit{display:none;margin:12px 0 0;border:1px solid rgba(92,60,25,.24);border-radius:18px;background:linear-gradient(180deg,rgba(255,252,245,.96),rgba(244,229,199,.92));box-shadow:0 16px 40px rgba(55,35,10,.13);overflow:hidden;color:#24170d}.ai-cockpit-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;background:linear-gradient(135deg,#2c1d10,#69491e);color:#fff6df}.ai-cockpit-head b{font-size:14px}.ai-cockpit-head small{opacity:.78}.ai-cockpit-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:12px;padding:12px}.ai-cockpit-card{background:rgba(255,255,255,.72);border:1px solid rgba(83,54,22,.16);border-radius:14px;padding:12px}.ai-cockpit-card h4{margin:0 0 9px;font-size:12px;color:#5c3d19}.ai-cockpit-score{font-size:27px;font-weight:900;line-height:1}.ai-cockpit-meter{height:10px;border-radius:999px;background:#dfcfb1;overflow:hidden;margin:9px 0}.ai-cockpit-meter i{display:block;height:100%;width:50%;background:linear-gradient(90deg,#8f1f1f,#d9a33d,#315d2e);transition:width .35s ease}.ai-cockpit-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.ai-cockpit-stat{padding:8px;border-radius:10px;background:rgba(241,225,195,.72);text-align:center}.ai-cockpit-stat b{display:block;font-size:14px}.ai-cockpit-stat span{font-size:9px;opacity:.72}.ai-candidate{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:8px;padding:8px 7px;border-top:1px solid rgba(83,54,22,.11);font-size:12px}.ai-candidate:first-child{border-top:0}.ai-candidate .rank{font-weight:900;color:#80602e}.ai-candidate .pv{font-weight:800}.ai-candidate .eval{font-variant-numeric:tabular-nums;font-weight:700}.ai-cockpit-foot{padding:0 12px 12px;display:flex;flex-wrap:wrap;gap:7px}.ai-cockpit-foot button{border:1px solid rgba(82,55,22,.22);background:#fff9ec;color:#3b2815;border-radius:10px;padding:7px 10px;font-weight:700;cursor:pointer}.ai-alert{padding:8px 10px;border-radius:10px;background:rgba(132,62,20,.08);border:1px dashed rgba(132,62,20,.25);font-size:11px;line-height:1.55;margin-top:9px}.ai-alert.ok{background:rgba(46,105,58,.08);border-color:rgba(46,105,58,.24)}.ai-fingerprint{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;word-break:break-all;opacity:.75;margin-top:6px}.ultra47-hotkey{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;padding:2px 5px;border-radius:5px;background:rgba(0,0,0,.06)}body.ultra47-focus .play-layout>main{filter:drop-shadow(0 0 20px rgba(166,119,42,.12))}@media(max-width:860px){.ai-cockpit-grid{grid-template-columns:1fr}.ai-cockpit-stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.ai-cockpit-head small{display:none}.ai-cockpit-grid{padding:9px}}
   </style>
@@ -534,11 +552,46 @@ body:not(.best-unlocked) .u50-ghost-piece{display:none!important}
 @media(prefers-reduced-motion:reduce){.w56-head{transition:none!important}}
 </style>
 <style id="ultra58-cockpit-css">
-/* ULTRA58: compact diagnostics; hidden until the developer analysis is unlocked. */
+/* ULTRA59: compact diagnostics; hidden until the developer analysis is unlocked. */
 .w58-cockpit{margin-top:10px;border:1px solid rgba(184,137,58,.28);border-radius:13px;background:linear-gradient(180deg,#fffaf0,#f3e7cf);overflow:hidden;color:#2b1b0e}
 .w58-cockpit[hidden]{display:none!important}.w58-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 10px;cursor:pointer}.w58-head b{font-family:"Shippori Mincho",serif;font-size:14px}.w58-state{font-size:10px;padding:3px 7px;border-radius:999px;background:#eadfc9}.w58-body{padding:0 10px 10px}.w58-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.w58-metric{padding:7px 5px;border-radius:8px;background:rgba(255,255,255,.62);text-align:center;border:1px solid rgba(120,85,35,.12)}.w58-metric small{display:block;font-size:9px;color:#78644d}.w58-metric strong{display:block;margin-top:2px;font-size:12px;font-variant-numeric:tabular-nums}.w58-bar{height:6px;margin-top:8px;border-radius:99px;background:#e6d9c1;overflow:hidden}.w58-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#b8893a,#6d28d9,#1d4ed8);transition:width .18s ease}.w58-foot{margin-top:7px;font-size:9px;line-height:1.5;color:#6d5a43}.w58-collapse{font-size:10px;color:#7b6344}.w58-cockpit.collapsed .w58-body{display:none}
 @media(max-width:560px){.w58-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.w58-head{padding:8px}.w58-body{padding:0 8px 8px}}
 @media(prefers-reduced-motion:reduce){.w58-bar i{transition:none}}
+</style>
+
+<style id="ultra59-polish-css">
+/* ULTRA59: presentation-only cleanup. Existing controls and functionality stay intact. */
+.play-layout{align-items:start}
+.play-layout aside{min-width:0}
+.panel,.analysis-shell,.best-guide-panel,.w56-analysis-shell,.w58-cockpit{box-sizing:border-box}
+.w56-analysis-shell,.w58-cockpit,.best-master-dock{max-width:100%;overflow:hidden}
+.w56-pv{overflow-wrap:anywhere;line-height:1.55}
+.w56-candidates,.best-master-radar{max-height:240px;overflow:auto;overscroll-behavior:contain}
+.w58-cockpit{position:relative;z-index:1;box-shadow:0 5px 18px rgba(50,30,10,.07)}
+.w58-head{user-select:none;flex-wrap:wrap}
+.w58-head b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.w58-foot{overflow-wrap:anywhere}
+@media(max-width:820px){
+  .w56-analysis-shell,.w58-cockpit,.best-master-dock{margin-inline:0}
+  .w56-meta{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+}
+@media(max-width:520px){
+  .w58-head{gap:5px}.w58-head b{font-size:12px}.w58-collapse{margin-left:auto}
+  .w56-candidates{max-height:180px}.best-master-radar{max-height:180px}
+}
+@media(prefers-reduced-motion:reduce){.w58-bar i,.engine-meter i{transition:none!important}}
+</style>
+
+<style id="ultra60-quality-css">
+/* ULTRA60: dense-information layout without changing existing controls. */
+.w60-quality{margin-top:7px;padding-top:7px;border-top:1px dashed rgba(90,60,25,.18);font-size:9px;color:#66533e}
+.w60-quality-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-top:5px}
+.w60-qitem{min-width:0;padding:5px;border-radius:7px;background:rgba(255,255,255,.48);border:1px solid rgba(90,60,25,.09)}
+.w60-qitem b{display:block;font-size:9px;color:#3a2817;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.w60-qitem span{display:block;margin-top:2px;font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.w60-note{margin-top:5px;line-height:1.45;overflow-wrap:anywhere}
+@media(max-width:560px){.w60-quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.w60-quality *{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -4639,9 +4692,9 @@ function W56Check(b,h,m,side){const cap=apply(b,h,m,side);const x=inCheck(b,side
 function W56SEE(b,h,m,side){if(!m.capture)return 0;const victim=W56PieceVal(b[m.toR]?.[m.toC]);const attacker=W56PieceVal(b[m.fromR]?.[m.fromC]||{t:m.t,p:false});let gain=victim-attacker*0.35;const cap=apply(b,h,m,side);const opp=side==='S'?'G':'S';const replies=legalMoves(b,h,opp,true).filter(x=>x.toR===m.toR&&x.toC===m.toC);if(replies.length){let min=W56PieceVal(b[m.toR]?.[m.toC]);for(const r of replies)min=Math.min(min,W56PieceVal(r.drop?{t:r.t,p:false}:b[r.fromR]?.[r.fromC]||{t:r.t,p:false}));gain-=Math.max(0,min*0.28);}revert(b,h,m,side,cap);return gain}
 function W56Order(b,h,m,side,ply,ttKey){let s=0,key=W56MKey(m);if(ttKey===key)s+=1e10;if((W55.killers[ply]||[]).includes(key))s+=5e7;s+=W55.history.get(key)||0;if(m.capture)s+=4e6+W56SEE(b,h,m,side)*3000;if(m.promote)s+=7e5+(VAL[m.t]||0)*4500;if(m.drop)s+=2500+(m.t==='R'||m.t==='B'?3500:m.t==='G'?1800:400);if(W56Check(b,h,m,side))s+=8e6;return s}
 function W56Terminal(b,h,side,ply){const ms=legalMoves(b,h,side,true);if(ms.length)return null;return inCheck(b,side)?(side==='S'?-50000+ply:50000-ply):0}
-function W56Q(b,h,side,alpha,beta,ply,qdepth,hkey,path){if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}W55.nodes++;const rep=path.get(hkey)||0;if(rep>=3)return 0;const check=inCheck(b,side);const terminal=W56Terminal(b,h,side,ply);if(terminal!==null)return terminal;if(check){if(qdepth<=0)return side==='S'?-48000+ply:48000-ply;const ms=legalMoves(b,h,side,true).sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));let best=side==='S'?-1e9:1e9;for(const m of ms){if(W55.stop)break;const cap=b[m.toR]?.[m.toC]||null;const nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W56Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}return best}
+function W56Q(b,h,side,alpha,beta,ply,qdepth,hkey,path){if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}W55.nodes++;const rep=path.get(hkey)||0;if(rep>=4)return 0;const check=inCheck(b,side);const terminal=W56Terminal(b,h,side,ply);if(terminal!==null)return terminal;if(check){if(qdepth<=0)return side==='S'?-48000+ply:48000-ply;const ms=legalMoves(b,h,side,true).sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));let best=side==='S'?-1e9:1e9;for(const m of ms){if(W55.stop)break;const cap=b[m.toR]?.[m.toC]||null;const nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W56Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}return best}
 const stand=W55Eval(b,h);if(side==='S'&&stand>=beta)return stand;if(side==='G'&&stand<=alpha)return stand;const ms=legalMoves(b,h,side,true).filter(m=>m.capture||m.promote||W56Check(b,h,m,side)).sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));let best=stand;for(const m of ms.slice(0,24)){const cap=b[m.toR]?.[m.toC]||null;const nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W56Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(W55.stop)break;if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}return best}
-function W56AB(b,h,side,depth,alpha,beta,ply,hkey,ext,path){if(typeof hkey!=='bigint'){hkey=W56HashFull(b,h,side);path=new Map([[hkey,1]]);ext=0}if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}W55.nodes++;const rep=path.get(hkey)||0;if(rep>=3)return 0;const old=W55.tt.get(hkey);if(old&&old.depth>=depth){if(old.flag==='EXACT')return old.score;if(old.flag==='LOW'&&old.score>alpha)alpha=old.score;if(old.flag==='HIGH'&&old.score<beta)beta=old.score;if(alpha>=beta)return old.score}if(depth<=0)return W56Q(b,h,side,alpha,beta,ply,4,hkey,path);const ms=legalMoves(b,h,side,true);if(!ms.length)return W56Terminal(b,h,side,ply);const ttMove=old?.moveKey;ms.sort((a,c)=>W56Order(b,h,c,side,ply,ttMove)-W56Order(b,h,a,side,ply));const oa=alpha,ob=beta;let best=side==='S'?-1e9:1e9,bm=ms[0];for(let i=0;i<ms.length;i++){if(W55.stop)break;const m=ms[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);let d2=depth-1+(gives&&ext<6?1:0);let sc;if(i>=5&&depth>=6&&!m.capture&&!m.promote&&!gives){const red=Math.max(1,d2-2-(i>12?1:0));sc=W56AB(b,h,side==='S'?'G':'S',red,alpha,beta,ply+1,nh,ext,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path)}else if(i>0){if(side==='S')sc=W56AB(b,h,'G',d2,alpha,alpha+1,ply+1,nh,ext,path);else sc=W56AB(b,h,'S',d2,beta-1,beta,ply+1,nh,ext,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path)}else sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(W55.stop)break;if(side==='S'){if(sc>best){best=sc;bm=m}if(sc>alpha)alpha=sc}else{if(sc<best){best=sc;bm=m}if(sc<beta)beta=sc}if(alpha>=beta){const k=W56MKey(m);W55.killers[ply]=[k,...(W55.killers[ply]||[])].slice(0,2);W55.history.set(k,(W55.history.get(k)||0)+depth*depth);break}}
+function W56AB(b,h,side,depth,alpha,beta,ply,hkey,ext,path){if(typeof hkey!=='bigint'){hkey=W56HashFull(b,h,side);path=new Map([[hkey,1]]);ext=0}if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}W55.nodes++;const rep=path.get(hkey)||0;if(rep>=4)return 0;const old=W55.tt.get(hkey);if(old&&old.depth>=depth){if(old.flag==='EXACT')return old.score;if(old.flag==='LOW'&&old.score>alpha)alpha=old.score;if(old.flag==='HIGH'&&old.score<beta)beta=old.score;if(alpha>=beta)return old.score}if(depth<=0)return W56Q(b,h,side,alpha,beta,ply,4,hkey,path);const ms=legalMoves(b,h,side,true);if(!ms.length)return W56Terminal(b,h,side,ply);const ttMove=old?.moveKey;ms.sort((a,c)=>W56Order(b,h,c,side,ply,ttMove)-W56Order(b,h,a,side,ply));const oa=alpha,ob=beta;let best=side==='S'?-1e9:1e9,bm=ms[0];for(let i=0;i<ms.length;i++){if(W55.stop)break;const m=ms[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);let d2=depth-1+(gives&&ext<6?1:0);let sc;if(i>=5&&depth>=6&&!m.capture&&!m.promote&&!gives){const red=Math.max(1,d2-2-(i>12?1:0));sc=W56AB(b,h,side==='S'?'G':'S',red,alpha,beta,ply+1,nh,ext,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path)}else if(i>0){if(side==='S')sc=W56AB(b,h,'G',d2,alpha,alpha+1,ply+1,nh,ext,path);else sc=W56AB(b,h,'S',d2,beta-1,beta,ply+1,nh,ext,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path)}else sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(W55.stop)break;if(side==='S'){if(sc>best){best=sc;bm=m}if(sc>alpha)alpha=sc}else{if(sc<best){best=sc;bm=m}if(sc<beta)beta=sc}if(alpha>=beta){const k=W56MKey(m);W55.killers[ply]=[k,...(W55.killers[ply]||[])].slice(0,2);W55.history.set(k,(W55.history.get(k)||0)+depth*depth);break}}
 let flag='EXACT';if(best<=oa)flag='HIGH';else if(best>=ob)flag='LOW';W55.tt.set(hkey,{depth,score:best,flag,moveKey:W56MKey(bm)});return best}
 function W56Root(b,h,side,depth,alpha,beta,hkey){const root=legalMoves(b,h,side,true);root.sort((a,c)=>W56Order(b,h,c,side,0,null)-W56Order(b,h,a,side,0,null));let best=side==='S'?-1e9:1e9,bm=root[0],scores=[];const path=new Map([[hkey,1]]);for(let i=0;i<root.length;i++){if(W55.stop)break;const m=root[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const d2=Math.max(0,depth-1+(gives?1:0));let sc;if(i>0){if(side==='S')sc=W56AB(b,h,'G',d2,alpha,alpha+1,1,nh,0,path);else sc=W56AB(b,h,'S',d2,beta-1,beta,1,nh,0,path);if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,1,nh,0,path)}else sc=W56AB(b,h,side==='S'?'G':'S',d2,alpha,beta,1,nh,0,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(W55.stop)break;scores.push({m,score:sc});if(side==='S'){if(sc>best){best=sc;bm=m}if(sc>alpha)alpha=sc}else{if(sc<best){best=sc;bm=m}if(sc<beta)beta=sc}if(alpha>=beta)break}return {score:best,move:bm,scores}}
 function W56ExactMultiPV(b,h,side,depth,hkey,rootScores,count){const ranked=rootScores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,Math.min(count,rootScores.length));const out=[];for(const item of ranked){if(W55.stop)break;const m=item.m,cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);const path=new Map([[hkey,1],[nh,1]]);const sc=W56AB(b,h,side==='S'?'G':'S',Math.max(0,depth-1),-1e9,1e9,1,nh,0,path);revert(b,h,m,side,cap);if(W55.stop)break;out.push({m,score:sc})}return out.sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score)}
@@ -4729,29 +4782,80 @@ function W57SEE(b,h,m,side){
 W56SEE=W57SEE;
 W55Eval=W57Eval;
 
-function W57Q(b,h,side,alpha,beta,ply,qdepth,hkey,path){
+/* ULTRA62 QSEARCH: check-aware, bounded tactical horizon.
+   Only search extensions are changed here; rule semantics remain untouched. */
+function W62Q(b,h,side,alpha,beta,ply,qdepth,hkey,path){
   if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}
   W55.nodes++;
-  if(path.get(hkey)>=3)return 0;
+  if(path.get(hkey)>=4)return 0;
+
   const check=inCheck(b,side);
   if(check){
     const ms=legalMoves(b,h,side,true);
     if(!ms.length)return side==='S'?-50000+ply:50000-ply;
     if(qdepth<=0)return side==='S'?-48000+ply:48000-ply;
     ms.sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));
-    let best=side==='S'?-1e9:1e9;
-    for(const m of ms){if(W55.stop)break;const cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W57Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}
-    return best;
+    let best=side==='S'?-1e9:1e9, searched=0;
+    for(const m of ms){
+      if(W55.stop)break;
+      const cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);
+      apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);
+      const sc=W62Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);
+      path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);searched++;
+      if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}
+      else{if(sc<best)best=sc;if(best<beta)beta=best}
+      if(alpha>=beta)break;
+    }
+    return searched?best:(side==='S'?-48000+ply:48000-ply);
   }
-  let best=side==='S'?-1e9:1e9,found=false;
-  const raw=pseudo(b,h,side);
-  const tactical=[];
-  for(const m of raw){if(!m.capture&&!m.promote)continue;const cap=b[m.toR]?.[m.toC]||null;apply(b,h,m,side);const legal=!inCheck(b,side);revert(b,h,m,side,cap);if(legal)tactical.push(m)}
+
+  const stand=W55Eval(b,h);
+  /* Keep the old tactical behavior, but add a small, capped set of forcing checks.
+     Non-capturing checks are considered only while qdepth is still meaningful. */
+  const raw=pseudo(b,h,side), tactical=[], checks=[];
+  for(const m of raw){
+    const cap=b[m.toR]?.[m.toC]||null;
+    const isT=!!m.capture||!!m.promote;
+    const isC=!!W56Check(b,h,m,side);
+    if(!isT&&!isC)continue;
+    apply(b,h,m,side);
+    const legal=!inCheck(b,side);
+    revert(b,h,m,side,cap);
+    if(!legal)continue;
+    if(isT)tactical.push(m);
+    else if(qdepth>=2)checks.push(m);
+  }
   tactical.sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));
-  for(const m of tactical){if(W55.stop)break;found=true;const cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);const sc=W57Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,qdepth-1,nh,path);path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}else{if(sc<best)best=sc;if(best<beta)beta=best}if(alpha>=beta)break}
-  return found?best:W55Eval(b,h);
+  checks.sort((a,c)=>W56Order(b,h,c,side,ply,null)-W56Order(b,h,a,side,ply));
+
+  const ordered=tactical.concat(checks.slice(0,Math.min(8,checks.length)));
+  let best=side==='S'?stand:-stand,found=false;
+  const limit=Math.min(24,ordered.length);
+  for(let i=0;i<limit;i++){
+    const m=ordered[i]; if(W55.stop)break;
+    const cap=b[m.toR]?.[m.toC]||null;
+    /* Safe delta guard: never prune promotions or checks; only clearly losing,
+       non-promoting captures whose SEE cannot recover the tactical margin. */
+    if(i>=10&&!m.promote&&!W56Check(b,h,m,side)&&m.capture){
+      const see=W56SEE(b,h,m,side);
+      const gain=VAL[m.t]||0;
+      const margin=side==='S'?80:-80;
+      if(side==='S' && stand+gain+see+margin<alpha)continue;
+      if(side==='G' && stand-gain-see-margin>beta)continue;
+    }
+    found=true;
+    const nh=W56MoveHash(hkey,b,h,m,side,cap);
+    apply(b,h,m,side);path.set(nh,(path.get(nh)||0)+1);
+    const sc=W62Q(b,h,side==='S'?'G':'S',alpha,beta,ply+1,Math.max(0,qdepth-1),nh,path);
+    path.set(nh,path.get(nh)-1);revert(b,h,m,side,cap);
+    if(side==='S'){if(sc>best)best=sc;if(best>alpha)alpha=best}
+    else{if(sc<best)best=sc;if(best<beta)beta=best}
+    if(alpha>=beta)break;
+  }
+  return found?best:stand;
 }
-W56Q=W57Q;
+W57Q=W62Q;
+W56Q=W62Q;
 function W55Search(msg){const b=msg.board,h=msg.hands,side=msg.side,profile=msg.profile||{depth:4,time:2000,nodes:50000};ruleControl=true;W55.tt=new Map();W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.rootSide=side;const hkey=W56HashFull(b,h,side);let root=legalMoves(b,h,side,true);if(!root.length){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:null,depth:0,nodes:0,score:0,candidates:[],pv:[]});return}let best=root[0],bestScore=side==='S'?-1e9:1e9,reached=0,lastScore=0,lastScores=[];for(let depth=1;depth<=profile.depth;depth++){if(W55.stop||performance.now()>=W55.deadline)break;let result=null,attempt=0,delta=depth>=3&&Number.isFinite(lastScore)?Math.max(40,Math.min(900,Math.abs(lastScore)*0.2+70)):1e9;while(attempt<4){attempt++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W56Root(b,h,side,depth,a,beta,hkey);if(W55.stop)break;const fail=depth>=3&&((side==='S'&&(result.score<=a||result.score>=beta))||(side==='G'&&(result.score<=a||result.score>=beta)));if(fail){delta*=2;continue}break}if(W55.stop||!result)break;best=result.move;bestScore=result.score;lastScore=result.score;lastScores=result.scores;reached=depth;W55.tt.set(hkey,{depth,score:bestScore,flag:'EXACT',moveKey:W56MKey(best)});const pv=W56BuildPV(b,h,side,Math.min(depth,16),hkey);let candidates=result.scores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);if(depth>=3&&performance.now()<W55.deadline&&W55.nodes<W55.limit*0.72)candidates=W56ExactMultiPV(b,h,side,depth,hkey,candidates,Math.min(5,candidates.length));self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates});if(Math.abs(bestScore)>49000)break}const pv=W56BuildPV(b,h,side,Math.min(reached,16),hkey);let candidates=lastScores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);if(reached>=2&&performance.now()<W55.deadline&&W55.nodes<W55.limit)candidates=W56ExactMultiPV(b,h,side,reached,hkey,candidates,Math.min(5,candidates.length));self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv})}
 
 
@@ -4759,25 +4863,110 @@ function W55Search(msg){const b=msg.board,h=msg.hands,side=msg.side,profile=msg.
    Additive search upgrade. Existing move/rule code is intentionally retained.
    Goals: bounded TT, counter-move ordering, depth-aware history, search telemetry,
    safer quiet pruning, PV stability, and zero changes to rule semantics. */
-class W58BoundedTT{
-  constructor(max){this.max=Math.max(2048,max||65536);this.m=new Map();this.clock=0}
-  get(k){const e=this.m.get(k);if(e)e.age=this.clock++;return e}
-  set(k,e){e={...e,age:this.clock++};if(this.m.has(k)){this.m.set(k,e);return}
-    if(this.m.size>=this.max){let victim=null,va=Infinity,vd=-1;for(const [kk,v] of this.m){const age=v.age||0,dep=v.depth||0,score=age-dep*100000;if(score<va){va=score;victim=kk;vd=dep}}if(victim!==null)this.m.delete(victim)}this.m.set(k,e)}
-  clear(){this.m.clear();this.clock=0}
+class W61BoundedTT{
+  constructor(max){
+    this.max=Math.max(2048,max||65536);
+    this.m=new Map();
+    this.slots=new Array(this.max);
+    this.cursor=0;
+    this.generation=0;
+    this.hits=0; this.probes=0; this.replaces=0;
+  }
+  beginGeneration(){this.generation=(this.generation+1)&255;}
+  get(k){
+    const e=this.m.get(k);
+    if(e){this.hits++;e.last=this.generation;}
+    this.probes++;
+    return e;
+  }
+  set(k,e){
+    const old=this.m.get(k);
+    if(old){
+      if((e.depth||0)<(old.depth||0)-1 && old.gen===this.generation)return;
+      this.m.set(k,{...old,...e,gen:this.generation,last:this.generation});
+      return;
+    }
+    if(this.m.size>=this.max){
+      let victim=null;
+      for(let tries=0;tries<8;tries++){
+        const idx=(this.cursor++)%this.max,kk=this.slots[idx];
+        if(kk===undefined)continue;
+        const v=this.m.get(kk);
+        if(!v){this.slots[idx]=undefined;continue;}
+        if(v.gen!==this.generation || (e.depth||0)>=(v.depth||0)){
+          victim=kk;this.slots[idx]=k;break;
+        }
+      }
+      if(victim!==null){this.m.delete(victim);this.replaces++;}
+      else{
+        const idx=(this.cursor++)%this.max,kk=this.slots[idx];
+        if(kk!==undefined)this.m.delete(kk);
+        this.slots[idx]=k;this.replaces++;
+      }
+    }else{
+      while(this.slots[this.cursor%this.max]!==undefined && this.m.size<this.max)this.cursor++;
+      this.slots[this.cursor%this.max]=k;this.cursor=(this.cursor+1)%this.max;
+    }
+    this.m.set(k,{...e,gen:this.generation,last:this.generation});
+  }
+  clear(){this.m.clear();this.slots.fill(undefined);this.cursor=0;this.generation=0;this.hits=0;this.probes=0;this.replaces=0;}
   get size(){return this.m.size}
+  get hitRate(){return this.probes?this.hits/this.probes:0}
 }
+W58BoundedTT=W61BoundedTT;
+W55.tt=new W61BoundedTT(65536);
 W55.tt=new W58BoundedTT(65536);
 W55.counter=new Map();
 W55.lastMoveByPly=[];
 W55.stableMoveKey='';W55.stableCount=0;W55.lastProgressMoveKey='';
+W55.prevBestKey='';W55.prevScore=0;W55.scoreDelta=0;W55.stability=0;W55.startTime=0;W55.softDeadline=0;W55.hardDeadline=0;
 
 function W58HistoryScore(key,depth){const v=W55.history.get(key)||0;return v+(depth*depth*3)}
 function W58CounterScore(ply,key){const prev=W55.lastMoveByPly[Math.max(0,ply-1)];if(!prev)return 0;return W55.counter.get(prev+'|'+key)||0}
+/* ULTRA59: continuation history. It complements the existing counter-move table:
+   counter says "after this exact previous move, try X"; continuation history
+   learns a softer preference from the previous move at the parent ply. */
+const W59Cont=new Map();
+function W59ContScore(ply,key){
+  const prev=W55.lastMoveByPly[Math.max(0,ply-1)]; if(!prev)return 0;
+  const v=W59Cont.get(prev+'|'+key)||0; return Math.max(-80000,Math.min(80000,v))*18;
+}
+function W59ContUpdate(m,ply,depth){
+  const prev=W55.lastMoveByPly[Math.max(0,ply-1)]; if(!prev)return;
+  const key=W56MKey(m),ck=prev+'|'+key,old=W59Cont.get(ck)||0;
+  const bonus=Math.min(1200,Math.max(8,depth*depth*2));
+  W59Cont.set(ck,Math.max(-80000,Math.min(80000,old+bonus-(old>0?Math.floor(old/48):0))));
+}
+function W59AgeTables(){
+  const ageMap=(m,rate)=>{for(const [k,v] of m){const nv=Math.trunc(v*rate);if(Math.abs(nv)<2)m.delete(k);else m.set(k,nv)}};
+  ageMap(W55.history,.82); ageMap(W55.counter,.86); ageMap(W59Cont,.86);
+}
+/* ULTRA60: two-ply continuation history. It is intentionally bounded by score and
+   aged with the other move-ordering tables so it cannot grow without control. */
+const W60Cont2=new Map();
+function W60Cont2Key(ply,key){
+  const p1=W55.lastMoveByPly[Math.max(0,ply-1)],p2=W55.lastMoveByPly[Math.max(0,ply-2)];
+  return p2&&p1?p2+'|'+p1+'|'+key:null;
+}
+function W60Cont2Score(ply,key){
+  const ck=W60Cont2Key(ply,key); if(!ck)return 0;
+  return Math.max(-60000,Math.min(60000,W60Cont2.get(ck)||0))*8;
+}
+function W60Cont2Update(m,ply,depth){
+  const key=W56MKey(m),ck=W60Cont2Key(ply,key); if(!ck)return;
+  const old=W60Cont2.get(ck)||0, bonus=Math.min(900,Math.max(6,depth*depth));
+  W60Cont2.set(ck,Math.max(-60000,Math.min(60000,old+bonus-(old>0?Math.floor(old/56):0))));
+}
+function W60AgeTables(){
+  W59AgeTables();
+  for(const [k,v] of W60Cont2){const nv=Math.trunc(v*.86);if(Math.abs(nv)<2)W60Cont2.delete(k);else W60Cont2.set(k,nv)}
+}
 function W58Order(b,h,m,side,ply,ttKey){
   const key=W56MKey(m);let s=0;
   if(ttKey===key)s+=1e12;
   if((W55.killers[ply]||[]).includes(key))s+=2e8;
+  s+=W59ContScore(ply,key);
+  s+=W60Cont2Score(ply,key);
   s+=W58CounterScore(ply,key);
   s+=W58HistoryScore(key,Math.max(1,ply+1));
   if(m.capture)s+=8e6+W56SEE(b,h,m,side)*5000;
@@ -4793,6 +4982,8 @@ function W58RecordCutoff(m,side,ply,depth){
   W55.history.set(key,Math.max(-200000,Math.min(200000,old+depth*depth*4-(old>0?Math.floor(old/32):0))));
   const prev=W55.lastMoveByPly[Math.max(0,ply-1)];
   if(prev){const ck=prev+'|'+key,cv=W55.counter.get(ck)||0;W55.counter.set(ck,Math.min(200000,cv+depth*depth*3))}
+  W59ContUpdate(m,ply,depth);
+  W60Cont2Update(m,ply,depth);
   W55.killers[ply]=[key,...(W55.killers[ply]||[])].filter((x,i,a)=>a.indexOf(x)===i).slice(0,2);
 }
 
@@ -4800,7 +4991,7 @@ function W58AB(b,h,side,depth,alpha,beta,ply,hkey,ext,path){
   if(typeof hkey!=='bigint'){hkey=W56HashFull(b,h,side);path=new Map([[hkey,1]]);ext=0}
   if(performance.now()>=W55.deadline||W55.nodes>=W55.limit){W55.stop=true;return W55Eval(b,h)}
   W55.nodes++;
-  const rep=path.get(hkey)||0;if(rep>=3)return 0;
+  const rep=path.get(hkey)||0;if(rep>=4)return 0;
   const old=W55.tt.get(hkey);
   if(old&&old.depth>=depth){if(old.flag==='EXACT')return old.score;if(old.flag==='LOW'&&old.score>alpha)alpha=old.score;if(old.flag==='HIGH'&&old.score<beta)beta=old.score;if(alpha>=beta)return old.score}
   if(depth<=0)return W57Q(b,h,side,alpha,beta,ply,4,hkey,path);
@@ -4819,7 +5010,9 @@ function W58AB(b,h,side,depth,alpha,beta,ply,hkey,ext,path){
        4 moves, checks, captures, promotions, drops, or killer/TT moves. */
     if(i>=4&&depth>=7&&quiet&&ttMove!==W56MKey(m)&&!(W55.killers[ply]||[]).includes(W56MKey(m))){
       const hist=W55.history.get(W56MKey(m))||0;
-      const red=hist>2500?1:hist<-500?2:(i>12?2:1);
+      const nearKing=(Math.abs((m.toC??4)-4)<=2 || Math.abs((m.toR??4)-4)<=2);
+      const handPressure=(h[side].R||0)+(h[side].B||0)+(h[side].G||0)>=2;
+      const red=(nearKing||handPressure)?1:(hist>3500?1:hist<-700?2:(i>12?2:1));
       sc=W58AB(b,h,side==='S'?'G':'S',Math.max(1,d2-red),alpha,beta,ply+1,nh,ext,path);
       if(!W55.stop&&((side==='S'&&sc>alpha&&sc<beta)||(side==='G'&&sc<beta&&sc>alpha)))sc=W58AB(b,h,side==='S'?'G':'S',d2,alpha,beta,ply+1,nh,ext,path);
     }else if(i>0){
@@ -4837,8 +5030,13 @@ function W58AB(b,h,side,depth,alpha,beta,ply,hkey,ext,path){
 }
 W56AB=W58AB;
 
-function W58Root(b,h,side,depth,alpha,beta,hkey){
-  const root=legalMoves(b,h,side,true);root.sort((a,c)=>W58Order(b,h,c,side,0,null)-W58Order(b,h,a,side,0,null));
+function W58Root(b,h,side,depth,alpha,beta,hkey,preferredKey){
+  const root=legalMoves(b,h,side,true);
+  root.sort((a,c)=>{
+    const ak=W56MKey(a),ck=W56MKey(c);
+    const ap=preferredKey&&ak===preferredKey?1:0,cp=preferredKey&&ck===preferredKey?1:0;
+    return cp-ap || W58Order(b,h,c,side,0,preferredKey)-W58Order(b,h,a,side,0,preferredKey);
+  });
   let best=side==='S'?-1e9:1e9,bm=root[0],scores=[];const path=new Map([[hkey,1]]);
   for(let i=0;i<root.length;i++){
     if(W55.stop)break;const m=root[i],gives=W56Check(b,h,m,side),cap=b[m.toR]?.[m.toC]||null,nh=W56MoveHash(hkey,b,h,m,side,cap);
@@ -4852,29 +5050,47 @@ function W58Root(b,h,side,depth,alpha,beta,hkey){
 
 function W58Search(msg){
   const b=msg.board,h=msg.hands,side=msg.side,profile=msg.profile||{depth:4,time:2000,nodes:50000};
-  ruleControl=true;W55.tt=new W58BoundedTT(Math.max(8192,Math.min(220000,Math.floor((profile.nodes||50000)/4))));W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.counter=new Map();W55.lastMoveByPly=[];W55.deadline=performance.now()+profile.time;W55.limit=profile.nodes;W55.rootSide=side;
+  ruleControl=true;W55.tt=new W61BoundedTT(Math.max(8192,Math.min(220000,Math.floor((profile.nodes||50000)/4))));W55.tt.beginGeneration();W55.nodes=0;W55.stop=false;W55.killers=[];W55.history=new Map();W55.counter=new Map();W55.lastMoveByPly=[];W59Cont.clear();W60Cont2.clear();W55.startTime=performance.now();W55.hardDeadline=W55.startTime+profile.time;W55.softDeadline=W55.startTime+Math.max(80,profile.time*0.78);W55.deadline=W55.hardDeadline;W55.limit=profile.nodes;W55.rootSide=side;W55.prevBestKey='';W55.prevScore=0;W55.scoreDelta=0;W55.stability=0;
   const started=performance.now(),hkey=W56HashFull(b,h,side),root=legalMoves(b,h,side,true);
   if(!root.length){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:null,depth:0,nodes:0,score:0,candidates:[],pv:[],ms:0,nps:0,ttSize:0,stable:0});return}
+  /* Correct, cheap mate-in-one gate. It prevents a shallow/time-limited search
+     from overlooking an immediate checkmate. No evaluation heuristic is involved. */
+  for(const mm of root){
+    if(performance.now()>=W55.deadline)break;
+    const cap=b[mm.toR]?.[mm.toC]||null; apply(b,h,mm,side);
+    const opp=side==='S'?'G':'S', lm=legalMoves(b,h,opp,true), mate=!lm.length&&inCheck(b,opp);
+    revert(b,h,mm,side,cap);
+    if(mate){self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best:mm,depth:1,nodes:W55.nodes,score:side==='S'?50000:-50000,candidates:[{m:mm,score:side==='S'?50000:-50000}],pv:[mm],ms:Math.round(performance.now()-started),nps:0,ttSize:W55.tt.size,stable:1});return}
+  }
   let best=root[0],bestScore=side==='S'?-1e9:1e9,reached=0,lastScore=0,lastScores=[],stable=0,lastBestKey='';
   for(let depth=1;depth<=profile.depth;depth++){
-    if(W55.stop||performance.now()>=W55.deadline)break;let result=null,attempt=0;
+    const now=performance.now();
+    if(W55.stop||now>=W55.hardDeadline)break;
+    if(depth>1 && now>=W55.softDeadline && W55.stability>=3 && Math.abs(W55.scoreDelta)<35)break;
+    W55.tt.beginGeneration();let result=null,attempt=0;
     let delta=depth>=3&&Number.isFinite(lastScore)?Math.max(35,Math.min(800,Math.abs(lastScore)*0.18+55)):1e9;
-    while(attempt<5){attempt++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W58Root(b,h,side,depth,a,beta,hkey);if(W55.stop)break;const fail=depth>=3&&((side==='S'&&(result.score<=a||result.score>=beta))||(side==='G'&&(result.score<=a||result.score>=beta)));if(!fail)break;delta=Math.min(200000,delta*2)}
+    while(attempt<5){attempt++;W55.stop=false;let a=depth>=3&&Number.isFinite(lastScore)?lastScore-delta:-1e9,beta=depth>=3&&Number.isFinite(lastScore)?lastScore+delta:1e9;result=W58Root(b,h,side,depth,a,beta,hkey,W55.prevBestKey);if(W55.stop)break;const fail=depth>=3&&((side==='S'&&(result.score<=a||result.score>=beta))||(side==='G'&&(result.score<=a||result.score>=beta)));if(!fail)break;delta=Math.min(200000,delta*2)}
     if(W55.stop||!result||!result.move)break;
-    best=result.move;bestScore=result.score;lastScore=result.score;lastScores=result.scores;reached=depth;const bk=W56MKey(best);stable=bk===lastBestKey?stable+1:1;lastBestKey=bk;
+    best=result.move;bestScore=result.score;lastScore=result.score;lastScores=result.scores;reached=depth;const bk=W56MKey(best);stable=bk===lastBestKey?stable+1:1;lastBestKey=bk;W55.scoreDelta=Math.abs(bestScore-W55.prevScore);W55.stability=stable;W55.prevScore=bestScore;W55.prevBestKey=bk;
+    W60AgeTables();
     W55.tt.set(hkey,{depth,score:bestScore,flag:'EXACT',moveKey:bk});
     const pv=W56BuildPV(b,h,side,Math.min(depth,20),hkey);
     let candidates=result.scores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);
     if(depth>=3&&performance.now()<W55.deadline&&W55.nodes<W55.limit*0.68)candidates=W56ExactMultiPV(b,h,side,depth,hkey,candidates,Math.min(5,candidates.length));
     const elapsed=Math.max(1,performance.now()-started),nps=Math.round(W55.nodes*1000/elapsed);
-    self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates,ms:Math.round(elapsed),nps,ttSize:W55.tt.size,stable});
+    self.postMessage({type:'progress',mode:msg.mode||'best',id:msg.id,depth:reached,nodes:W55.nodes,score:bestScore,pv,candidates,ms:Math.round(elapsed),nps,ttSize:W55.tt.size,ttHitRate:W55.tt.hitRate||0,ttReplaces:W55.tt.replaces||0,stable});
     if(Math.abs(bestScore)>49000)break;
   }
   const elapsed=Math.max(1,performance.now()-started),pv=W56BuildPV(b,h,side,Math.min(reached,20),hkey);
   let candidates=lastScores.slice().sort((a,c)=>side==='S'?c.score-a.score:a.score-c.score).slice(0,8);
   if(reached>=2&&performance.now()<W55.deadline&&W55.nodes<W55.limit)candidates=W56ExactMultiPV(b,h,side,reached,hkey,candidates,Math.min(5,candidates.length));
-  self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv,ms:Math.round(elapsed),nps:Math.round(W55.nodes*1000/elapsed),ttSize:W55.tt.size,stable});
+  self.postMessage({type:'done',mode:msg.mode||'best',id:msg.id,best,depth:reached,nodes:W55.nodes,score:bestScore,candidates,pv,ms:Math.round(elapsed),nps:Math.round(W55.nodes*1000/elapsed),ttSize:W55.tt.size,ttHitRate:W55.tt.hitRate||0,ttReplaces:W55.tt.replaces||0,stable});
 }
+/* ULTRA63 ROOT-PV REUSE ----------------------------------------------------
+   The completed iterative-deepening best move is now fed back into the next
+   root iteration as a preferred move. This is a pure ordering improvement: it
+   does not alter legality, evaluation, or rule semantics.
+*/
 W55Search=W58Search;
 
 self.onmessage=e=>{try{const d=e.data||{};if(d.type==='search'||d.type==='gameSearch'){W55Search(d);return;}if(d.type==='perft'){ruleControl=true;const n=W55Perft(d.board,d.hands,d.side||'S',Math.max(0,Math.min(5,d.depth||1)));self.postMessage({type:'perftDone',id:d.id,nodes:n});return;}if(d.type==='ruleAudit'){self.postMessage({type:'ruleAuditDone',id:d.id,result:W55RuleAudit(d.board,d.hands,d.side||'S')});return;}if(d.type==='selfPlay'){W55SelfPlay(d);return;}}catch(err){self.postMessage({type:'error',mode:e.data&&e.data.mode,id:e.data&&e.data.id,message:String(err&&err.stack||err)})}};
@@ -4884,7 +5100,7 @@ function killWorker(){if(worker){try{worker.terminate()}catch(e){}worker=null;}i
 function ensureWorker(){
  if(worker)return worker;workerURL=URL.createObjectURL(new Blob([WORKER_SOURCE],{type:'text/javascript'}));worker=new Worker(workerURL);worker.onmessage=e=>{const d=e.data||{};
   if(d.mode==='game'){if(d.id!==GAME_AI.id||!GAME_AI.working)return;if(d.type==='progress'){const p=aiProfile(aiLevel());const info=$('engineInfo');if(info)info.textContent='Lv'+aiLevel()+' '+rankName(aiLevel())+'　目標深さ'+p.depth+'　到達'+d.depth+'　節点'+Number(d.nodes||0).toLocaleString()+'　解析中…';const meter=$('playEngineMeter');if(meter)meter.style.width=Math.min(100,Math.round((d.depth||0)/Math.max(1,p.depth)*100))+'%';return;}if(d.type==='error'){GAME_AI.working=false;$('think')?.classList.remove('on');return;}if(d.type==='done'){GAME_AI.working=false;$('think')?.classList.remove('on');if(gameOver||page!=='play'||mode!=='ai'||online||turn!==GAME_AI.side||u46Key()!==GAME_AI.key)return;const m=d.best;if(!m||!u52StrictLegal(m))return;const p=aiProfile(aiLevel());const pawn=Math.round(Number(d.score||0)/100);const who=pawn>30?'先手有利':pawn<-30?'後手有利':'互角付近';const info=$('engineInfo');if(info)info.textContent='Lv'+aiLevel()+' '+rankName(aiLevel())+'　目標深さ'+p.depth+'　到達'+d.depth+'　節点'+Number(d.nodes||0).toLocaleString()+'　評価'+pawn+'（'+who+'）　思考上限'+Math.round(p.time/1000)+'秒　探索上限'+Number(p.nodes).toLocaleString()+'。';const meter=$('playEngineMeter');if(meter)meter.style.width=Math.min(100,Math.round((d.depth||0)/Math.max(1,p.depth)*100))+'%';const badges=$('playEngineBadges');if(badges)badges.innerHTML='<span>深さ '+d.depth+'/'+p.depth+'</span><span>節点 '+Number(d.nodes||0).toLocaleString()+'</span><span>最大 '+Math.round(p.time/1000)+'秒</span>';commit(m);}return;}
-  if(d.id&&d.id!==bestSerial)return;if(d.type==='progress'){if(window.KYOKUJO_ULTRA58_UI&&d.mode==='best')window.KYOKUJO_ULTRA58_UI.progress(d);return;}if(d.type==='error'){state.working=false;return;}if(d.type==='done'){state.working=false;if(!ULTRA46.enabled||page!=='play'||gameOver)return;const key=u46Key();if(key!==state.pendingKey)return;const m=d.best;if(!m||!u52StrictLegal(m)){u46ClearOverlay();state.best=null;return;}const candidates=(d.candidates||[]).filter(x=>x&&x.m&&u52StrictLegal(x.m)).map(x=>({m:x.m,note:notation(x.m,turn),score:x.score}));const pv=(d.pv||[]).filter(x=>x&&u52StrictLegal(x));const result={best:m,bestNote:notation(m,turn),score:d.score,depth:d.depth,nodes:d.nodes,ms:d.ms||0,nps:d.nps||0,ttSize:d.ttSize||0,stable:d.stable||0,candidates,pv};state.best=m;state.lastKey=key;ULTRA46.best=result;u46SetResult(result);if(window.KYOKUJO_ULTRA58_UI)window.KYOKUJO_ULTRA58_UI.done(d);u55RenderAnalysis(result);}};return worker;}
+  if(d.id&&d.id!==bestSerial)return;if(d.type==='progress'){if(window.KYOKUJO_ULTRA58_UI&&d.mode==='best')window.KYOKUJO_ULTRA58_UI.progress(d);return;}if(d.type==='error'){state.working=false;return;}if(d.type==='done'){state.working=false;if(!ULTRA46.enabled||page!=='play'||gameOver)return;const key=u46Key();if(key!==state.pendingKey)return;const m=d.best;if(!m||!u52StrictLegal(m)){u46ClearOverlay();state.best=null;return;}const candidates=(d.candidates||[]).filter(x=>x&&x.m&&u52StrictLegal(x.m)).map(x=>({m:x.m,note:notation(x.m,turn),score:x.score}));const pv=(d.pv||[]).filter(x=>x&&u52StrictLegal(x));const result={best:m,bestNote:notation(m,turn),score:d.score,depth:d.depth,nodes:d.nodes,ms:d.ms||0,nps:d.nps||0,ttSize:d.ttSize||0,ttHitRate:d.ttHitRate||0,ttReplaces:d.ttReplaces||0,stable:d.stable||0,candidates,pv};state.best=m;state.lastKey=key;ULTRA46.best=result;u46SetResult(result);if(window.KYOKUJO_ULTRA58_UI)window.KYOKUJO_ULTRA58_UI.done(d);u55RenderAnalysis(result);}};return worker;}
 function u52StrictLegal(m){try{const old=ruleControl;ruleControl=true;const ms=legalMoves(board,hands,turn,true);ruleControl=old;return ms.some(x=>x.drop===m.drop&&x.t===m.t&&x.fromR===m.fromR&&x.fromC===m.fromC&&x.toR===m.toR&&x.toC===m.toC&&!!x.promote===!!m.promote);}catch(e){ruleControl=true;return false;}}
 function start(){if(!ULTRA46.enabled||gameOver||page!=='play'||!board)return;if(mode==='ai'&&userSide!==turn)return;const key=u46Key();if(key===state.lastKey&&state.best&&u52StrictLegal(state.best))return;state.pendingKey=key;state.token++;state.working=true;state.best=null;ULTRA46.best=null;const id=++bestSerial,profile=aiProfile(aiLevel());ensureWorker().postMessage({type:'search',mode:'best',id,board:board.map(r=>r.map(p=>p?{...p}:null)),hands:{S:{...hands.S},G:{...hands.G}},side:turn,profile:{depth:profile.depth,time:profile.time,nodes:profile.nodes},ruleControl:true});}
 function startGameAI(){if(gameOver||online||page!=='play'||mode!=='ai'||userSide==='H'||turn===userSide||GAME_AI.working)return;const key=u46Key(),side=turn,profile=aiProfile(aiLevel());GAME_AI.working=true;GAME_AI.id=++gameSerial;GAME_AI.key=key;GAME_AI.side=side;GAME_AI.token++;$('think')?.classList.add('on');ensureWorker().postMessage({type:'gameSearch',mode:'game',id:GAME_AI.id,board:board.map(r=>r.map(p=>p?{...p}:null)),hands:{S:{...hands.S},G:{...hands.G}},side,profile:{depth:profile.depth,time:profile.time,nodes:profile.nodes},ruleControl:true});}
@@ -4904,9 +5120,77 @@ function u55EnsurePanel(){
   host.parentNode.insertBefore(el,host.nextSibling);
 }
 function u55PvText(pv){return (pv||[]).map((m,i)=>{try{return (i+1)+'. '+notation(m,i%2===0?turn:(turn==='S'?'G':'S'));}catch(e){return '?';}}).join('  →  ');}
-function u55RenderAnalysis(r){u55EnsurePanel();if(!r)return;const st=$('w55State');if(st)st.textContent='解析完了';const pv=$('w55PV');if(pv)pv.textContent=u55PvText(r.pv)||r.bestNote||'—';const dep=$('w55Depth');if(dep)dep.textContent='深さ '+(r.depth??'—');const nod=$('w55Nodes');if(nod)nod.textContent='節点 '+Number(r.nodes||0).toLocaleString();const ev=$('w55Eval');if(ev)ev.textContent='評価 '+(Number(r.score||0)/100).toFixed(2);const hs=$('w55Hash');if(hs)hs.textContent='Zobrist 64bit';const c=$('w55Candidates');if(c)c.innerHTML=(r.candidates||[]).slice(0,5).map((x,i)=>'<div class="w55-c"><b>#'+(i+1)+'</b><span>'+notation(x.m,turn)+'</span><em>'+((Number(x.score||0))/100).toFixed(2)+'</em></div>').join('');}
+function u55RenderAnalysis(r){u55EnsurePanel();if(!r)return;if(window.KYOKUJO_ULTRA61_UI)window.KYOKUJO_ULTRA61_UI.render(r);const st=$('w55State');if(st)st.textContent='解析完了';const pv=$('w55PV');if(pv)pv.textContent=u55PvText(r.pv)||r.bestNote||'—';const dep=$('w55Depth');if(dep)dep.textContent='深さ '+(r.depth??'—');const nod=$('w55Nodes');if(nod)nod.textContent='節点 '+Number(r.nodes||0).toLocaleString();const ev=$('w55Eval');if(ev)ev.textContent='評価 '+(Number(r.score||0)/100).toFixed(2);const hs=$('w55Hash');if(hs)hs.textContent='Zobrist 64bit';const c=$('w55Candidates');if(c)c.innerHTML=(r.candidates||[]).slice(0,5).map((x,i)=>'<div class="w55-c"><b>#'+(i+1)+'</b><span>'+notation(x.m,turn)+'</span><em>'+((Number(x.score||0))/100).toFixed(2)+'</em></div>').join('');}
 function u55CancelAnalysis(){if(window.u52Cancel)window.u52Cancel();const s=$('w55State');if(s)s.textContent='待機';}
-window.KYOKUJO_WORLD_CLASS={version:'ULTRA58',features:['Zobrist64','BoundedTT','CounterMove','DepthHistory','SearchTelemetry','PV20','PV','MultiPV','Aspiration','LMR','CheckExtension','SEE','KingSafety','MateProbe','Perft','RuleAudit','WorkerAI','IncrementalZobrist','RepetitionGuard','ExactRootMultiPV','PV16']};
+
+/* ULTRA61 ENGINE HEALTH --------------------------------------------------- */
+(function(){
+  function q(id){return document.getElementById(id)}
+  function ensure(){
+    if(q('u61Health'))return q('u61Health');
+    const host=q('w55AnalysisPanel')||q('bestGuidePanel')||document.querySelector('.play-layout aside:last-child');
+    if(!host||!host.parentNode)return null;
+    const el=document.createElement('section');el.id='u61Health';el.className='u61-health';
+    el.innerHTML='<div class="u61-health-head"><b>探索品質</b><span id="u61HealthState">待機</span></div>'+
+      '<div class="u61-health-grid">'+
+      '<div class="u61-health-cell"><b id="u61Depth">—</b><span>深さ</span></div>'+
+      '<div class="u61-health-cell"><b id="u61Nps">—</b><span>Nodes/s</span></div>'+
+      '<div class="u61-health-cell"><b id="u61Tt">—</b><span>TT</span></div>'+
+      '<div class="u61-health-cell"><b id="u61Stable">—</b><span>安定度</span></div></div>'+
+      '<div class="u61-health-bar"><i id="u61HealthBar"></i></div>'+
+      '<div class="u61-note" id="u61HealthNote">探索中は最善手の安定度とTT効率を監視します。</div>';
+    host.parentNode.insertBefore(el,host.nextSibling);return el;
+  }
+  function render(r){
+    const el=ensure();if(!el||!r)return;
+    const p=aiProfile(typeof aiLevel==='function'?aiLevel():41);
+    q('u61Depth').textContent=(r.depth??'—')+'/'+(p.depth??'—');
+    q('u61Nps').textContent=Number(r.nps||0).toLocaleString();
+    q('u61Tt').textContent=Number(r.ttSize||0).toLocaleString();
+    q('u61Stable').textContent=(r.stable||0)+'回';
+    q('u61HealthState').textContent='解析完了';
+    const pct=Math.min(100,Math.max(0,(Number(r.stable||0)/5)*100));
+    q('u61HealthBar').style.width=pct+'%';
+    const hit=(Number(r.ttHitRate||0)*100).toFixed(1);
+    q('u61HealthNote').textContent='TT hit '+hit+'% / 置換 '+Number(r.ttReplaces||0).toLocaleString()+' / 最善手安定 '+(r.stable||0)+'回。安定局面では早めに停止し、不安定局面では探索を継続します。';
+  }
+  function busy(){
+    const el=ensure();if(!el)return;
+    q('u61HealthState').textContent='探索中';
+  }
+  window.KYOKUJO_ULTRA61_UI={ensure,render,busy};
+  const old=window.KYOKUJO_ULTRA58_UI;
+  if(old){
+    const oldP=old.progress,oldD=old.done;
+    old.progress=function(d){try{oldP&&oldP(d)}catch(e){};busy();};
+    old.done=function(d){try{oldD&&oldD(d)}catch(e){};render(d);};
+  }
+  document.addEventListener('keydown',e=>{
+    if(!(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='d'))return;
+    e.preventDefault();
+    let box=q('u61Diag');
+    if(!box){box=document.createElement('div');box.id='u61Diag';box.className='u61-diag';box.innerHTML='<h3>ULTRA61 Diagnostics</h3><pre id="u61DiagText"></pre>';document.body.appendChild(box)}
+    box.classList.toggle('on');
+    if(box.classList.contains('on')){
+      const ids=[...document.querySelectorAll('[id]')].map(x=>x.id);
+      const dup=ids.filter((x,i)=>ids.indexOf(x)!==i);
+      const overflow=document.documentElement.scrollWidth>window.innerWidth;
+      q('u61DiagText').textContent=JSON.stringify({
+        viewport:[innerWidth,innerHeight],dpr:devicePixelRatio,
+        page:typeof page!=='undefined'?page:null,
+        turn:typeof turn!=='undefined'?turn:null,
+        ply:typeof hist!=='undefined'&&Array.isArray(hist)?hist.length:null,
+        aiWorking:!!window.GAME_AI?.working,
+        bestWorking:!!window.U52?.working,
+        ids:ids.length,duplicateIds:[...new Set(dup)],
+        horizontalOverflow:overflow,
+        engine:'ULTRA61'
+      },null,2);
+    }
+  });
+})();
+
+window.KYOKUJO_WORLD_CLASS={version:'ULTRA63',features:['Zobrist64','BoundedTT','CounterMove','ContinuationHistory','HistoryAging','DepthHistory','SearchTelemetry','PV20','PV','MultiPV','Aspiration','LMR','CheckExtension','SEE','KingSafety','MateProbe','MateInOneGate','Perft','RuleAudit','WorkerAI','IncrementalZobrist','RepetitionGuard','ExactRootMultiPV','PV16','CheckQuiescence','SoftTimeManager','TTGeneration','TTHitRate','DynamicLMR','CheckAwareQSearch','ForcingChecks','BoundedDeltaQ','LayoutOptimizer','EngineLab','RootPVReuse','FocusLayout','SearchNoiseReduction']};
 
 /* WORLD-CLASS UI / ANALYSIS ------------------------------------------------ */
 function u55RunQA(){
@@ -5313,7 +5597,7 @@ if(ghost){const g=add('best-master-ghost',{left:tc.x+'px',top:tc.y+'px'});g.text
   </script>
 <script id="ultra57-diagnostics">
 (()=>{
-  window.KYOKUJO_WORLD_CLASS57={version:'ULTRA57',features:['fast-see','quiescence-tactical-only','king-shell-eval','phase-aware-eval','rule-aware-search','layout-polish'],note:'ULTRA57 functionality preserved; ULTRA57 is additive.'};
+  window.KYOKUJO_WORLD_CLASS57={version:'ULTRA60',features:['fast-see','quiescence-tactical-only','king-shell-eval','phase-aware-eval','rule-aware-search','layout-polish'],note:'ULTRA57 functionality preserved; ULTRA57 is additive.'};
   const oldStart=window.u46BestSearch;
   const oldGame=window.GAME_AI;
   // Avoid stale best-guide results occupying the shared Worker while the game AI starts.
@@ -5331,21 +5615,206 @@ if(ghost){const g=add('best-master-ghost',{left:tc.x+'px',top:tc.y+'px'});g.text
     const host=q('w56AnalysisPanel')||q('w55AnalysisPanel')||q('bestGuidePanel');
     if(!host)return null;
     const el=document.createElement('section');el.id='w58Cockpit';el.className='w58-cockpit';
-    el.innerHTML='<div class="w58-head" id="w58Head"><b>ENGINE COCKPIT / 探索品質</b><span class="w58-state" id="w58State">待機</span><span class="w58-collapse" id="w58Collapse">詳細を閉じる</span></div><div class="w58-body"><div class="w58-grid"><div class="w58-metric"><small>実効深さ</small><strong id="w58Depth">—</strong></div><div class="w58-metric"><small>Nodes/s</small><strong id="w58Nps">—</strong></div><div class="w58-metric"><small>TT</small><strong id="w58TT">—</strong></div><div class="w58-metric"><small>安定度</small><strong id="w58Stable">—</strong></div></div><div class="w58-bar"><i id="w58Bar"></i></div><div class="w58-foot" id="w58Foot">探索中は深さ・節点速度・TT使用量・第一候補の安定度を表示します。これらは診断値で、合法手や評価そのものを変更しません。</div></div>';
+    el.innerHTML='<div class="w58-head" id="w58Head"><b>ENGINE COCKPIT / 探索品質</b><span class="w58-state" id="w58State">待機</span><span class="w58-collapse" id="w58Collapse">詳細を閉じる</span></div><div class="w58-body"><div class="w58-grid"><div class="w58-metric"><small>実効深さ</small><strong id="w58Depth">—</strong></div><div class="w58-metric"><small>Nodes/s</small><strong id="w58Nps">—</strong></div><div class="w58-metric"><small>TT</small><strong id="w58TT">—</strong></div><div class="w58-metric"><small>安定度</small><strong id="w58Stable">—</strong></div></div><div class="w58-bar"><i id="w58Bar"></i></div><div class="w60-quality"><b>探索品質モニター</b><div class="w60-quality-grid"><div class="w60-qitem"><b>探索状態</b><span id="w60SearchState">待機</span></div><div class="w60-qitem"><b>PV安定</b><span id="w60PvStable">—</span></div><div class="w60-qitem"><b>候補数</b><span id="w60Cand">—</span></div></div><div class="w60-note" id="w60Note">深さだけでなく、候補の安定性と探索速度も同時に確認します。</div></div><div class="w58-foot" id="w58Foot">探索中は深さ・節点速度・TT使用量・第一候補の安定度を表示します。これらは診断値で、合法手や評価そのものを変更しません。</div></div>';
     host.parentNode.insertBefore(el,host.nextSibling);U58.panel=el;
     q('w58Head').onclick=()=>{U58.open=!U58.open;el.classList.toggle('collapsed',!U58.open);q('w58Collapse').textContent=U58.open?'詳細を閉じる':'詳細を開く'};
     return el;
   }
   function progress(d){
     const el=ensure();if(!el)return;el.hidden=false;
-    q('w58State').textContent='探索中';q('w58Depth').textContent=String(d.depth??'—');q('w58Nps').textContent=Number(d.nps||0).toLocaleString();q('w58TT').textContent=Number(d.ttSize||0).toLocaleString();q('w58Stable').textContent=(d.stable||0)+'段';
+    q('w58State').textContent='探索中';if(q('w60SearchState'))q('w60SearchState').textContent='探索中';if(q('w60PvStable'))q('w60PvStable').textContent=(d.stable||0)+'段';if(q('w60Cand'))q('w60Cand').textContent=String((d.candidates||[]).length);if(q('w60Note'))q('w60Note').textContent='探索中：第一候補の安定度・候補数・Nodes/sを監視しています。';q('w58Depth').textContent=String(d.depth??'—');q('w58Nps').textContent=Number(d.nps||0).toLocaleString();q('w58TT').textContent=Number(d.ttSize||0).toLocaleString();q('w58Stable').textContent=(d.stable||0)+'段';
     const target=typeof aiLevel==='function'&&typeof aiProfile==='function'?((aiProfile(aiLevel())||{}).depth||1):20; q('w58Bar').style.width=Math.min(100,Math.max(2,Number(d.depth||0)/Math.max(1,target)*100))+'%';
     q('w58Foot').textContent='探索 '+Number(d.nodes||0).toLocaleString()+' nodes / '+Number(d.ms||0).toLocaleString()+'ms。TT '+Number(d.ttSize||0).toLocaleString()+'件。第一候補の連続一致 '+(d.stable||0)+'回。';U58.last=d;
   }
-  function done(d){const el=ensure();if(!el)return;el.hidden=false;q('w58State').textContent='解析完了';q('w58Depth').textContent=String(d.depth??'—');q('w58Nps').textContent=Number(d.nps||0).toLocaleString();q('w58TT').textContent=Number(d.ttSize||0).toLocaleString();q('w58Stable').textContent=(d.stable||0)+'段';q('w58Bar').style.width='100%';q('w58Foot').textContent='完了 '+Number(d.nodes||0).toLocaleString()+' nodes / '+Number(d.ms||0).toLocaleString()+'ms。第一候補の安定度 '+(d.stable||0)+'。';U58.last=d}
+  function done(d){const el=ensure();if(!el)return;el.hidden=false;q('w58State').textContent='解析完了';if(q('w60SearchState'))q('w60SearchState').textContent='完了';if(q('w60PvStable'))q('w60PvStable').textContent=(d.stable||0)+'段';if(q('w60Cand'))q('w60Cand').textContent=String((d.candidates||[]).length);if(q('w60Note'))q('w60Note').textContent='完了：最終PVと候補手を表示。安定度が高いほど反復深化で第一候補が維持されています。';q('w58Depth').textContent=String(d.depth??'—');q('w58Nps').textContent=Number(d.nps||0).toLocaleString();q('w58TT').textContent=Number(d.ttSize||0).toLocaleString();q('w58Stable').textContent=(d.stable||0)+'段';q('w58Bar').style.width='100%';q('w58Foot').textContent='完了 '+Number(d.nodes||0).toLocaleString()+' nodes / '+Number(d.ms||0).toLocaleString()+'ms。第一候補の安定度 '+(d.stable||0)+'。';U58.last=d}
   window.KYOKUJO_ULTRA58_UI={ensure,progress,done};
   document.addEventListener('click',e=>{if(e.target&&e.target.id==='bestBtn')setTimeout(ensure,150)});
   window.addEventListener('visibilitychange',()=>{if(document.hidden&&U58.panel)U58.panel.classList.add('collapsed')});
+})();
+</script>
+
+<script id="ultra59-diagnostics">
+(function(){'use strict';
+  function q(id){return document.getElementById(id)}
+  window.KYOKUJO_ULTRA59={
+    version:'ULTRA59',
+    features:['ContinuationHistory','HistoryAging','ExactSennichiteThreshold','MateInOneGate','ResponsivePolish','SearchTelemetry'],
+    health:function(){
+      const boardEl=q('board'),panel=q('w58Cockpit');
+      return {board:Boolean(boardEl),boardSize:boardEl?boardEl.children.length:0,analysis:Boolean(panel),width:innerWidth,height:innerHeight,gameAI:Boolean(window.GAME_AI),bestUnlocked:Boolean(window.ULTRA46&&ULTRA46.unlocked)};
+    }
+  };
+})();
+</script>
+
+<script id="ultra60-diagnostics">
+(()=>{
+  'use strict';
+  const api={version:'ULTRA60',started:performance.now(),snapshot(){
+    const ids=[...document.querySelectorAll('[id]')];
+    const dup=ids.map(x=>x.id).filter((id,i,a)=>a.indexOf(id)!==i);
+    const cockpit=document.getElementById('w58Cockpit');
+    return {version:'ULTRA60',viewport:{w:innerWidth,h:innerHeight,dpr:devicePixelRatio},dom:{ids:ids.length,duplicateIds:[...new Set(dup)]},cockpit:!!cockpit,hidden:document.hidden,bestUnlocked:!!(window.ULTRA46&&ULTRA46.unlocked)};
+  },layoutAudit(){
+    const out=[];
+    document.querySelectorAll('.panel,.analysis-shell,.w56-analysis-shell,.w58-cockpit').forEach(el=>{const r=el.getBoundingClientRect();if(r.width>innerWidth+2)out.push({id:el.id||'',class:el.className,width:r.width,viewport:innerWidth});});
+    return out;
+  }};
+  window.KYOKUJO_ULTRA60=api;
+})();
+</script>
+
+
+<style id="ultra62-layout">
+/* ULTRA62 — visual hierarchy, mobile safety, reduced clutter, accessibility. */
+:root{--u62-gap:10px;--u62-radius:14px}
+.u62-control{margin-top:10px;padding:10px;border:1px solid rgba(184,137,58,.28);border-radius:14px;background:rgba(255,250,243,.82);box-shadow:0 6px 18px rgba(70,45,20,.06)}
+.u62-control-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.u62-control-head b{font-family:"Shippori Mincho",serif}
+.u62-control-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:8px}
+.u62-control button{min-height:34px;border:1px solid rgba(120,82,34,.2);border-radius:10px;background:#fff;color:#4b3219;font-weight:700;cursor:pointer}
+.u62-control button[aria-pressed="true"]{background:#2f261c;color:#fff}
+.u62-help{margin-top:7px;font-size:11px;line-height:1.55;color:#72583a}
+.u62-compact .w55-analysis-panel,.u62-compact #u61Health,.u62-compact #w56Shell{font-size:.9em}
+.u62-compact .w55-cands,.u62-compact .w56-candidates{max-height:150px;overflow:auto}
+.u62-focus .play-layout aside{opacity:.82}
+.u62-focus .play-layout aside:hover{opacity:1}
+.u62-reduced-motion *, .u62-reduced-motion *::before, .u62-reduced-motion *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}
+@media(max-width:720px){
+  .u62-control-grid{grid-template-columns:1fr}
+  .w55-analysis-panel,.u61-health,#w56Shell{margin-top:8px!important}
+  .w55-cands,.w56-candidates{max-height:190px;overflow:auto}
+  .u61-health-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .u61-health-cell{min-height:48px}
+  .game-badges{font-size:10px}
+}
+@media(min-width:1100px){
+  .play-layout aside{min-width:0}
+  .w55-analysis-panel,.u61-health,#w56Shell{contain:layout paint}
+}
+button:focus-visible,[role="button"]:focus-visible{outline:3px solid rgba(29,78,216,.55);outline-offset:2px}
+
+/* ULTRA63 PRESENTATION / FOCUS LAYOUT ------------------------------------ */
+html{scroll-behavior:smooth}
+:focus-visible{outline:3px solid rgba(184,137,58,.72);outline-offset:2px}
+body.u63-focus .panel{opacity:.94}
+body.u63-focus .help{opacity:.78}
+body.u63-focus .game-report-card{display:none}
+body.u63-focus .u61-health{box-shadow:0 8px 24px rgba(0,0,0,.10)}
+body.u63-focus .analysis-side .analysis-kpi{gap:6px}
+body.u63-focus .analysis-side .analysis-kpi>div{padding:6px 7px}
+body.u63-focus .analysis-side h3{margin:9px 0 5px}
+body.u63-focus .ultra-mini{padding:5px 7px}
+body.u63-focus .game-badges span{padding:3px 6px}
+body.u63-focus *{animation-duration:.01ms!important;transition-duration:.08s!important}
+@media (max-width:900px){
+  .table-scene{grid-template-columns:minmax(54px,72px) minmax(0,1fr) minmax(54px,72px)!important;gap:5px!important}
+  .komadai{min-width:0!important}
+  .komadai .slots{overflow-x:auto;max-width:100%}
+  .panel{min-width:0!important}
+}
+@media (max-width:640px){
+  .table-scene{grid-template-columns:1fr!important}
+  .table-scene .komadai{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px!important}
+  .table-scene .komadai .slots{flex:1;display:flex;flex-wrap:nowrap;overflow-x:auto}
+  .board-frame{width:min(96vw,620px)!important;margin-inline:auto}
+  .eval-wrap{font-size:11px!important}
+  .speech{font-size:12px!important}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+<script>
+/* ULTRA62 UI: one small control surface for the visual problems caused by the
+   accumulated feature layers. It does not remove or alter any existing feature. */
+(function U62UI(){
+  const q=id=>document.getElementById(id);
+  function ensure(){
+    if(q('u62Control'))return q('u62Control');
+    const host=q('u61Health')||q('w55AnalysisPanel')||q('bestGuidePanel')||document.querySelector('.play-layout aside:last-child');
+    if(!host||!host.parentNode)return null;
+    const el=document.createElement('section');
+    el.id='u62Control';el.className='u62-control';
+    el.innerHTML='<div class="u62-control-head"><b>表示・操作最適化</b><span id="u62State">標準</span></div>'+
+      '<div class="u62-control-grid">'+
+      '<button type="button" id="u62Compact" aria-pressed="false">解析をコンパクト</button>'+
+      '<button type="button" id="u62Focus" aria-pressed="false">盤面集中</button>'+
+      '<button type="button" id="u62Motion" aria-pressed="false">演出を軽量化</button>'+
+      '<button type="button" id="u62Reset" aria-pressed="false">表示を初期化</button></div>'+
+      '<div class="u62-help">既存の対局・棋譜・最善手・解析機能はそのまま。表示密度だけを切り替えます。</div>';
+    host.parentNode.insertBefore(el,host.nextSibling);
+    bind(el);return el;
+  }
+  function set(name,on){
+    document.body.classList.toggle('u62-'+name,on);
+    const b=q('u62'+name.charAt(0).toUpperCase()+name.slice(1));
+    if(b)b.setAttribute('aria-pressed',String(on));
+    try{localStorage.setItem('kyokujo-u62-'+name,on?'1':'0')}catch(e){}
+    const st=q('u62State');if(st)st.textContent=on?'最適化ON':'標準';
+  }
+  function get(name){try{return localStorage.getItem('kyokujo-u62-'+name)==='1'}catch(e){return false}}
+  function bind(){
+    q('u62Compact')?.addEventListener('click',()=>set('compact',!document.body.classList.contains('u62-compact')));
+    q('u62Focus')?.addEventListener('click',()=>set('focus',!document.body.classList.contains('u62-focus')));
+    q('u62Motion')?.addEventListener('click',()=>set('reduced-motion',!document.body.classList.contains('u62-reduced-motion')));
+    q('u62Reset')?.addEventListener('click',()=>{
+      ['compact','focus','reduced-motion'].forEach(n=>{try{localStorage.removeItem('kyokujo-u62-'+n)}catch(e){}document.body.classList.remove('u62-'+n)});
+      ['u62Compact','u62Focus','u62Motion'].forEach(id=>q(id)?.setAttribute('aria-pressed','false'));
+      const st=q('u62State');if(st)st.textContent='標準';
+    });
+  }
+  function sync(){const el=ensure();if(!el)return;set('compact',get('compact'));set('focus',get('focus'));set('reduced-motion',get('reduced-motion'))}
+  const mo=new MutationObserver(()=>{if(document.body&&document.querySelector('.play-layout'))sync()});
+  try{mo.observe(document.body,{childList:true,subtree:true})}catch(e){}
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)sync()});
+  setTimeout(sync,120);
+  window.KYOKUJO_ULTRA62_UI={ensure,sync};
+})();
+</script>
+<script>
+/* ULTRA62 Engine Lab: reproducible health tests without changing normal play. */
+(function U62Lab(){
+  function q(id){return document.getElementById(id)}
+  function ensureWorker62(){
+    if(typeof ensureWorker==='function')return ensureWorker();
+    return null;
+  }
+  window.KYOKUJO_ULTRA62_LAB={
+    perft(depth=3){
+      const w=ensureWorker62(); if(!w)return Promise.reject(new Error('Worker unavailable'));
+      return new Promise((resolve,reject)=>{
+        const id='u62p'+Date.now();
+        const old=w.onmessage;
+        w.onmessage=e=>{try{if(e.data?.id===id&&e.data?.type==='perftDone'){w.onmessage=old;resolve(e.data.nodes)}}catch(err){reject(err)}};
+        w.postMessage({type:'perft',id,board:board.map(r=>r.map(p=>p?{...p}:null)),hands:{S:{...hands.S},G:{...hands.G}},side:turn||'S',depth:Math.max(0,Math.min(5,depth))});
+      });
+    },
+    ruleAudit(){
+      const w=ensureWorker62();if(!w)return Promise.reject(new Error('Worker unavailable'));
+      return new Promise((resolve,reject)=>{
+        const id='u62r'+Date.now(),old=w.onmessage;
+        w.onmessage=e=>{try{if(e.data?.id===id&&e.data?.type==='ruleAuditDone'){w.onmessage=old;resolve(e.data.result)}}catch(err){reject(err)}};
+        w.postMessage({type:'ruleAudit',id,board:board.map(r=>r.map(p=>p?{...p}:null)),hands:{S:{...hands.S},G:{...hands.G}},side:turn||'S'});
+      });
+    }
+  };
+})();
+</script>
+
+
+<script>
+/* ULTRA63 UI focus layer: additive, keyboard-only toggle so no existing control is removed. */
+(()=>{
+  'use strict';
+  const KEY='kyokujo-ultra63-focus';
+  const apply=v=>document.body.classList.toggle('u63-focus',!!v);
+  let on=false;try{on=localStorage.getItem(KEY)==='1'}catch(e){}
+  const boot=()=>{apply(on);window.addEventListener('keydown',e=>{
+    if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='l'){
+      e.preventDefault();on=!on;apply(on);try{localStorage.setItem(KEY,on?'1':'0')}catch(_){}}
+  },{passive:false});
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+  window.KYOKUJO_ULTRA63_UI={toggle(){on=!on;apply(on);try{localStorage.setItem(KEY,on?'1':'0')}catch(e){}},get enabled(){return on}};
 })();
 </script>
 </body>
